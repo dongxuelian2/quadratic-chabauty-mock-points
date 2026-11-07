@@ -1,0 +1,144 @@
+{
+  "parameter_a": -605,
+  "p": 5,
+  "term_cutoff": 20,
+  "coefficient_precision": 30,
+  "theoretical_degree_bound": 2868,
+  "effective_degree": 698,
+  "horizontal_scale_exponent": 4,
+  "integration_scale_exponent_used": 3,
+  "pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      3
+    ]
+  ],
+  "modulus": 78125,
+  "frobenius_matrix": [
+    [
+      22285,
+      0,
+      25800,
+      0,
+      5080
+    ],
+    [
+      0,
+      22285,
+      0,
+      2540,
+      0
+    ],
+    [
+      27935,
+      0,
+      64880,
+      0,
+      23675
+    ],
+    [
+      0,
+      53188,
+      0,
+      55840,
+      0
+    ],
+    [
+      369,
+      0,
+      225,
+      0,
+      69090
+    ]
+  ],
+  "system_matrix": [
+    [
+      19401,
+      36725,
+      47000,
+      14875,
+      73450,
+      65550
+    ],
+    [
+      17920,
+      58726,
+      15225,
+      31125,
+      39335,
+      4675
+    ],
+    [
+      46650,
+      60725,
+      8576,
+      48550,
+      58875,
+      21750
+    ],
+    [
+      52595,
+      31475,
+      21935,
+      69551,
+      70975,
+      19250
+    ],
+    [
+      58085,
+      240,
+      64000,
+      53500,
+      16851,
+      58275
+    ],
+    [
+      61128,
+      20040,
+      63950,
+      14125,
+      6705,
+      61276
+    ]
+  ],
+  "system_rhs": [
+    43275,
+    49005,
+    51500,
+    18218,
+    17316,
+    51249
+  ],
+  "normalized_cross_periods": [
+    21625,
+    13695,
+    57225,
+    77593,
+    71316,
+    65694
+  ],
+  "normalized_target": 21625,
+  "odd_model_target_J": 48500,
+  "system_determinant_mod5": 1,
+  "status": "Finite arithmetic certificate; analytic certification is Section 7 of chabauty_five_adic_residual_certificate.md."
+}
