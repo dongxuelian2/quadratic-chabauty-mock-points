@@ -119,3 +119,7 @@ python scripts/check_small_disks.py
 ```
 
 The scripts supplement the proofs; finite residues alone are not used to assert analytic identities.
+
+## Rational denominator targets
+
+Theorem 32 computes both actual local targets at every odd denominator prime: the second vanishes, while the first can exclude zero. It also proves the necessary +(1/2)log_p(D) correction to the global point height. See [proof](proofs/rational_denominator_targets.md), [independent review](verification/rational_denominator_review.md), and [exact checks](scripts/check_rational_denominators.py). This does not assert general full-depth-two membership.
