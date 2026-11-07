@@ -1052,11 +1052,46 @@ The Jacobian has rational rank two. Full [rank proof](proofs/rank_one_parameter_
 
 This is a conditional family theorem with two fully verified members, not a classification of every curve or prime. Exact checks are `scripts/check_general_prime3.py`, `scripts/check_rank_one_parameter.py`, and `scripts/check_rank_one_independent.py`.
 
-## 18. Boundary of this result
+## 18. Checkable rank patterns and further good primes
+
+The following results separate rank certification from local analytic isolation. All depth-two equalities retain the Mordell–Weil-restricted, actual-local-image convention.
+
+**Theorem 24 (arithmetic rank criteria).** Each of the following conditions proves rank E_a(Q)=1 by elementary two-isogeny descent:
+
+1. a=3−32r, where r and 8r−1 are primes and r≡3 or5 modulo8.
+2. a=3−8n², where n>1 is odd, every prime dividing n is 3 or5 modulo8, exactly one prime congruent to3 modulo8 occurs to odd exponent, and 2n²−1 is prime.
+
+The [complete proof](proofs/checkable_rank_patterns.md) also states the precise prime-power extensions. The descent images are determined exactly, not inferred from local solubility. In case1 the extra condition r≡547 modulo729, and in case2 n≡±1 modulo729, place the curve in Theorem22 with zero actual targets. Ten explicit examples, including a=−204125 and a=−67977797, have exact certificates. These are checkable implications, not assertions of infinitely many prime patterns or rank-one parameters. Oddness of n is essential: dropping it permits n=6, where a rational point forces rank at least two.
+
+**Theorem 25 (two prime-7 neighborhoods).** The first scalar height alone has exactly four rational endpoint zeros for every odd integer a in either progression
+\[
+ a\equiv-5\pmod{343},\qquad\text{or}\qquad a\equiv-605\pmod{49}.
+\]
+If additionally a≡3 modulo8 and E_a(Q) has rank one, this gives
+\[
+ C_a(\mathbf Q_7)_2=C_a(\mathbf Q)
+ =\{(0,1),(0,-1),\infty_+,\infty_-\}.
+\]
+The combined progressions are respectively −5 modulo2744 and −605 modulo392. No restriction on the prime multiplicities in a+1 is needed. The unconditional examples a=−5, a=−2033309 and a=−605 have certified rank one.
+
+The [eight-disk proof](proofs/prime7_isolation.md) controls four rational endpoint disks and four Weierstrass disks uniformly, with an independent 4P/8P height check. It uses a fixed height complement, not an ordinary or unit-root assumption; E_{−5} is supersingular at7. The [four-disk proof](proofs/prime7_four_disk_family.md) treats a second residue pattern using a dominating quadratic coefficient. Both include infinite-tail and parameter-continuity bounds.
+
+**Theorem 26 (the second certified curve at11).** For a=−157469,
+\[
+ C_a(\mathbf Q_{11})_2=C_a(\mathbf Q)
+ =\{(0,1),(0,-1),\infty_+,\infty_-\}.
+\]
+Its first height has exactly eight zeros: the four rational endpoints and the four x=±1 centers. The second height excludes the latter. The [complete proof](proofs/prime11_isolation.md) reduces the nonrational residue disks to the two polynomials T(8−4T²) and 6+4T² over F_11, which have no common root, and proves bounds for every remaining series term. The existing exact rank and zero-target certificates apply at11.
+
+Finally, the [small-disk classification](proofs/small_disk_classification.md) uses Hasse's bound and exhaustive finite-field enumeration to identify every relevant reduction with at most eight rational disks for odd a. After the scalar obstruction at p≡1 modulo4 is removed, only p=3,7,11,19,23 remain for this particular layout. At p≡1 modulo4 both scalar heights retain (±i,0), so their intersection cannot be just the four endpoints. This never proves full-depth-two membership of those points and does not preclude non-scalar obstructions or successful larger-disk methods.
+
+Independent audit reports and exact scripts accompany every statement in `verification/` and `scripts/`. General classification across all parameters and primes remains open.
+
+## 19. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. It neither proves that infinitely many parameters have rank one nor classifies all non-Weierstrass candidates.
 
-Sections 8, 11, and 13 transfer exclusions to the full depth-two set in the stated Selmer convention: all eight points (17) are excluded, and so are the four points with x=±1 at their visible primes p≥5. Section 15 also excludes the pair \(\pm i,0\) at every odd prime where it is visible. Thus, for \(p\ge5\), all fourteen specified nonrational points that survive the first height test (the pair, the four points with x=±1, and the eight three-torsion candidates) are excluded from the full depth-two set whenever locally visible. This does not classify all other points of the full set or solve ICM Problem 6.4 in general. Section 16 closes the p=3 boundary and gives a complete full-depth-two calculation for this curve at p=3. Section 17 supplies an explicit sufficient reciprocal-family criterion and a second fully certified member. These results do not classify the full set at other primes or for general curves, nor prove infinitely many rank-one parameters.
+Sections 8, 11, and 13 transfer exclusions to the full depth-two set in the stated Selmer convention: all eight points (17) are excluded, and so are the four points with x=±1 at their visible primes p≥5. Section 15 also excludes the pair \(\pm i,0\) at every odd prime where it is visible. Thus, for \(p\ge5\), all fourteen specified nonrational points that survive the first height test (the pair, the four points with x=±1, and the eight three-torsion candidates) are excluded from the full depth-two set whenever locally visible. This does not classify all other points of the full set or solve ICM Problem 6.4 in general. Section 16 closes the p=3 boundary and gives a complete full-depth-two calculation for this curve at p=3. Sections 17–18 supply explicit sufficient reciprocal-family criteria, arithmetic rank patterns, further certified members, and results at primes7 and11. These results do not classify the full set at other primes or for general curves, nor prove infinitely many rank-one parameters.
 
 The exact examples themselves were already detected in [5]. The contribution of the arguments above is an exact algebraic membership test, an all-prime exclusion criterion, and a symmetry proof covering a parameter family. No priority claim is made beyond the literature checked here.
 
@@ -1077,5 +1112,6 @@ The exact examples themselves were already detected in [5]. The contribution of 
 
 11. J. S. Balakrishnan and N. Dogra, *Quadratic Chabauty and Rational Points II: Generalised Height Functions on Selmer Varieties*, especially Section 2 and the proof of Proposition 2.2. https://arxiv.org/abs/1705.00401
 12. L. Alexander Betts, *The motivic anabelian geometry of local heights on abelian varieties*, Section 3, equation (3.0.1). https://arxiv.org/abs/1706.04850
+
 
 
