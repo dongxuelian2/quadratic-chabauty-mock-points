@@ -28,6 +28,12 @@ Depth-two statements here use the Mordell–Weil abelian-image condition of Bala
 
 For y²=x⁶−5x⁴−5x²+1, Theorem 21 proves C(Q₃)₂=C(Q)={(0,±1),∞±}, in the explicitly stated Mordell–Weil-restricted, actual-local-image convention. The proof combines an exact h₃(P)≡2 mod3 certificate, uniform estimates over all eight residue disks, and an endpoint-basepoint mixed-extension bridge. Both analytic and bridge arguments received independent review. Full proofs are in [proofs/](proofs), with reports in [verification/](verification).
 
+## General sufficient family criterion
+
+Theorem 22 extends the p=3 argument to C_a:y²=x⁶+a x⁴+a x²+1 with a≡−5 mod5832, subject to an independently verified rank-one elliptic quotient and an explicit prime-factor valuation condition. A squarefree odd part of |a+1| is a simple sufficient target condition. The full exact local-target formula, including nonzero-target cases, is proved in [proofs/reciprocal_local_targets.md](proofs/reciprocal_local_targets.md).
+
+Theorem 23 verifies every hypothesis for a=−157469, proving another exact equality C_a(Q₃)₂=C_a(Q)={(0,±1),∞±}. The rank certificate is elementary two-isogeny descent, with a separate exhaustive primitive-pair checker. The family theorem does not assert infinitely many rank-one parameters or solve the general classification problem.
+
 ## Scope and open questions
 
 The positive membership results concern explicitly defined single-height candidate sets, not general characterizations of the full depth-two Chabauty–Kim set. Theorem 21 separately gives a complete characterization for this specific curve at p=3. The exclusion results do transfer to the full set when the standard coarse target is used, by the known containment detailed in PROOF.md. A second correspondence now excludes the eight-point locus above. The four points (±1,±2√−2) are now excluded from depth two for visible p≥5 by the proved nonmonic refined-target containment. The independent exact prime-3 certificate now covers p=3 as well. The two points (±i,0) pass both earlier scalar height tests but are now excluded at every visible odd prime by an explicit norm-one-torus quotient. A global reference path is constructed using two proper elliptic curves; its local discrepancy is the nonzero Kummer class of a unit built from 1+√2. This covers both split and inert CM primes. Together, all fourteen specified nonrational first-height candidates are excluded at every odd prime whenever locally visible. The general classification of non-Weierstrass candidates remains open.
@@ -51,3 +57,14 @@ python scripts/check_prime3_six_multiple.py
 ```
 
 These scripts include independently derived 3P and 6P certificates. The proofs provide the bounds for every omitted term; zero or nonzero claims are not inferred from unexplained finite precision.
+
+
+General-family and new-rank certificates (standard library only):
+
+```sh
+python scripts/check_general_prime3.py
+python scripts/check_rank_one_parameter.py
+python scripts/check_rank_one_independent.py
+```
+
+The rank checker reads the included `verification/rank_one_obstructions.txt`. The general analytic checks alone do not certify rank or actual local targets; those are separate proofs.
