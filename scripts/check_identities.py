@@ -30,3 +30,25 @@ assert (-4)**3+16*(-4)**2+32*(-4) == 8**2
 assert s.discriminant(fm,x) == -2**28
 assert 16*B**2*(A**2-4*B) == 2**15
 print('PASS: quotient derivatives, reciprocal symmetry, discriminants, factorization, and descent witness.')
+
+# Lemma 6: exact rational-power identities for every permitted quadratic type.
+b,c,d = s.symbols('b c d')
+for quad,m,R in [
+    (u**2+c,2,-c),
+    (u**2+b*u+b**2,3,b**3),
+    (u**2+b*u+b**2/2,4,-b**4/4),
+    (u**2+b*u+b**2/3,6,-b**6/27),
+]:
+    assert s.rem(u**m-R,quad,u) == 0
+assert s.rem(u**3+d,u**3+d,u) == 0
+# Equal-modulus cubic roots u,z,zbar have z*zbar=u*u.
+zsum = s.symbols('zsum')
+cubic_b = -(u+zsum)
+cubic_c = u*zsum+u**2
+assert s.expand(cubic_c+cubic_b*u) == 0
+# The unconditional example's rejected quadratic lies outside all four types.
+assert 36 not in (0,1,2,3)
+assert s.expand((u+1)*(u**2-6*u+1)) == u**3-5*u**2-5*u+1
+ratio = s.symbols('ratio',nonzero=True)
+assert s.cancel(ratio**3/(-1/ratio)) == -ratio**4
+print('PASS: rational-power factor identities, cubic obstruction, and binomial target.')
