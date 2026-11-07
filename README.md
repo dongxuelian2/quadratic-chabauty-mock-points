@@ -58,6 +58,12 @@ Theorem 29 completes the first-height zero classification in every case with fou
 
 These additional zeros are not asserted to lie in the full depth-two set. Full-set conclusions retain the separate rank and local-target assumptions. See [the criterion and proof](proofs/endpoint_bifurcation.md) and scripts/check_endpoint_bifurcation.py.
 
+## Eight scalar extras excluded from full depth two
+
+Theorem30 evaluates the second height on the previously omitted endpoint lifts. Its unit linear term excludes every noncentral second-height zero. Under rank one, a≡3 mod8 and zero second actual target, the full endpoint conclusion now holds throughout a≡4 mod7 and a≡2 mod11.
+
+For the rank-certified curve a=−14974109 at7, the first scalar has twelve zeros, but the second removes all eight extras and the full restricted depth-two set is exactly the four rational endpoints. The [complete proof](proofs/second_height_endpoint_exclusion.md) and independent degree20 checks establish this beyond a first-height candidate calculation.
+
 ## Scope and open questions
 
 The positive membership results concern explicitly defined single-height candidate sets, not general characterizations of the full depth-two Chabauty–Kim set. Theorem 21 separately gives a complete characterization for this specific curve at p=3. The exclusion results do transfer to the full set when the standard coarse target is used, by the known containment detailed in PROOF.md. A second correspondence now excludes the eight-point locus above. The four points (±1,±2√−2) are now excluded from depth two for visible p≥5 by the proved nonmonic refined-target containment. The independent exact prime-3 certificate now covers p=3 as well. The two points (±i,0) pass both earlier scalar height tests but are now excluded at every visible odd prime by an explicit norm-one-torus quotient. A global reference path is constructed using two proper elliptic curves; its local discrepancy is the nonzero Kummer class of a unit built from 1+√2. This covers both split and inert CM primes. Together, all fourteen specified nonrational first-height candidates are excluded at every odd prime whenever locally visible. The general classification of non-Weierstrass candidates remains open.
