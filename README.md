@@ -129,3 +129,7 @@ Theorem 33 strengthens rational rank-one infinitude: infinitely many geometrical
 ## General non-CM depth-two structure
 
 Theorem 34 proves unconditional strict Sym² Selmer vanishing, an isomorphism from relaxed residual classes to their bad-prime restrictions, and exact ordinary/crystalline gluing of the Tate and residual quotients. The resulting full criterion retains joint same-point local images and a compatible global Tate lift. See [proof](proofs/noncm_residual_gluing.md) and [independent audit](verification/noncm_residual_gluing_review.md). The residual discrepancy and surviving joint images remain to be computed; general non-CM membership is not claimed solved.
+
+## Actual exclusions for infinitely many non-CM curves
+
+Theorem 35 excludes all six Weierstrass points and four x=±1 symmetry points, whenever locally visible, for an unconditional infinite rank-two genus-two family at every explicitly eligible odd prime. The key is a distinguished denominator prime with a nonzero first actual target, together with an archimedean argument for the other four Weierstrass points. See [proof](proofs/infinite_weierstrass_exclusion.md), [review](verification/weierstrass_exclusion_review.md), and [checks](scripts/check_weierstrass_exclusion.py). This does not compute the residual Sym² class or classify all other local points.
