@@ -52,3 +52,21 @@ assert s.expand((u+1)*(u**2-6*u+1)) == u**3-5*u**2-5*u+1
 ratio = s.symbols('ratio',nonzero=True)
 assert s.cancel(ratio**3/(-1/ratio)) == -ratio**4
 print('PASS: rational-power factor identities, cubic obstruction, and binomial target.')
+
+# Simultaneous three-torsion: exact parameter elimination and specializations.
+D3 = 3*u**4+4*a*u**3+6*a*u**2+12*u+4*a-a**2
+D3_recip = s.expand(u**4*D3.subs(u,1/u))
+assert s.factor(s.resultant(D3,D3_recip,u)) == (a-15)*(a-3)**10*(a+1)**3*(a+5)**2
+assert s.Poly(s.gcd(D3.subs(a,-5),D3_recip.subs(a,-5)),u).monic().as_expr() == u**2-s.Rational(2,3)*u+1
+assert s.Poly(s.gcd(D3.subs(a,15),D3_recip.subs(a,15)),u).monic().as_expr() == u-1
+q3 = 3*x**4-2*x**2+3
+assert s.discriminant(q3,x) == 2**14*3**2
+assert s.resultant(q3,fm,x) == 2**22
+p = 67
+residue_points = [(xx,yy) for xx in range(p) if int(q3.subs(x,xx)) % p == 0
+                  for yy in range(p) if (yy**2-int(fm.subs(x,xx))) % p == 0]
+assert residue_points == [(6,20),(6,47),(11,21),(11,46),(56,21),(56,46),(61,20),(61,47)]
+for xx,yy in residue_points:
+    assert int(s.diff(q3,x).subs(x,xx)) % p != 0
+    assert 2*yy % p != 0
+print('PASS: simultaneous three-torsion locus, non-Weierstrass certificate, and exact Hensel witness.')
