@@ -1160,7 +1160,21 @@ The proof combines the fully audited local valuation conditions in Zywina's cons
 
 This is an unconditional infinite family satisfying rank and the second-target condition, not an infinite family of proved full-depth-two equalities. Denominator contributions to the first target and global height remain; merely imposing the displayed p-adic neighborhood does not establish the older analytic hypotheses for rational parameters. No infinitude of integral parameters is asserted.
 
-## 26. Boundary of this result
+## 26. General non-CM residual lifting and exact full gluing
+
+**Theorem 34 (residual Selmer localization and joint criterion).** Suppose E_a is geometrically non-CM of rank one, p is good and 1 modulo 4, and R=Sym²(V_pE_a). Newton–Thorne's proved adjoint vanishing and Selmer duality imply H_f^1(Q,R)=0. For a finite set S containing all bad primes and excluding p, localization is an isomorphism
+
+    H_f,S^1(Q,R) -> direct-sum_(q in S) H^1(Q_q,R).
+
+The involution x -> -x provides a canonical reference lift for the common abelian class of W_±=(±i,0). Its two local discrepancies delta_p(W_±) lie in the two-dimensional H_f^1(Q_p,R) and are negatives of one another. The residual quotient criterion is exactly membership in the finite target obtained by transporting all actual bad-prime residual images through the inverse localization map.
+
+Only 2 and odd primes with v_q(a-3)>0 can contribute nonzero ACTUAL residual targets. Multiplicative primes and odd denominator primes have zero local H^1(R); good primes have zero actual image but can have nonzero full H^1(R).
+
+Furthermore U2 is the fiber product of its Tate and residual quotients, in both ordinary and crystalline cohomology here. Full membership is equivalent to one compatible global Tate lift together with joint bad-local pairs arising from the SAME local point, whose residual coordinates transport to delta_p(W). Neither separate scalar target membership nor replacing joint images by products is sufficient without another proof.
+
+See [complete proof and exact quantified criterion](proofs/noncm_residual_gluing.md) and [independent audit](verification/noncm_residual_gluing_review.md). The proof evaluates neither delta_p(i,0), the surviving joint local images, nor the global Tate lift. It therefore does not settle general non-CM membership or establish any new general exclusion.
+
+## 27. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.
 
