@@ -1152,7 +1152,15 @@ The complete proof, including normalized ramified base extension, actual-image a
 
 For rational a in Z_2 with a=3 modulo 8 and positive reduced denominator D prime to p, the global point height is h_p(P)=lambda_p(P)+(1/2)log_p(D). Therefore an integral-parameter proof cannot be extended simply by retaining the old alpha coefficient or assuming its first target is {0}. The second target remains {0} when every positive odd valuation of a+1 is one. These are exact local and global-height statements, not a general full-depth-two classification.
 
-## 25. Boundary of this result
+## 25. An infinite rank-one family with zero second target
+
+**Theorem 33 (unconditional rational infinitude with a local condition).** There are infinitely many rational a in (-1,3), yielding infinitely many geometric genus-two isomorphism classes, with rank E_a(Q)=1, rank J_a(Q)=2, a=3 modulo 8 in Z_2, and every positive odd valuation of a+1 equal to one. For every good odd p their entire second actual local target is therefore Omega*={0}. For any fixed odd p and N>=1 the construction can additionally impose v_p(a+5)>=N, with good reduction at p.
+
+The proof combines the fully audited local valuation conditions in Zywina's construction with Theorem 32. See [complete proof](proofs/infinite_zero_second_target.md), [independent source audit](verification/infinite_second_target_review.md), and [exact algebra checks](scripts/check_infinite_second_target.py).
+
+This is an unconditional infinite family satisfying rank and the second-target condition, not an infinite family of proved full-depth-two equalities. Denominator contributions to the first target and global height remain; merely imposing the displayed p-adic neighborhood does not establish the older analytic hypotheses for rational parameters. No infinitude of integral parameters is asserted.
+
+## 26. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.
 
