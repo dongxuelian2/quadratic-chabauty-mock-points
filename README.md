@@ -52,6 +52,12 @@ Theorem 28 transfers Zywina's existing rank-one specialization theorem to this r
 
 This is not an infinitude theorem for integral parameters or for full depth-two endpoint equalities. Denominator-prime local targets remain a separate issue. See [the proof and source](proofs/rational_rank_infinitude.md).
 
+## Exact four-or-twelve scalar classification
+
+Theorem 29 completes the first-height zero classification in every case with four rational reduction points. At 7 and 11 an explicit p-adic squareclass criterion decides whether there are four or twelve zeros; at 19 there are always four. The proof controls all series terms and includes exact twelve-zero examples.
+
+These additional zeros are not asserted to lie in the full depth-two set. Full-set conclusions retain the separate rank and local-target assumptions. See [the criterion and proof](proofs/endpoint_bifurcation.md) and scripts/check_endpoint_bifurcation.py.
+
 ## Scope and open questions
 
 The positive membership results concern explicitly defined single-height candidate sets, not general characterizations of the full depth-two Chabauty–Kim set. Theorem 21 separately gives a complete characterization for this specific curve at p=3. The exclusion results do transfer to the full set when the standard coarse target is used, by the known containment detailed in PROOF.md. A second correspondence now excludes the eight-point locus above. The four points (±1,±2√−2) are now excluded from depth two for visible p≥5 by the proved nonmonic refined-target containment. The independent exact prime-3 certificate now covers p=3 as well. The two points (±i,0) pass both earlier scalar height tests but are now excluded at every visible odd prime by an explicit norm-one-torus quotient. A global reference path is constructed using two proper elliptic curves; its local discrepancy is the nonzero Kummer class of a unit built from 1+√2. This covers both split and inert CM primes. Together, all fourteen specified nonrational first-height candidates are excluded at every odd prime whenever locally visible. The general classification of non-Weierstrass candidates remains open.
