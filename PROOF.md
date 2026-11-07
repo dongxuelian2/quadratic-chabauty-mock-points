@@ -1201,7 +1201,21 @@ The same stable model proves that an odd prime q is good for C_a exactly when a 
 
 See [complete proof](proofs/odd_bad_residual_images.md), [independent audit](verification/odd_bad_residual_review.md), and [exact checks](scripts/check_odd_bad_residual.py). No dyadic calculation or general full-set equality is asserted.
 
-## 29. Boundary of this result
+## 29. The compatible Tate lift is uniquely determined
+
+**Theorem 37 (residual sufficiency for the integral family).** Suppose a is integral, a=3 modulo8, E_a is geometrically non-CM of rank one, and p is an odd good prime congruent1 modulo4. There is a unique global crystalline U_T lift of the common abelian class of W_±=(±i,0) whose local classes at every bad prime are neutral. Its p-localization equals BOTH j_T,p(W_+) and j_T,p(W_-).
+
+The proof first removes the global central obstruction by Brauer localization, then uses Kummer S-units to construct and uniquely normalize the lift. The two correspondence functionals span the full Tate center. Their arbitrary-torsor height comparison, with the endpoint-basepoint correction retained, proves equality with the local point classes. No scalar sufficiency is assumed.
+
+Every actual residual local value can be represented with neutral Tate coordinate, including at2 by the two independent zero local-height functions. Theorem34's same-point gluing therefore gives the exact equivalence
+
+    W_± in C_a(Q_p)_2 iff delta_p(W_±) in Omega_R,p.
+
+This discharges the previously unresolved Tate-lift existence and joint-compatibility quantifier in THIS integral family. It does not compute the dyadic residual image, global transport Theta_p, or the discrepancy delta_p itself. The exact odd factors of Omega_R,p are supplied by Theorem36.
+
+See [complete proof](proofs/integral_tate_lift.md) and [independent audit](verification/integral_tate_lift_review.md).
+
+## 30. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.
 
