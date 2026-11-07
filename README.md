@@ -44,7 +44,13 @@ Theorem 26 also proves full equality for a=−157469 at p=11. Its first height h
 
 Theorem 27 broadens the four-disk argument to odd a≡4 mod7 excluding 46 mod49, odd a≡2 mod11 excluding 24 mod121, and every odd a divisible by 19. In each locus the first scalar height has only the four endpoint zeros. With a≡3 mod8 and rank one, these are also the full restricted depth-two sets. The excluded lifts are not claimed to fail.
 
-Exact rank certificates give a=−18269 at 11 and a=−17309, −3474245 at 19. Full proof and review accompany the standalone SymPy checker scripts/check_endpoint_families.py. No infinitude or complete general classification is asserted.
+Exact rank certificates give a=−18269 at 11 and a=−17309, −3474245 at 19. Full proof and review accompany the standalone SymPy checker scripts/check_endpoint_families.py. These integral endpoint criteria assert neither infinitude in their parameter loci nor a complete general classification.
+
+## Infinitely many rational rank-two members
+
+Theorem 28 transfers Zywina's existing rank-one specialization theorem to this reciprocal family through an explicit two-isogeny and Möbius change of parameter. It proves infinitely many rational a∈(−1,3) with elliptic rank one and Jacobian rank two, including infinitely many geometric curve isomorphism classes.
+
+This is not an infinitude theorem for integral parameters or for full depth-two endpoint equalities. Denominator-prime local targets remain a separate issue. See [the proof and source](proofs/rational_rank_infinitude.md).
 
 ## Scope and open questions
 
