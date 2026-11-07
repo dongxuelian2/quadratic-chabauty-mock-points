@@ -1,0 +1,1742 @@
+[
+  {
+    "parameter_a": 9,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        164554,
+        0,
+        209157,
+        0,
+        294008
+      ],
+      [
+        0,
+        164554,
+        0,
+        147004,
+        0
+      ],
+      [
+        74035,
+        0,
+        262821,
+        0,
+        17147
+      ],
+      [
+        0,
+        37052,
+        0,
+        206743,
+        0
+      ],
+      [
+        242308,
+        0,
+        118942,
+        0,
+        315228
+      ]
+    ],
+    "system_matrix": [
+      [
+        8282,
+        14027,
+        126243,
+        228995,
+        28054,
+        9633
+      ],
+      [
+        318838,
+        76090,
+        313625,
+        151008,
+        152204,
+        281086
+      ],
+      [
+        110526,
+        270569,
+        333100,
+        268710,
+        219362,
+        30589
+      ],
+      [
+        339157,
+        335920,
+        229112,
+        100790,
+        322972,
+        83343
+      ],
+      [
+        33345,
+        120016,
+        328627,
+        351481,
+        202840,
+        188539
+      ],
+      [
+        240017,
+        111302,
+        208926,
+        309484,
+        307338,
+        21422
+      ]
+    ],
+    "system_rhs": [
+      100893,
+      218660,
+      77064,
+      156397,
+      133838,
+      194980
+    ],
+    "normalized_cross_periods": [
+      287131,
+      9607,
+      223756,
+      15308,
+      18957,
+      104955
+    ],
+    "normalized_target": 287131,
+    "odd_model_target_J": 343239,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 0
+  },
+  {
+    "parameter_a": 22,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        114803,
+        0,
+        39494,
+        0,
+        138606
+      ],
+      [
+        0,
+        114803,
+        0,
+        69303,
+        0
+      ],
+      [
+        196495,
+        0,
+        122226,
+        0,
+        112372
+      ],
+      [
+        0,
+        328317,
+        0,
+        256494,
+        0
+      ],
+      [
+        44825,
+        0,
+        363069,
+        0,
+        134281
+      ]
+    ],
+    "system_matrix": [
+      [
+        58813,
+        245388,
+        200434,
+        119314,
+        119483,
+        280878
+      ],
+      [
+        32344,
+        224563,
+        113841,
+        12883,
+        77857,
+        68679
+      ],
+      [
+        62023,
+        220376,
+        364872,
+        50024,
+        303862,
+        153959
+      ],
+      [
+        252421,
+        265876,
+        102505,
+        260105,
+        262314,
+        360529
+      ],
+      [
+        76505,
+        101556,
+        313066,
+        13117,
+        223718,
+        11609
+      ],
+      [
+        131116,
+        115488,
+        36312,
+        91123,
+        224450,
+        353039
+      ]
+    ],
+    "system_rhs": [
+      160888,
+      121459,
+      174915,
+      293677,
+      178779,
+      35951
+    ],
+    "normalized_cross_periods": [
+      182013,
+      150189,
+      351182,
+      208696,
+      203492,
+      48639
+    ],
+    "normalized_target": 182013,
+    "odd_model_target_J": 38701,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 1
+  },
+  {
+    "parameter_a": 35,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        187577,
+        0,
+        209352,
+        0,
+        298389
+      ],
+      [
+        0,
+        187577,
+        0,
+        334841,
+        0
+      ],
+      [
+        95199,
+        0,
+        347347,
+        0,
+        115323
+      ],
+      [
+        0,
+        175112,
+        0,
+        183720,
+        0
+      ],
+      [
+        92392,
+        0,
+        292518,
+        0,
+        207679
+      ]
+    ],
+    "system_matrix": [
+      [
+        78924,
+        196209,
+        184041,
+        114075,
+        21125,
+        218686
+      ],
+      [
+        194207,
+        284649,
+        309517,
+        92430,
+        198029,
+        270491
+      ],
+      [
+        194012,
+        89570,
+        187422,
+        30251,
+        330395,
+        345943
+      ],
+      [
+        197119,
+        167778,
+        220103,
+        279657,
+        185094,
+        322192
+      ],
+      [
+        229177,
+        245674,
+        30654,
+        73762,
+        257778,
+        21931
+      ],
+      [
+        144571,
+        143841,
+        170264,
+        284446,
+        321716,
+        25387
+      ]
+    ],
+    "system_rhs": [
+      196209,
+      323895,
+      265330,
+      340542,
+      159838,
+      163377
+    ],
+    "normalized_cross_periods": [
+      56615,
+      241761,
+      266851,
+      154161,
+      370620,
+      64317
+    ],
+    "normalized_target": 56615,
+    "odd_model_target_J": 305214,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 2
+  },
+  {
+    "parameter_a": 48,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        84084,
+        0,
+        90389,
+        0,
+        112060
+      ],
+      [
+        0,
+        84084,
+        0,
+        56030,
+        0
+      ],
+      [
+        207350,
+        0,
+        290069,
+        0,
+        135850
+      ],
+      [
+        0,
+        201385,
+        0,
+        287213,
+        0
+      ],
+      [
+        136748,
+        0,
+        302749,
+        0,
+        368450
+      ]
+    ],
+    "system_matrix": [
+      [
+        42251,
+        110357,
+        99034,
+        312143,
+        220714,
+        214123
+      ],
+      [
+        303511,
+        364001,
+        21853,
+        281996,
+        356733,
+        73632
+      ],
+      [
+        359294,
+        308763,
+        75375,
+        42419,
+        17745,
+        202293
+      ],
+      [
+        287495,
+        296478,
+        353418,
+        249523,
+        201162,
+        181441
+      ],
+      [
+        254085,
+        11908,
+        243750,
+        236821,
+        309414,
+        8593
+      ],
+      [
+        177123,
+        312802,
+        173579,
+        30426,
+        3749,
+        73253
+      ]
+    ],
+    "system_rhs": [
+      239811,
+      120731,
+      128609,
+      334341,
+      129743,
+      315815
+    ],
+    "normalized_cross_periods": [
+      249275,
+      910,
+      342056,
+      12084,
+      52380,
+      103655
+    ],
+    "normalized_target": 249275,
+    "odd_model_target_J": 176098,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 3
+  },
+  {
+    "parameter_a": 61,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        48191,
+        0,
+        82459,
+        0,
+        203567
+      ],
+      [
+        0,
+        48191,
+        0,
+        287430,
+        0
+      ],
+      [
+        27638,
+        0,
+        130546,
+        0,
+        369486
+      ],
+      [
+        0,
+        202815,
+        0,
+        323106,
+        0
+      ],
+      [
+        186681,
+        0,
+        303685,
+        0,
+        192573
+      ]
+    ],
+    "system_matrix": [
+      [
+        65235,
+        288821,
+        167310,
+        298285,
+        206349,
+        58474
+      ],
+      [
+        59267,
+        113296,
+        228514,
+        245440,
+        226616,
+        93262
+      ],
+      [
+        296426,
+        194688,
+        46307,
+        33800,
+        198575,
+        318396
+      ],
+      [
+        9451,
+        335608,
+        216840,
+        174097,
+        20514,
+        179946
+      ],
+      [
+        85319,
+        59358,
+        1053,
+        205699,
+        183093,
+        360464
+      ],
+      [
+        154074,
+        281836,
+        66030,
+        269379,
+        360261,
+        160496
+      ]
+    ],
+    "system_rhs": [
+      181844,
+      206219,
+      87711,
+      340984,
+      26978,
+      288944
+    ],
+    "normalized_cross_periods": [
+      298623,
+      172419,
+      319748,
+      114212,
+      265983,
+      289685
+    ],
+    "normalized_target": 298623,
+    "odd_model_target_J": 112723,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 4
+  },
+  {
+    "parameter_a": 74,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        123838,
+        0,
+        128440,
+        0,
+        254345
+      ],
+      [
+        0,
+        123838,
+        0,
+        312819,
+        0
+      ],
+      [
+        335998,
+        0,
+        134615,
+        0,
+        354861
+      ],
+      [
+        0,
+        260691,
+        0,
+        247459,
+        0
+      ],
+      [
+        136735,
+        0,
+        91005,
+        0,
+        112857
+      ]
+    ],
+    "system_matrix": [
+      [
+        35829,
+        347126,
+        68107,
+        257049,
+        322959,
+        57122
+      ],
+      [
+        102999,
+        211407,
+        50700,
+        160719,
+        51545,
+        144833
+      ],
+      [
+        1014,
+        177957,
+        232038,
+        65910,
+        220376,
+        61516
+      ],
+      [
+        77012,
+        140166,
+        210223,
+        343383,
+        67171,
+        216645
+      ],
+      [
+        199628,
+        18928,
+        350532,
+        55094,
+        225941,
+        209729
+      ],
+      [
+        29287,
+        367311,
+        324366,
+        28034,
+        81840,
+        65219
+      ]
+    ],
+    "system_rhs": [
+      140946,
+      75049,
+      265668,
+      83649,
+      47076,
+      306858
+    ],
+    "normalized_cross_periods": [
+      57460,
+      301509,
+      57122,
+      221072,
+      172175,
+      174219
+    ],
+    "normalized_target": 57460,
+    "odd_model_target_J": 148044,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 5
+  },
+  {
+    "parameter_a": 87,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        155038,
+        0,
+        85527,
+        0,
+        117195
+      ],
+      [
+        0,
+        155038,
+        0,
+        244244,
+        0
+      ],
+      [
+        227266,
+        0,
+        282503,
+        0,
+        87581
+      ],
+      [
+        0,
+        370619,
+        0,
+        216259,
+        0
+      ],
+      [
+        138503,
+        0,
+        88730,
+        0,
+        305062
+      ]
+    ],
+    "system_matrix": [
+      [
+        356084,
+        329212,
+        51883,
+        230178,
+        287131,
+        286962
+      ],
+      [
+        162279,
+        137645,
+        94783,
+        348595,
+        275314,
+        357968
+      ],
+      [
+        97006,
+        317889,
+        136046,
+        314509,
+        173225,
+        169845
+      ],
+      [
+        204568,
+        107809,
+        305006,
+        219116,
+        365300,
+        219037
+      ],
+      [
+        131248,
+        349791,
+        255203,
+        230997,
+        213864,
+        30940
+      ],
+      [
+        156479,
+        57326,
+        25847,
+        132463,
+        286759,
+        51062
+      ]
+    ],
+    "system_rhs": [
+      92950,
+      250107,
+      214292,
+      56661,
+      271326,
+      279480
+    ],
+    "normalized_cross_periods": [
+      64051,
+      219011,
+      268203,
+      264557,
+      45581,
+      223021
+    ],
+    "normalized_target": 64051,
+    "odd_model_target_J": 257894,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 6
+  },
+  {
+    "parameter_a": 100,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        157170,
+        0,
+        96525,
+        0,
+        187577
+      ],
+      [
+        0,
+        157170,
+        0,
+        279435,
+        0
+      ],
+      [
+        81523,
+        0,
+        268827,
+        0,
+        20228
+      ],
+      [
+        0,
+        71229,
+        0,
+        214127,
+        0
+      ],
+      [
+        229334,
+        0,
+        235344,
+        0,
+        316606
+      ]
+    ],
+    "system_matrix": [
+      [
+        85684,
+        336141,
+        197730,
+        116610,
+        300989,
+        225108
+      ],
+      [
+        164606,
+        28224,
+        224549,
+        158756,
+        56472,
+        62582
+      ],
+      [
+        351520,
+        302510,
+        118639,
+        327015,
+        147199,
+        153452
+      ],
+      [
+        220753,
+        64974,
+        44213,
+        291227,
+        167921,
+        143182
+      ],
+      [
+        328367,
+        111631,
+        306059,
+        65520,
+        94134,
+        155844
+      ],
+      [
+        175342,
+        239469,
+        189881,
+        237737,
+        65460,
+        124616
+      ]
+    ],
+    "system_rhs": [
+      242177,
+      54717,
+      28054,
+      40320,
+      295480,
+      173855
+    ],
+    "normalized_cross_periods": [
+      56953,
+      41366,
+      296088,
+      347926,
+      160826,
+      330635
+    ],
+    "normalized_target": 56953,
+    "odd_model_target_J": 360984,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 7
+  },
+  {
+    "parameter_a": 113,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        316979,
+        0,
+        218556,
+        0,
+        289731
+      ],
+      [
+        0,
+        316979,
+        0,
+        330512,
+        0
+      ],
+      [
+        78923,
+        0,
+        245180,
+        0,
+        319774
+      ],
+      [
+        0,
+        300640,
+        0,
+        54318,
+        0
+      ],
+      [
+        332333,
+        0,
+        355087,
+        0,
+        180444
+      ]
+    ],
+    "system_matrix": [
+      [
+        283583,
+        154804,
+        42081,
+        43771,
+        309608,
+        234065
+      ],
+      [
+        237406,
+        304968,
+        303784,
+        197574,
+        238667,
+        16640
+      ],
+      [
+        46137,
+        191139,
+        283076,
+        136383,
+        232375,
+        150748
+      ],
+      [
+        68445,
+        9464,
+        27625,
+        221378,
+        184665,
+        344994
+      ],
+      [
+        296660,
+        306280,
+        123019,
+        4654,
+        356682,
+        30797
+      ],
+      [
+        125422,
+        230473,
+        65094,
+        313098,
+        193484,
+        35423
+      ]
+    ],
+    "system_rhs": [
+      278850,
+      211692,
+      344084,
+      214780,
+      343632,
+      14150
+    ],
+    "normalized_cross_periods": [
+      88894,
+      170625,
+      340704,
+      3218,
+      49949,
+      191678
+    ],
+    "normalized_target": 88894,
+    "odd_model_target_J": 318903,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 8
+  },
+  {
+    "parameter_a": 126,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        249990,
+        0,
+        51766,
+        0,
+        47970
+      ],
+      [
+        0,
+        249990,
+        0,
+        23985,
+        0
+      ],
+      [
+        199693,
+        0,
+        77545,
+        0,
+        124995
+      ],
+      [
+        0,
+        54823,
+        0,
+        121307,
+        0
+      ],
+      [
+        256361,
+        0,
+        157955,
+        0,
+        43775
+      ]
+    ],
+    "system_matrix": [
+      [
+        295075,
+        507,
+        63882,
+        367575,
+        1014,
+        76557
+      ],
+      [
+        336739,
+        190139,
+        196274,
+        100347,
+        9009,
+        178399
+      ],
+      [
+        204659,
+        43095,
+        104274,
+        261105,
+        147537,
+        185900
+      ],
+      [
+        176059,
+        110448,
+        55315,
+        328134,
+        354016,
+        95069
+      ],
+      [
+        84461,
+        164788,
+        211393,
+        123097,
+        177633,
+        73229
+      ],
+      [
+        74826,
+        3974,
+        99674,
+        270666,
+        161127,
+        18562
+      ]
+    ],
+    "system_rhs": [
+      121680,
+      244283,
+      114413,
+      46170,
+      154339,
+      252947
+    ],
+    "normalized_cross_periods": [
+      155480,
+      180570,
+      344929,
+      47717,
+      358868,
+      43426
+    ],
+    "normalized_target": 155480,
+    "odd_model_target_J": 307411,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 9
+  },
+  {
+    "parameter_a": 139,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        114387,
+        0,
+        224497,
+        0,
+        559
+      ],
+      [
+        0,
+        114387,
+        0,
+        185926,
+        0
+      ],
+      [
+        224133,
+        0,
+        88881,
+        0,
+        145522
+      ],
+      [
+        0,
+        100531,
+        0,
+        256910,
+        0
+      ],
+      [
+        67328,
+        0,
+        353579,
+        0,
+        168042
+      ]
+    ],
+    "system_matrix": [
+      [
+        350845,
+        145678,
+        199420,
+        187252,
+        291356,
+        29406
+      ],
+      [
+        247299,
+        305488,
+        137098,
+        16471,
+        239707,
+        77701
+      ],
+      [
+        251472,
+        288990,
+        285273,
+        220038,
+        354055,
+        168831
+      ],
+      [
+        343668,
+        337168,
+        241527,
+        101791,
+        214604,
+        177736
+      ],
+      [
+        282763,
+        117767,
+        105417,
+        124254,
+        18357,
+        186472
+      ],
+      [
+        120222,
+        190511,
+        84906,
+        336732,
+        29905,
+        52063
+      ]
+    ],
+    "system_rhs": [
+      289159,
+      332644,
+      318903,
+      143059,
+      94500,
+      286071
+    ],
+    "normalized_cross_periods": [
+      195195,
+      301886,
+      365885,
+      356194,
+      248329,
+      294521
+    ],
+    "normalized_target": 195195,
+    "odd_model_target_J": 73853,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 10
+  },
+  {
+    "parameter_a": 152,
+    "p": 13,
+    "term_cutoff": 12,
+    "coefficient_precision": 24,
+    "theoretical_degree_bound": 4572,
+    "effective_degree": 1474,
+    "horizontal_scale_exponent": 2,
+    "integration_scale_exponent_used": 2,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 371293,
+    "frobenius_matrix": [
+      [
+        239720,
+        0,
+        165529,
+        0,
+        114543
+      ],
+      [
+        0,
+        239720,
+        0,
+        242918,
+        0
+      ],
+      [
+        103909,
+        0,
+        316537,
+        0,
+        62790
+      ],
+      [
+        0,
+        4955,
+        0,
+        131577,
+        0
+      ],
+      [
+        88193,
+        0,
+        52174,
+        0,
+        186346
+      ]
+    ],
+    "system_matrix": [
+      [
+        81797,
+        177281,
+        213616,
+        315692,
+        354562,
+        140946
+      ],
+      [
+        325000,
+        73204,
+        361335,
+        238147,
+        146432,
+        301145
+      ],
+      [
+        239304,
+        245557,
+        158185,
+        17576,
+        199420,
+        266513
+      ],
+      [
+        114296,
+        87646,
+        272090,
+        60841,
+        19084,
+        292006
+      ],
+      [
+        168753,
+        310219,
+        224718,
+        82823,
+        140297,
+        131053
+      ],
+      [
+        15546,
+        221061,
+        269051,
+        309172,
+        61261,
+        228200
+      ]
+    ],
+    "system_rhs": [
+      43095,
+      199953,
+      252317,
+      28698,
+      45477,
+      309055
+    ],
+    "normalized_cross_periods": [
+      89401,
+      308282,
+      203645,
+      232200,
+      364250,
+      39799
+    ],
+    "normalized_target": 89401,
+    "odd_model_target_J": 51038,
+    "system_determinant_modp": 11,
+    "status": "Finite arithmetic certificate; analytic bounds are proved in proofs/universal_thirteen_adic_residual.md.",
+    "b": 11
+  }
+]
