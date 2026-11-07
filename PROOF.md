@@ -1016,11 +1016,47 @@ Every displayed point is rational and hence satisfies the global Selmer conditio
 
 Independent audits are included in [verification/prime3_independent_audit.md](verification/prime3_independent_audit.md) and [verification/endpoint_basepoint_independent_audit.md](verification/endpoint_basepoint_independent_audit.md). Exact standard-library verification scripts are `scripts/check_prime3_height.py` and `scripts/check_prime3_six_multiple.py`; the latter independently reproduces the height residue through 6P. Finite checks corroborate, and do not replace, the proved all-orders bounds.
 
-## 17. Boundary of this result
+## 17. A reciprocal-family theorem and another complete example
+
+**Theorem 22 (sufficient family criterion).** Let
+\[
+ C_a:y^2=x^6+a x^4+a x^2+1,\qquad a\equiv-5\pmod{5832},
+\]
+and put E_a:Y²=X³+(a−3)X²−(a−3)X. Assume E_a(Q) has rank one. For each odd prime q dividing a+1 at which 2 is a quadratic residue, put m_q=v_q(a+1), and assume
+\[
+ v_3(m_q)<v_3(q^2-1).
+\]
+Then, in the stated Mordell–Weil-restricted, actual-local-image convention,
+\[
+ C_a(\mathbf Q_3)_2=C_a(\mathbf Q)
+ =\{(0,1),(0,-1),\infty_+,\infty_-\}.
+\]
+A simpler sufficient arithmetic condition is that none of the odd-prime multiplicities in a+1 is divisible by 3. In particular, a squarefree odd part of |a+1| suffices. Rank one remains a separate hypothesis; no infinitude of rank-one parameters is asserted.
+
+**Proof.** [The general analytic criterion](proofs/general_prime3_criterion.md) proves all eight disk estimates uniformly for a≡−5 modulo 3⁶, using compatible integral complements and quantitative formal-series bounds. [The exact local-target calculation](proofs/reciprocal_local_targets.md) proves that the first actual target is {0} and, under the displayed prime-factor test, the second target is contained in 3Z₃. The first height isolates the four rational endpoints, while the second height is a unit on the other four residue disks. The endpoint-basepoint containment proved in Section 16 supplies the full-depth-two inclusion. Rational-point containment supplies the reverse inclusion. ∎
+
+The local-target result is broader than this sufficient equality theorem. At an odd q dividing a+1, with m=v_q(a+1), its second coefficient image is exactly:
+
+- If 2 is a square modulo q: {0} together with ±2k(m−k)/m for 1≤k≤floor(m/2).
+- If 2 is a nonsquare and m is odd: {0}.
+- If 2 is a nonsquare and m is even: {0,±m/2}.
+
+Each coefficient multiplies logₚ(q). The displayed prime-factor condition is necessary and sufficient for the stronger target containment Ω′⊆3Z₃ in this progression; it is not asserted necessary for full-depth-two equality. For example a=23323 lies in the analytic progression but has the target unit −(4/3)log₃7. This is an obstruction to that target-containment test, not a counterexample to full-depth-two equality.
+
+**Corollary 23 (a second fully certified curve).** The theorem applies unconditionally to a=−157469. Its elliptic quotient has rank one by exact two-isogeny descent: the two descent images have cardinality at most 2 and 4, and the nonzero formal logarithm proves rank at least one. Also a+1=−4·39367, with 39367 prime, so both actual targets are zero. Thus
+\[
+ C_{-157469}(\mathbf Q_3)_2=C_{-157469}(\mathbf Q)
+ =\{(0,1),(0,-1),\infty_+,\infty_-\}.
+\]
+The Jacobian has rational rank two. Full [rank proof](proofs/rank_one_parameter_157469.md), [finite obstruction list](verification/rank_one_obstructions.txt), and [independent audit](verification/general_family_independent_audit.md) are supplied. The independent checker re-tests all primitive residue pairs rather than reusing the original two-chart enumeration.
+
+This is a conditional family theorem with two fully verified members, not a classification of every curve or prime. Exact checks are `scripts/check_general_prime3.py`, `scripts/check_rank_one_parameter.py`, and `scripts/check_rank_one_independent.py`.
+
+## 18. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. It neither proves that infinitely many parameters have rank one nor classifies all non-Weierstrass candidates.
 
-Sections 8, 11, and 13 transfer exclusions to the full depth-two set in the stated Selmer convention: all eight points (17) are excluded, and so are the four points with x=±1 at their visible primes p≥5. Section 15 also excludes the pair \(\pm i,0\) at every odd prime where it is visible. Thus, for \(p\ge5\), all fourteen specified nonrational points that survive the first height test (the pair, the four points with x=±1, and the eight three-torsion candidates) are excluded from the full depth-two set whenever locally visible. This does not classify all other points of the full set or solve ICM Problem 6.4 in general. Section 16 closes the p=3 boundary and gives a complete full-depth-two calculation for this curve at p=3. It does not classify the full set at other primes or for general curves.
+Sections 8, 11, and 13 transfer exclusions to the full depth-two set in the stated Selmer convention: all eight points (17) are excluded, and so are the four points with x=±1 at their visible primes p≥5. Section 15 also excludes the pair \(\pm i,0\) at every odd prime where it is visible. Thus, for \(p\ge5\), all fourteen specified nonrational points that survive the first height test (the pair, the four points with x=±1, and the eight three-torsion candidates) are excluded from the full depth-two set whenever locally visible. This does not classify all other points of the full set or solve ICM Problem 6.4 in general. Section 16 closes the p=3 boundary and gives a complete full-depth-two calculation for this curve at p=3. Section 17 supplies an explicit sufficient reciprocal-family criterion and a second fully certified member. These results do not classify the full set at other primes or for general curves, nor prove infinitely many rank-one parameters.
 
 The exact examples themselves were already detected in [5]. The contribution of the arguments above is an exact algebraic membership test, an all-prime exclusion criterion, and a symmetry proof covering a parameter family. No priority claim is made beyond the literature checked here.
 
@@ -1041,4 +1077,5 @@ The exact examples themselves were already detected in [5]. The contribution of 
 
 11. J. S. Balakrishnan and N. Dogra, *Quadratic Chabauty and Rational Points II: Generalised Height Functions on Selmer Varieties*, especially Section 2 and the proof of Proposition 2.2. https://arxiv.org/abs/1705.00401
 12. L. Alexander Betts, *The motivic anabelian geometry of local heights on abelian varieties*, Section 3, equation (3.0.1). https://arxiv.org/abs/1706.04850
+
 
