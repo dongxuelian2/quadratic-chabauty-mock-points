@@ -60,9 +60,15 @@ These additional zeros are not asserted to lie in the full depth-two set. Full-s
 
 ## Eight scalar extras excluded from full depth two
 
-Theorem30 evaluates the second height on the previously omitted endpoint lifts. Its unit linear term excludes every noncentral second-height zero. Under rank one, a≡3 mod8 and zero second actual target, the full endpoint conclusion now holds throughout a≡4 mod7 and a≡2 mod11.
+Theorem 30 evaluates the second height on the previously omitted endpoint lifts. Its unit linear term excludes every noncentral second-height zero. Under rank one, a≡3 mod8 and zero second actual target, the full endpoint conclusion now holds throughout a≡4 mod7 and a≡2 mod11.
 
 For the rank-certified curve a=−14974109 at7, the first scalar has twelve zeros, but the second removes all eight extras and the full restricted depth-two set is exactly the four rational endpoints. The [complete proof](proofs/second_height_endpoint_exclusion.md) and independent degree20 checks establish this beyond a first-height candidate calculation.
+
+## A second non-scalar CM obstruction
+
+Theorem 31 proves that the locally visible pair (±i,0) on a=15 is excluded from full depth two at every p≡1 mod4, despite vanishing in both earlier scalar expressions. An explicit norm-one-torus quotient detects the nonzero Kummer class of −7+4sqrt(3).
+
+The proof includes a rank certificate, exact degree-three CM map, complete fiber-divisor calculation and the corrected proper-reference sign. It treats both split and inert CM primes. This is a second unconditional example, not a general non-CM classification. See [the proof](proofs/cm15_torus_exclusion.md).
 
 ## Scope and open questions
 
