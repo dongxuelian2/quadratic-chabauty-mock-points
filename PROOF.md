@@ -1174,7 +1174,19 @@ Furthermore U2 is the fiber product of its Tate and residual quotients, in both 
 
 See [complete proof and exact quantified criterion](proofs/noncm_residual_gluing.md) and [independent audit](verification/noncm_residual_gluing_review.md). The proof evaluates neither delta_p(i,0), the surviving joint local images, nor the global Tate lift. It therefore does not settle general non-CM membership or establish any new general exclusion.
 
-## 27. Boundary of this result
+## 27. Actual exclusions in an infinite non-CM family
+
+**Theorem 35 (denominator obstruction and infinite exclusions).** For rational a=M/D in lowest terms, D>0, the first-height actual-target containment extends by clearing denominators and using the true global height. Call an odd prime eligible when it does not divide D(M-3D)(M+D).
+
+Assume a=3 modulo 8 in Z_2 and rank E_a(Q)=1. The visible points (±i,0) pass the first-height test exactly when every odd denominator prime q satisfies the zero-attainment test of Theorem 32. In particular, a prime q=3 modulo 4 with odd denominator multiplicity excludes both points from full depth two. The same obstruction excludes every visible point (±1,±sqrt(2(a+1))), since its first scalar also vanishes. Cancellation between different primes cannot rescue these points: prime logarithms are Q-linearly independent.
+
+For any nonintegral rational a in (-1,3), the four remaining quartic Weierstrass points fail every actual first-height target whenever visible. Indeed their squared x-coordinates have complex absolute value one; a candidate logarithmic relation would make their trace 1-a a rational algebraic integer.
+
+Taking Zywina's construction with source quadratic extension Q(i) gives infinitely many geometrically different rational parameters in (-1,3), with rank E_a=1 and rank J_a=2, whose distinguished denominator prime is 3 modulo 4 with multiplicity one. Its negative j-valuation also proves geometric non-CM. At EVERY eligible odd prime, all locally visible points in the ten-point geometric packet (six Weierstrass points and the four x=±1 points) are absent from the full restricted depth-two set.
+
+See [complete proof](proofs/infinite_weierstrass_exclusion.md), [independent review](verification/weierstrass_exclusion_review.md), and [exact checks](scripts/check_weierstrass_exclusion.py). This is an actual infinite-family exclusion theorem, not an evaluation of the Sym² discrepancy or a full classification of non-Weierstrass members. No endpoint-only equality for an infinite family is claimed.
+
+## 28. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.
 
