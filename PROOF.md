@@ -1100,11 +1100,19 @@ The proof factors the endpoint identity by alpha, permitting arbitrary negative 
 
 The previously proved rank patterns certify a=−18269 at 11 and a=−17309, −3474245 at 19; a=−605 at 7 is retained. These arithmetic certificates do not establish infinitude. The complete proof, review and standalone exact script are in proofs/uniform_endpoint_families.md, verification/endpoint_families_review.md and scripts/check_endpoint_families.py. The general classification remains open.
 
-## 20. Boundary of this result
+## 20. Unconditional infinitude for rational parameters
 
-The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. It neither proves that infinitely many parameters have rank one nor classifies all non-Weierstrass candidates.
+**Theorem 28.** There are infinitely many a∈Q∩(−1,3) for which E_a(Q) has rank one and Jac(C_a)(Q) has rank two. The resulting genus-two curves include infinitely many geometric isomorphism classes.
 
-Sections 8, 11, and 13 transfer exclusions to the full depth-two set in the stated Selmer convention: all eight points (17) are excluded, and so are the four points with x=±1 at their visible primes p≥5. Section 15 also excludes the pair \(\pm i,0\) at every odd prime where it is visible. Thus, for \(p\ge5\), all fourteen specified nonrational points that survive the first height test (the pair, the four points with x=±1, and the eight three-torsion candidates) are excluded from the full depth-two set whenever locally visible. This does not classify all other points of the full set or solve ICM Problem 6.4 in general. Section 16 closes the p=3 boundary and gives a complete full-depth-two calculation for this curve at p=3. Sections 17–18 supply explicit sufficient reciprocal-family criteria, arithmetic rank patterns, further certified members, and results at primes7 and11. These results do not classify the full set at other primes or for general curves, nor prove infinitely many rank-one parameters.
+This is an explicit transfer of Zywina's existing infinitude theorem, not an infinitude assertion about the earlier simultaneous-prime patterns. With t∈(0,1), set A=−8t/(t+1), a=A+3 and s=(t+1)/2. Scaling the two-isogenous curve E'_A by (u,v)=(s²X,s³Y) gives exactly the family used in Zywina, arXiv:2505.16960v1, Theorem 1.5 and Section 4. Rank is preserved under isogeny. The two independent elliptic quotient differentials give Jac(C_a) isogenous to E_a².
+
+The [complete proof](proofs/rational_rank_infinitude.md) verifies the source specialization statement, inverse parameter, smoothness and infinitely many curve isomorphism classes. An exact script and independent review accompany it. This does not establish infinitely many integral parameters or infinitely many full depth-two endpoint equalities; denominator primes require separate local analysis.
+
+## 21. Boundary of this result
+
+The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.
+
+Sections 8, 11, and 13 transfer exclusions to the full depth-two set in the stated Selmer convention: all eight points (17) are excluded, and so are the four points with x=±1 at their visible primes p≥5. Section 15 also excludes the pair \(\pm i,0\) at every odd prime where it is visible. Thus, for \(p\ge5\), all fourteen specified nonrational points that survive the first height test (the pair, the four points with x=±1, and the eight three-torsion candidates) are excluded from the full depth-two set whenever locally visible. This does not classify all other points of the full set or solve ICM Problem 6.4 in general. Section 16 closes the p=3 boundary and gives a complete full-depth-two calculation for this curve at p=3. Sections 17–18 supply explicit sufficient reciprocal-family criteria, arithmetic rank patterns, further certified members, and results at primes7 and11. These integral-family criteria do not classify the full set at all primes or for general curves, and do not prove infinitude within their integer parameter loci. Theorem 28 supplies an unconditional infinitude statement for rational rank-one parameters, without a full-depth-two conclusion.
 
 The exact examples themselves were already detected in [5]. The contribution of the arguments above is an exact algebraic membership test, an all-prime exclusion criterion, and a symmetry proof covering a parameter family. No priority claim is made beyond the literature checked here.
 
@@ -1128,3 +1136,5 @@ The exact examples themselves were already detected in [5]. The contribution of 
 
 
 
+
+13. D. Zywina, *Rank one elliptic curves and rank stability*, arXiv:2505.16960v1 (2025), Section 1.1, Theorem 1.5 and Section 4. https://arxiv.org/abs/2505.16960
