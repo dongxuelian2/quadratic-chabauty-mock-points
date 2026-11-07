@@ -1,0 +1,42 @@
+Uniform 2-adic obstructions: exhaustive residue checks PASS.
+LINEAR: p=6379, q=51031, a=-204125; primes certified by trial division.
+  Descent images: [1, 12758], [-51031, -12758, 1, 651053498]; rank = 1.
+a=-204125: ell/3=h=9alpha=2, K=C=1 mod3; both zeta valuations=-1: PASS
+  a+1=-4q; both actual targets are {0}; full depth-two equality certified.
+LINEAR: p=12211, q=97687, a=-390749; primes certified by trial division.
+  Descent images: [1, 24422], [-97687, -24422, 1, 2385711914]; rank = 1.
+a=-390749: ell/3=h=9alpha=2, K=C=1 mod3; both zeta valuations=-1: PASS
+  a+1=-4q; both actual targets are {0}; full depth-two equality certified.
+LINEAR: p=19501, q=156007, a=-624029; primes certified by trial division.
+  Descent images: [1, 39002], [-156007, -39002, 1, 6084585014]; rank = 1.
+a=-624029: ell/3=h=9alpha=2, K=C=1 mod3; both zeta valuations=-1: PASS
+  a+1=-4q; both actual targets are {0}; full depth-two equality certified.
+LINEAR: p=48661, q=389287, a=-1557149; primes certified by trial division.
+  Descent images: [1, 97322], [-389287, -97322, 1, 37886189414]; rank = 1.
+a=-1557149: ell/3=h=9alpha=2, K=C=1 mod3; both zeta valuations=-1: PASS
+  a+1=-4q; both actual targets are {0}; full depth-two equality certified.
+LINEAR: p=159469, q=1275751, a=-5103005; primes certified by trial division.
+  Descent images: [1, 318938], [-1275751, -318938, 1, 406885472438]; rank = 1.
+a=-5103005: ell/3=h=9alpha=2, K=C=1 mod3; both zeta valuations=-1: PASS
+  a+1=-4q; both actual targets are {0}; full depth-two equality certified.
+QUADRATIC: n=2915, factors={5: 1, 11: 1, 53: 1}, D=16994449, a=-67977797; primes certified.
+  Distinguished prime r=11; descent images [1, 2], [-16994449, -2, 1, 33988898]; rank = 1.
+a=-67977797: ell/3=h=9alpha=2, K=C=1 mod3; both zeta valuations=-1: PASS
+  a+1=-4D; both actual targets are {0}; full depth-two equality certified.
+QUADRATIC: n=8747, factors={8747: 1}, D=153020017, a=-612080069; primes certified.
+  Distinguished prime r=8747; descent images [1, 2], [-153020017, -2, 1, 306040034]; rank = 1.
+a=-612080069: ell/3=h=9alpha=2, K=C=1 mod3; both zeta valuations=-1: PASS
+  a+1=-4D; both actual targets are {0}; full depth-two equality certified.
+QUADRATIC: n=11663, factors={107: 1, 109: 1}, D=272051137, a=-1088204549; primes certified.
+  Distinguished prime r=107; descent images [1, 2], [-272051137, -2, 1, 544102274]; rank = 1.
+a=-1088204549: ell/3=h=9alpha=2, K=C=1 mod3; both zeta valuations=-1: PASS
+  a+1=-4D; both actual targets are {0}; full depth-two equality certified.
+QUADRATIC: n=29159, factors={13: 1, 2243: 1}, D=1700494561, a=-6801978245; primes certified.
+  Distinguished prime r=2243; descent images [1, 2], [-1700494561, -2, 1, 3400989122]; rank = 1.
+a=-6801978245: ell/3=h=9alpha=2, K=C=1 mod3; both zeta valuations=-1: PASS
+  a+1=-4D; both actual targets are {0}; full depth-two equality certified.
+QUADRATIC: n=32075, factors={5: 2, 1283: 1}, D=2057611249, a=-8230444997; primes certified.
+  Distinguished prime r=1283; descent images [1, 2], [-2057611249, -2, 1, 4115222498]; rank = 1.
+a=-8230444997: ell/3=h=9alpha=2, K=C=1 mod3; both zeta valuations=-1: PASS
+  a+1=-4D; both actual targets are {0}; full depth-two equality certified.
+PASS: ten new parameters certified, with no infinitude assertion.
