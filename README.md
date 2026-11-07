@@ -34,6 +34,12 @@ Theorem 22 extends the p=3 argument to C_a:y²=x⁶+a x⁴+a x²+1 with a≡−5
 
 Theorem 23 verifies every hypothesis for a=−157469, proving another exact equality C_a(Q₃)₂=C_a(Q)={(0,±1),∞±}. The rank certificate is elementary two-isogeny descent, with a separate exhaustive primitive-pair checker. The family theorem does not assert infinitely many rank-one parameters or solve the general classification problem.
 
+## Rank certificates and primes 7 and 11
+
+Theorem 24 replaces the rank assumption on two explicit subfamilies by prime-factor and congruence tests, with ten exact examples. It makes no infinitude claim. Theorem 25 proves first-height isolation in two p=7 parameter neighborhoods, yielding full restricted depth-two equality once rank one and the stated mod 8 condition hold. Verified members include a=−5, −2033309 and −605; no a+1 multiplicity condition is needed at 7.
+
+Theorem 26 also proves full equality for a=−157469 at p=11. Its first height has eight zeros, and the second removes the four nonrational centers. All proofs have independent audits and full-series bounds. The small-disk supplement precisely limits the present method; it is not a classification at every prime.
+
 ## Scope and open questions
 
 The positive membership results concern explicitly defined single-height candidate sets, not general characterizations of the full depth-two Chabauty–Kim set. Theorem 21 separately gives a complete characterization for this specific curve at p=3. The exclusion results do transfer to the full set when the standard coarse target is used, by the known containment detailed in PROOF.md. A second correspondence now excludes the eight-point locus above. The four points (±1,±2√−2) are now excluded from depth two for visible p≥5 by the proved nonmonic refined-target containment. The independent exact prime-3 certificate now covers p=3 as well. The two points (±i,0) pass both earlier scalar height tests but are now excluded at every visible odd prime by an explicit norm-one-torus quotient. A global reference path is constructed using two proper elliptic curves; its local discrepancy is the nonzero Kummer class of a unit built from 1+√2. This covers both split and inert CM primes. Together, all fourteen specified nonrational first-height candidates are excluded at every odd prime whenever locally visible. The general classification of non-Weierstrass candidates remains open.
@@ -68,3 +74,18 @@ python scripts/check_rank_one_independent.py
 ```
 
 The rank checker reads the included `verification/rank_one_obstructions.txt`. The general analytic checks alone do not certify rank or actual local targets; those are separate proofs.
+
+
+Further exact checks (standard library only):
+
+```sh
+python scripts/check_rank_patterns.py
+python scripts/check_rank_patterns_independent.py
+python scripts/check_prime7.py
+python scripts/check_prime7_independent.py
+python scripts/check_prime7_four_disks.py
+python scripts/check_prime11.py
+python scripts/check_small_disks.py
+```
+
+The scripts supplement the proofs; finite residues alone are not used to assert analytic identities.
