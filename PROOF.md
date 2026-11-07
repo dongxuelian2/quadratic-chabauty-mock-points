@@ -329,11 +329,92 @@ For the specialization (11),
 \]
 The linear factor has \(V=-1\) and hence target vector zero. The quadratic has \(b^2/c=36\), so it is excluded for every target, recovering the four excluded Weierstrass points without algebraic-unit computations. More generally, (13) is a complete classification of the Weierstrass part of the specified single-height set using factorization and valuations over \(\mathbb Q\). It gives no additional conclusion about non-Weierstrass points or full depth-two Selmer conditions.
 
-## 7. Boundary of this result
+## 7. Simultaneous three-torsion and eight further non-Weierstrass candidates
+
+**Lemma 9.** In the setup of Section 1, let \(z=(x,y)\in C(\mathbb Q_p)\) with \(xy\ne0\). If both \(\phi_1(z)\) and \(\phi_2(z)\) have exact order three, then
+\[
+ \rho_p(z)=\frac23\log_p(a_6/a_0).
+ \tag{16}
+\]
+
+**Proof.** For an order-three point \(P=(X,Y)\), \(2P=-P\). Evenness of the local height and the duplication identity (5) give
+\[
+ 3\lambda_p(P)=2\log_p(2Y).
+\]
+The elliptic logarithms of both images of \(z\) vanish. Their \(Y\)-coordinates have ratio \(a_6x^3/a_0\); hence
+\[
+ \rho_p(z)=\frac23\log_p(a_6x^3/a_0)-2\log_px
+           =\frac23\log_p(a_6/a_0).
+\]
+No finite-precision equality or limiting calculation is used. ∎
+
+**Theorem 10 (complete simultaneous-three-torsion locus in the reciprocal family).** On the smooth family \(C_a\) of (9), over \(\overline{\mathbb Q}\), the finite points with \(xy\ne0\) whose two elliptic images have exact order three exist precisely when \(a=-5\) or \(a=15\). They are:
+
+- At \(a=-5\), the eight points
+\[
+ 3x^4-2x^2+3=0,\qquad y^2=x^6-5x^4-5x^2+1.
+ \tag{17}
+\]
+- At \(a=15\), the four points \(x=\pm1,\ y=\pm4\sqrt2\).
+
+At every eligible prime where these points are locally visible, \(\rho_p=0\). If the common elliptic quotient has rank one, they pass both targets in Theorem 4. For \(a=-5\) this rank hypothesis is already proved in Corollary 5, so (17) gives eight unconditional algebraic non-Weierstrass candidates, distinct from the four with \(x=\pm1\).
+
+**Proof.** The three-division polynomial of \(E_a\) is
+\[
+ D_a(T)=3T^4+4aT^3+6aT^2+12T+4a-a^2.
+\]
+With \(u=x^2\ne0\), simultaneous three-torsion is equivalent to
+\(D_a(u)=u^4D_a(1/u)=0\). On a smooth elliptic curve in characteristic zero, the roots of this division polynomial are precisely the \(X\)-coordinates of nonzero three-torsion; none is a two-torsion coordinate.
+
+The exact resultant is
+\[
+ \operatorname{Res}_T(D_a(T),T^4D_a(1/T))
+  =(a-15)(a-3)^{10}(a+1)^3(a+5)^2.
+ \tag{18}
+\]
+The singular parameters \(a=3,-1\) are excluded. At the remaining two parameters the greatest common divisors, up to nonzero rational constants, are
+\[
+ \gcd(D_{-5}(T),T^4D_{-5}(1/T))=3T^2-2T+3,\qquad
+ \gcd(D_{15}(T),T^4D_{15}(1/T))=T-1.
+\]
+Equation (18) and these gcd identities are exact polynomial identities, also checked in the accompanying script. For (17), the quartic has four distinct nonzero roots; its roots are not \(\pm1\). The corresponding \(y\)-coordinates are nonzero, since the elliptic images have order three rather than two. Thus there are eight distinct non-Weierstrass points. None is rational: \(3x^4-2x^2+3\) is positive for real \(x\). Lemma 9 gives \(\rho_p=0\), and both parameters are odd, so Theorem 4 supplies zero in both targets under its rank hypothesis. ∎
+
+**Local visibility of (17).** At \(p=3\), these points are not defined over \(\mathbb Q_3\): the roots \(u\) of \(3u^2-2u+3\) have valuations \(1\) and \(-1\), so neither can equal \(x^2\) with \(x\in\mathbb Q_3\).
+
+For every odd \(p\ne3\), (17) is locally visible exactly when there is an \(s\in\mathbb F_p\) such that
+\[
+ 3s^4-2s^2+3=0,\qquad s^6-5s^4-5s^2+1
+       \text{ is a nonzero square in }\mathbb F_p.
+ \tag{19}
+\]
+Indeed the quartic discriminant is \(2^{14}3^2\), and its resultant with \(x^6-5x^4-5x^2+1\) is \(2^{22}\). Thus its roots and the required \(y\)-coordinates are simple modulo every such prime. Hensel's lemma proves sufficiency; unit coordinates and reduction prove necessity. The transformations \(x\mapsto-x\), \((x,y)\mapsto(1/x,y/x^3)\), and \(y\mapsto-y\) act transitively on the eight points. Therefore either all eight are locally visible or none is.
+
+For a concrete exact witness, \(p=67\) and \((s,y)=(6,20)\) satisfy both equations modulo 67 with nonzero derivatives, so all eight points lift to \(\mathbb Q_{67}\). This is an exact Hensel certificate, not a numerical approximation to a height zero. We make no priority claim for these points or the torsion mechanism.
+
+## 8. What the exclusions imply for depth two
+
+For the **standard coarse target** of Bianchi–Padurariu [2, Theorem 2.3], there is a known containment
+\[
+ C(\mathbb Q_p)_2\ \subseteq\ A_{p,B_{\rm coarse}}.
+ \tag{20}
+\]
+Here \(C(\mathbb Q_p)_2\) denotes the full depth-two Chabauty–Kim set in the standard setup of that method. The relationship of the successive explicit supersets to this set is explained in [5, Remark 2.4], citing Balakrishnan–Dogra. We use (20) only for that standard target, under its hypotheses, not for an arbitrary finite target \(B\) or an unproved refinement.
+
+**Corollary 11 (genuine depth-two exclusions).** Under the hypotheses of (20):
+
+1. Any Weierstrass point excluded by Theorem 7 with \(B=B_{\rm coarse}\) is absent from \(C(\mathbb Q_p)_2\).
+2. If \(H\) is irreducible over \(\mathbb Q\) and \((a_4,a_2)\ne(0,0)\), the full depth-two set has no Weierstrass points at any eligible prime.
+3. For the rank-two curve (11), the four Weierstrass points \(x=\pm1\pm\sqrt2\) are not in the full depth-two set at any eligible prime where they are locally visible.
+
+**Proof.** Each statement is the contrapositive of containment (20), applied to Theorem 7, Corollary 8, or Corollary 5 respectively. ∎
+
+This implication is strictly one-way. Neither the six previously certified candidates nor the eight points (17) have been proved here to lie in the full depth-two set. Their survival of one height equation leaves the other independent correspondence conditions unresolved.
+
+## 9. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. It neither proves that infinitely many parameters have rank one nor classifies all non-Weierstrass candidates.
 
-The principal remaining arithmetic question is whether these points survive the **full** depth-two Selmer conditions, including independent correspondences. In the reciprocal family the Jacobian is isogenous to a square of an elliptic curve, so additional correspondences are available. Establishing their effect is needed before claiming a solution of ICM Problem 6.4 for the full Chabauty–Kim set.
+Section 8 transfers exclusions to the full depth-two set, but the principal remaining arithmetic question is whether the surviving candidates satisfy the **full** depth-two Selmer conditions, including independent correspondences. In the reciprocal family the Jacobian is isogenous to a square of an elliptic curve, so additional correspondences are available. Establishing their effect is needed before claiming a solution of ICM Problem 6.4 for the full Chabauty–Kim set.
 
 The exact examples themselves were already detected in [5]. The contribution of the arguments above is an exact algebraic membership test, an all-prime exclusion criterion, and a symmetry proof covering a parameter family. No priority claim is made beyond the literature checked here.
 
