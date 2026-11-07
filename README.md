@@ -143,3 +143,9 @@ The stable model also classifies all odd good-reduction primes. Thus Theorem35's
 ## Compatible Tate lifting is settled for the integral family
 
 Theorem37 proves that, for integral a=3 modulo8 with non-CM rank-one quotient and odd good p=1 modulo4, the common Tate class of (±i,0) has a unique compatible global lift with zero bad-local coordinates. Full depth-two membership of the pair is therefore equivalent to the residual Sym² finite-target criterion. See [proof](proofs/integral_tate_lift.md) and [independent audit](verification/integral_tate_lift_review.md). The dyadic residual image and actual global/local residual comparison remain to be evaluated.
+
+## Dyadic residual cohomology vanishes for odd v₂(a−3)≥5
+
+Theorem38 proves H¹(Q₂,Sym²Vp(E_a))=0 for every odd p in this integral subfamily, with no rank or non-CM hypothesis for the local result. Together with the two zero Tate coordinates, the entire actual dyadic joint image is {(0,0)}. See [proof](proofs/dyadic_residual_vanishing.md), [checks](scripts/check_dyadic_residual.py), and [independent audit](verification/dyadic_residual_review.md).
+
+Combined with Theorems36–37 under their global hypotheses, this leaves only the explicit odd residual targets. For a=-605 the full remaining pair criterion is δp(W)=0; for a=-157469 the target has at most three values, {0,±Θp(e37)}. The discrepancy and global transport have NOT been evaluated. The dyadic cases v₂(a−3)=3 and even valuations also remain open; no general classification is claimed.
