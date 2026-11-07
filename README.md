@@ -18,13 +18,15 @@ Research target: explain extra candidates for genus-two curves over the rational
 
 - Exact second heights for the remaining six: the four points with x=±1 have values ±2hₚ(P) for a specified rational CM elliptic point, while (±i,0) give zero. The actual second local target is {0}; CM height nonvanishing excludes the four from this refined height set for visible p≥5. A graph-correspondence proof now establishes full-depth-two containment in this nonmonic actual target, including its endpoints, and upgrades these to four further depth-two exclusions.
 
+- An explicit anti-CM torus obstruction excludes the remaining pair (±i,0). The proof constructs the global lift and compares its local fiber directly, rather than inferring full membership from scalar heights or assuming elliptic-height nonvanishing at inert primes.
+
 The original example points were already observed by Finnerty. These arguments prove exact membership and exclusion rather than identify points from finite-precision approximations; the underlying logarithm-kernel technique is credited to Bianchi. No unverified priority claim is made.
 
 Depth-two statements here use the Mordell–Weil abelian-image condition of Balakrishnan–Dogra Definition 2.2. They do not identify an unrestricted global Bloch–Kato group with Mordell–Weil points merely from the rank.
 
-## Open question
+## Scope and open questions
 
-The positive membership results concern explicitly defined single-height candidate sets, not a characterization of the full depth-two Chabauty–Kim set. The exclusion results do transfer to the full set when the standard coarse target is used, by the known containment detailed in PROOF.md. A second correspondence now excludes the eight-point locus above. The four points (±1,±2√−2) are now excluded from depth two for visible p≥5 by the proved nonmonic refined-target containment. At p=3 the cited nonvanishing theorem has not been applied. The two points (±i,0) pass both actual height tests, with full membership still unresolved. The remaining central representation is explicitly Sym²(Vₚ(E)); its anti-CM Tate direction has zero global finite-Selmer translation space but a one-dimensional local space, so a genuine torsor comparison is still needed. The general classification of non-Weierstrass candidates remains open.
+The positive membership results concern explicitly defined single-height candidate sets, not a characterization of the full depth-two Chabauty–Kim set. The exclusion results do transfer to the full set when the standard coarse target is used, by the known containment detailed in PROOF.md. A second correspondence now excludes the eight-point locus above. The four points (±1,±2√−2) are now excluded from depth two for visible p≥5 by the proved nonmonic refined-target containment. At p=3 the cited nonvanishing theorem has not been applied. The two points (±i,0) pass both earlier scalar height tests but are now excluded at every visible odd prime by an explicit norm-one-torus quotient. A global reference path is constructed using two proper elliptic curves; its local discrepancy is the nonzero Kummer class of a unit built from 1+√2. This covers both split and inert CM primes. Together, all fourteen specified nonrational first-height candidates are excluded for p≥5 whenever locally visible. The general classification of non-Weierstrass candidates remains open.
 
 ## Checking the algebra
 
@@ -34,4 +36,4 @@ The proofs do not require numerical p-adic computation. Optional exact polynomia
 python scripts/check_identities.py
 ```
 
-This verifies the derivative cancellation, reciprocal identities, discriminants, factorization, the descent witness, and the rational-power identities used in the factor classification, the simultaneous-three-torsion resultant, the exact local-visibility certificate, the dihedral-field norm identities, and the six-torsion second-height calculation, the CM isogeny/twist maps, and the remaining local-target arithmetic. It is not a substitute for the mathematical proofs.
+This verifies the derivative cancellation, reciprocal identities, discriminants, factorization, the descent witness, and the rational-power identities used in the factor classification, the simultaneous-three-torsion resultant, the exact local-visibility certificate, the dihedral-field norm identities, and the six-torsion second-height calculation, the CM isogeny/twist maps, the remaining local-target arithmetic, and the anti-CM divisor factors and exact nontrivial-unit values. It is not a substitute for the mathematical proofs.
