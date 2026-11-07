@@ -244,7 +244,92 @@ For \(E\), negative \(X\) makes \(X(X^2-8X+8)<0\), so its descent image is conta
 
 The displayed factorization proves that the only roots of unity among the roots of \(f\) are \(\pm i\): the other four roots are real and are neither 1 nor \(-1\). The model discriminants of \(C\) and \(E\) are powers of 2, so every odd prime is eligible. Theorem 4 and the elementary splitting criteria for \(\mathbb Q(i)\) and \(\mathbb Q(\sqrt{-2})\) finish the proof. ∎
 
-## 6. Boundary of this result
+## 6. A complete rational-factor test for Weierstrass candidates
+
+The root-of-unity test can be reduced to rational arithmetic, without constructing a number field. This also gives an obstruction outside the monic-unit case.
+
+Put
+\[
+ H(T)=a_6T^3+a_4T^2+a_2T+a_0,\qquad A=a_6/a_0.
+\]
+The hypotheses on \(f\) imply that \(H\) is squarefree and has no zero root.
+
+**Lemma 6 (rational powers in degrees at most three).** Let \(h\in\mathbb Q[T]\) be monic and irreducible, of degree at most three, with nonzero constant term, and let \(t\) be a root. There is an integer \(n>0\) with \(t^n\in\mathbb Q^\times\) if and only if \(h\) is one of the following types. In each listed case the pair \((m,R)\) satisfies \(t^m=R\in\mathbb Q^\times\) for every root of \(h\).
+
+- \(h=T+b\): take \((m,R)=(1,-b)\).
+- \(h=T^2+bT+c\), \(b=0\): take \((m,R)=(2,-c)\).
+- \(h=T^2+bT+c\), \(b^2=c\): take \((m,R)=(3,bc)\).
+- \(h=T^2+bT+c\), \(b^2=2c\): take \((m,R)=(4,-c^2)\).
+- \(h=T^2+bT+c\), \(b^2=3c\): take \((m,R)=(6,-c^3)\).
+- \(h=T^3+d\): take \((m,R)=(3,-d)\).
+
+In particular, no other irreducible quadratic or cubic has a root with a nonzero rational power.
+
+**Proof.** If \(t^n\) is rational and nonzero, all complex conjugates of \(t\) have the same absolute value.
+
+For a quadratic with two real roots, distinctness and equal absolute values force the roots to be negatives of one another, so \(b=0\). Otherwise its roots \(t,\bar t\) lie in an imaginary quadratic field, and \(\zeta=t/\bar t\) is a root of unity in that field. A root of unity in a quadratic field has order \(1,2,3,4,\) or \(6\), since its cyclotomic degree is at most two. Order 1 would give a repeated root. Moreover
+\[
+ \frac{b^2}{c}=\frac{(t+\bar t)^2}{t\bar t}
+             =2+\zeta+\zeta^{-1}.
+\]
+The remaining orders give respectively \(0,1,2,3\), exactly the quadratic cases listed. Conversely, reduction modulo \(T^2+bT+c\) gives the displayed identities \(t^m=R\) in each case.
+
+For an irreducible cubic \(T^3+bT^2+cT+d\), three distinct real roots cannot all have the same absolute value. Thus there is one real root \(u\) and a conjugate nonreal pair \(z,\bar z\). Equal absolute values give \(z\bar z=u^2\). Vieta's formulas imply
+\[
+ b=-(u+z+\bar z),\qquad
+ c=u(z+\bar z)+u^2=-bu.
+\]
+If \(b\ne0\), then \(u=-c/b\) is rational, contrary to irreducibility. Hence \(b=c=0\). The converse and the linear case are immediate. ∎
+
+**Theorem 7 (factorwise target-vector classification).** Retain the hypotheses and target \(B\) of Section 1. Factor \(H\) over \(\mathbb Q\), making each irreducible factor monic. Let \(W=(r,0)\in C(\mathbb Q_p)\), \(t=r^2\), and let \(h\) be the factor containing \(t\).
+
+If \(h\) is not on the list in Lemma 6, then \(W\notin A_{p,B}\), for every finite rational-log target \(B\).
+
+If \(h\) is on the list, choose its displayed pair \((m,R)\) and set
+\[
+ V_h=\frac{A^m}{R}\in\mathbb Q^\times.
+\]
+For a rational prime \(\ell\), write \(v_\ell\) for the valuation normalized by \(v_\ell(\ell)=1\). Then
+\[
+ W\in A_{p,B}
+ \quad\Longleftrightarrow\quad
+ \begin{cases}
+ v_\ell(V_h)=0&\text{for every prime }\ell\notin S,\\
+ \bigl(v_q(V_h)/(2m)\bigr)_{q\in S}\in B.
+ \end{cases}
+ \tag{13}
+\]
+Thus each irreducible factor is either excluded outright or has exactly one possible target coefficient vector. Local visibility of \(r\), rather than merely of \(t\), is still required.
+
+**Proof.** If \(W\) passes, Theorem 2 says that \((A/t)^d\) times a nonzero rational number is a root of unity. Raising to its finite order shows that a positive power of \(t\) is rational. Lemma 6 proves the exclusion assertion.
+
+For a listed factor, \(t^m=R\), and equation (6) gives
+\[
+ \rho_p(W)=\frac{1}{2m}\log_p V_h
+           =\sum_{\ell\ne p}\frac{v_\ell(V_h)}{2m}\log_p\ell.
+ \tag{14}
+\]
+The sum is finite; the sign of \(V_h\) contributes zero. Also \(v_p(V_h)=0\), because \(A\) and \(t\) are \(p\)-adic units.
+
+The logarithms of distinct rational primes other than \(p\) are linearly independent over \(\mathbb Q\). Indeed, clearing denominators in a putative relation gives a positive rational \(p\)-adic unit in the logarithm kernel. Such a number is a rational root of unity, hence 1; unique factorization makes every coefficient zero. Comparing (14) with a target vector proves (13), in both directions. ∎
+
+**Corollary 8 (irreducible-cubic obstruction).** If \(H\) is irreducible over \(\mathbb Q\) and \((a_4,a_2)\ne(0,0)\), there are no Weierstrass points in \(A_{p,B}\), at any eligible prime and for any finite rational-log target as in (2).
+
+In the exceptional binomial case \(H=a_6T^3+a_0\), whether or not it is irreducible, every locally visible Weierstrass point instead has
+\[
+ \rho_p(W)=\frac23\log_p(a_6/a_0).
+ \tag{15}
+\]
+Consequently the unique possible target vector is
+\(\bigl(\tfrac23v_q(a_6/a_0)\bigr)_{q\in S}\), provided the ratio has no prime support outside \(S\). This follows directly from \(t^3=-a_0/a_6\), which gives \(V=-A^4\). These statements assume the rank hypotheses needed for the chosen height setup; they do not assert that any new family has rank two.
+
+For the specialization (11),
+\[
+ H(T)=(T+1)(T^2-6T+1).
+\]
+The linear factor has \(V=-1\) and hence target vector zero. The quadratic has \(b^2/c=36\), so it is excluded for every target, recovering the four excluded Weierstrass points without algebraic-unit computations. More generally, (13) is a complete classification of the Weierstrass part of the specified single-height set using factorization and valuations over \(\mathbb Q\). It gives no additional conclusion about non-Weierstrass points or full depth-two Selmer conditions.
+
+## 7. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. It neither proves that infinitely many parameters have rank one nor classifies all non-Weierstrass candidates.
 
