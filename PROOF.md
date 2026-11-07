@@ -1138,7 +1138,21 @@ Here the degree-eight origin fibers share all six Weierstrass points. The proof 
 
 The pair has zero in both earlier scalar expressions, so this is a genuine additional central obstruction. It does not classify all points of C_15(Q_p)₂ or provide a general non-CM criterion. Exact map identities, descent obstructions and fiber values are verified by scripts/check_cm15_torus.py, with independent review and passing output.
 
-## 24. Boundary of this result
+## 24. Rational denominator primes: the two targets differ
+
+**Theorem 32 (exact denominator-prime targets).** Let a be rational, a != -1,3, and let q != p be odd with v_q(a)=-m<0. Set beta=q^m a and chi=(beta/q). The second-model local target is {0}, and lambda_q(1,1)=(m/2)log_p(q). The exact first-model coefficient image is
+
+    {±m/2}
+    union {±2k(m-k)/m : 1<=k<m/2, m even, chi=1}
+    union Z,
+
+where Z={0} exactly when q=1 modulo 4, or m is even and (q!=3 or chi=-1); otherwise Z is empty. In particular a=13/7, q=7 gives the nonzero first image {±log_p(7)/2}.
+
+The complete proof, including normalized ramified base extension, actual-image attainability and the exceptional q=3 case, is in [rational_denominator_targets.md](proofs/rational_denominator_targets.md). Independent review and exact checks are in [the review](verification/rational_denominator_review.md) and [the script](scripts/check_rational_denominators.py).
+
+For rational a in Z_2 with a=3 modulo 8 and positive reduced denominator D prime to p, the global point height is h_p(P)=lambda_p(P)+(1/2)log_p(D). Therefore an integral-parameter proof cannot be extended simply by retaining the old alpha coefficient or assuming its first target is {0}. The second target remains {0} when every positive odd valuation of a+1 is one. These are exact local and global-height statements, not a general full-depth-two classification.
+
+## 25. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.
 
