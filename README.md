@@ -1,18 +1,28 @@
 # Quadratic Chabauty: Mock Rational Points
 
-**Research target:** Explain and classify *mock rational points* arising in quadratic Chabauty computations for genus-two curves over \(\mathbb{Q}\) whose Jacobians have Mordell–Weil rank two.
+Research target: explain extra candidates for genus-two curves over the rationals whose Jacobians have Mordell–Weil rank two, starting from [ICM 2026, Problem 6.4](https://doi.org/10.1137/25M1805011).
 
-Quadratic Chabauty can produce a finite set of \(p\)-adic candidates containing the rational points. Some candidates may satisfy the quadratic Chabauty conditions without corresponding to a global rational point. This project studies the mechanisms and arithmetic obstructions behind such extra candidates.
+## Established here
 
-## Questions
+[PROOF.md](PROOF.md) gives complete arguments for:
 
-1. **Occurrence.** Under which hypotheses can extra \(p\)-adic candidates occur, and how do they depend on the curve, prime, and local-height conditions?
-2. **Exclusion.** Find checkable conditions that rule out extra candidates in a specified class of curves.
-3. **Local-to-global obstruction.** Relate extra solutions to independent arithmetic tests and determine what can be proved rather than merely observed numerically.
-4. **Families.** Seek a nontrivial family of genus-two rank-two curves for which occurrence or exclusion admits a uniform explanation.
+- An exact root-of-unity test for Weierstrass points in a specified bielliptic height-candidate set. Once the rational local-height target coefficients are fixed, membership is independent of the good prime except for local visibility.
+- A unit obstruction: for a monic even sextic with constant term ±1, a surviving Weierstrass point must have root-of-unity x-coordinate.
+- A reciprocal-symmetry mechanism giving non-Weierstrass algebraic candidates on y²=x⁶+a x⁴+a x²+1, whenever the common elliptic quotient has rank one. For odd a, these also pass the actual local-image target for this height function.
+- An unconditional rank-two case, y²=x⁶−5x⁴−5x²+1: exact occurrence of (±i,0) and (±1,±2√−2) at their splitting primes, and all-prime exclusion of the other four Weierstrass points. The rank proof uses elementary two-isogeny descent.
 
-## Work
+The example points were already observed by Finnerty. These arguments prove exact membership and exclusion rather than identify points from finite-precision approximations; the underlying logarithm-kernel technique is credited to Bianchi. No unverified priority claim is made.
 
-See [`PROOF.md`](PROOF.md) for exact definitions, case studies, arithmetic arguments, and theorem statements. Code belongs in `scripts/` only when a concrete example or certification requires it.
+## Open question
 
-**Status:** Initial research program; no new existence, nonexistence, or classification result is claimed.
+The results concern explicitly defined single-height candidate sets, not a characterization of the full depth-two Chabauty–Kim set. Additional independent correspondences, especially for a Jacobian isogenous to an elliptic square, remain to be analyzed. The general classification of non-Weierstrass candidates remains open.
+
+## Checking the algebra
+
+The proofs do not require numerical p-adic computation. Optional exact polynomial checks, using Python and SymPy:
+
+```sh
+python scripts/check_identities.py
+```
+
+This verifies the derivative cancellation, reciprocal identities, discriminants, factorization, and the descent witness. It is not a substitute for the mathematical proofs.
