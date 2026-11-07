@@ -4,6 +4,8 @@
 
 Balakrishnan's ICM survey [1, Problem 6.4] asks for an explanation of mock rational points on genus-two curves of Jacobian rank two. We study the explicitly defined **one-function bielliptic height-candidate set** below. For the standard local targets discussed below, this is a single-correspondence height condition; membership alone does not establish membership in the full depth-two Chabauty–Kim set.
 
+Throughout, depth-two Selmer sets use the Mordell–Weil abelian-image convention specified in Section 13; no unrestricted Bloch–Kato identification is inferred from rank alone.
+
 Let
 
 \[
@@ -667,15 +669,132 @@ We retain the source's assumption \(p>3\). Its CM and functional-equation hypoth
 
 Equations (27) and Proposition 16 exclude the four points from the refined second-height set. Equation (28), Theorem 4, and Proposition 16 prove the assertion about the two Weierstrass points. ∎
 
-**Important remaining boundary.** Corollary 17 is deliberately not stated as a new full-depth-two exclusion. Bianchi [3, Theorem 6.1] identifies an actual-local-image condition with a correspondence Selmer condition for a monic model. Bianchi–Padurariu [2, Remark 2.5] removes the monic hypothesis in the rational-point height criterion, but that alone does not prove full-depth-two containment for every refinement of the coarse target. A proof or precise source for the analogous actual-target containment for nonmonic model (22) is still required to promote Corollary 17 to a full-depth-two exclusion. The coarse-target full-depth-two exclusions in Sections 8 and 11 do not depend on this unresolved refinement.
+The next section proves the nonmonic actual-target containment needed to upgrade Corollary 17. At \(p=3\), equation (27) and Proposition 16 remain valid, but the cited nonvanishing result has not been applied here. Passing both tests at the two Weierstrass points still does not prove full-depth-two membership.
 
-At \(p=3\), equation (27) and Proposition 16 remain valid, but the cited nonvanishing result has not been applied here. Passing both tests at the two Weierstrass points still does not prove full-depth-two membership.
+## 13. Actual-target containment without a monic hypothesis
 
-## 13. Boundary of this result
+**Selmer convention.** We use the depth-two Selmer set with the Mordell–Weil abelian-image condition of [9, Definition 2.2(3)], as in the correspondence construction below. If instead one drops that condition and allows the entire global Bloch–Kato group in degree one, the same conclusion requires identifying that group with the Mordell–Weil image; rank alone does not establish this identification.
+
+**Theorem 18.** In the setup of Section 1, suppose that \(C\) has a rational basepoint \(b\) away from \(x=0,\infty\), with \(y(b)\ne0\). Let \(p\) be an odd good prime for the curve and its displayed elliptic quotients, with \(p\nmid a_0a_6\). Use compatible symmetric height splittings and invariant-differential tangent normalizations. Then
+\[
+ C(\mathbb Q_p)_2\subseteq
+ \left\{z:\rho_p(z)\in\sum_{q\ne p}w_q(C(\mathbb Q_q))\right\}.
+ \tag{32}
+\]
+The sum uses actual local images, including the continuous endpoint values. No monic-model or rational-infinity hypothesis is needed.
+
+**Proof.** Let \(\iota\) be the hyperelliptic involution, let
+\(g_1(x,y)=(-x,y)\), \(g_2(x,y)=(-x,-y)\), and write \(D_0,D_\infty\) for the degree-two divisors above zero and infinity. These divisors are rational even when their individual points are not, and
+\(\operatorname{div}(x)=D_0-D_\infty\).
+Use the rational correspondence \(Z=\Gamma_{g_2}-\Gamma_{g_1}\).
+Its intersection with the diagonal minus the two basepoint fibers is zero: the fixed divisors have degree two and each graph meets each fiber in degree one. Its projected wedge-square class is nonzero. Indeed the involutions are Rosati self-adjoint, and their difference acts by opposite nonzero eigenvalues on the two elliptic summands of \(H^1(C)\). Thus it gives a nonzero trace-zero alternating class, not merely a nonzero tensor class.
+
+The divisor associated to this graph difference is
+\[
+ D_Z(b,z)=D_\infty-D_0+g_1z-g_2z+g_1b-g_2b.
+\]
+Put \(P_i=\phi_i(z)\), \(B_i=\phi_i(b)\), and
+\(T_i=(-P_i)+(-B_i)-2O_i\). Direct pullback gives the exact identity
+\[
+ D_Z(b,z)=-\phi_1^*T_1+\phi_2^*T_2+\operatorname{div}(x).
+ \tag{33}
+\]
+For example \(\phi_1^*(-P_1)=\iota z+g_2z\),
+\(\phi_2^*(-P_2)=\iota z+g_1z\), and the pullbacks of the origins are \(D_\infty,D_0\). The principal term in (33) must not be omitted.
+
+For the symmetric elliptic divisor pairing, initially at generic points with the necessary disjoint supports,
+\[
+ h_v(P-B,(-P)+(-B)-2O)
+ =-\lambda_v(P)+\lambda_v(B)+\chi_v(Y(P)/Y(B)).
+ \tag{34}
+\]
+Here \(\chi_p=\log_p\), and \(\chi_q=\log_p|\cdot|_q\) otherwise. To check the normalization, expand the pairing: the cross terms cancel by symmetry and inversion. The principal divisor of \(X-X(P)\), with invariant-differential tangents at all support points, gives
+\(h_v(P-O,(-P)-O)+h_v(P-O,P-O)=\chi_v(2Y(P))\).
+The self-height is \(\lambda_v(P)\); subtract the corresponding identity for \(B\). This proves (34), including its sign.
+
+Apply the projection formula to (33). Since \(Y(P_1)/Y(P_2)=(a_6/a_0)x(z)^3\), the constants cancel against their values at \(b\), and the principal term contributes one copy of \(\chi_v(x(z)/x(b))\). Consequently
+\[
+ h_v(z-b,D_Z(b,z))=r_v(z)-r_v(b),\qquad
+ r_v=\lambda_{1,v}\circ\phi_1-\lambda_{2,v}\circ\phi_2-2\chi_v(x).
+ \tag{35}
+\]
+Globally the principal height is zero. Bilinearity on divisor classes, using \([T_i]=-[P_i]-[B_i]\), gives
+\[
+ h(z-b,D_Z(b,z))
+ =h_1(P_1)-h_1(B_1)-h_2(P_2)+h_2(B_2).
+ \tag{36}
+\]
+This determines the quadratic correction as an identity of forms, not by interpolation on rational curve points. Because each elliptic quotient has rank one, their nonzero elliptic logarithms give the required isomorphism
+\(J(\mathbb Q)\otimes\mathbb Q_p\longrightarrow H_f^1(\mathbb Q_p,V_p(J))\).
+The expression in (36), on these localizations, is \(F(z)-F(b)\), where
+\(F=\alpha_1L_1^2\circ\phi_1-\alpha_2L_2^2\circ\phi_2\).
+
+Now use the full-curve mixed extension \(A_Z(b,z)\) of [9, Proposition 5.5], whose local heights agree with the divisor pairing on its open domain by [9, Theorem 6.3]. These general constructions have no leading-coefficient restriction. They give the necessary condition
+\[
+ H_p(z)-F(z)+F(b)\in
+ \left\{-\sum_{q\ne p}H_q(z_q):z_q\in C(\mathbb Q_q)\right\}.
+ \tag{37}
+\]
+We justify (35) also at the omitted points. Write
+\(\lambda_i=-2\log_p(t_i)+A_i(t_i)\), with \(A_i\) analytic at zero.
+Near \(x=0\), \(t_2=-x/y\), and
+\(r_p=\lambda_1(\phi_1z)-2\log_p y-A_2(-x/y)\).
+Near infinity put \(s=1/x,\ v=y s^3\); then
+\(r_p=2\log_p v+A_1(-s/v)-\lambda_2(\phi_2z)\).
+Both extend analytically, retaining the endpoint constants involving \(a_0,a_6\).
+The full-curve mixed-extension height is locally analytic at \(p\), so equality extends by density of the open domain in each local disk. Away from \(p\), the local Kummer map is locally constant [10, Theorem 0.1], and the same cancellation gives continuous extensions of \(r_q\). Thus density again extends (35). Finite image alone is not being used as a continuity argument.
+
+Finally \(r_q=-w_q\) and \(r_p-F=\rho_p\). Equation (37) becomes
+\[
+ \rho_p(z)-\rho_p(b)\in
+ \left\{\sum_{q\ne p}w_q(z_q)-\sum_{q\ne p}w_q(b)\right\}.
+\]
+The rational basepoint satisfies \(\rho_p(b)=\sum_{q\ne p}w_q(b)\) by the global-height decomposition and product formula. Cancelling proves (32). ∎
+
+**Corollary 19 (four further depth-two exclusions).** For every \(p\ge5\) split in \(\mathbb Q(\sqrt{-2})\), the four points \((\pm1,\pm2\sqrt{-2})\) on (11) are absent from \(C(\mathbb Q_p)_2\).
+
+**Proof.** Apply Theorem 18 to (22) with rational basepoint \(b=(-1,-4)\). All its good-prime and rank hypotheses were verified above. Proposition 16 gives actual target \(\{0\}\), while Theorem 15 and the nonvanishing argument of Corollary 17 give nonzero values \(\pm2h_p(P)\). Transport through the rational curve isomorphism. ∎
+
+The restriction \(p\ge5\) is retained: no new nonvanishing assertion at \(p=3\) is made.
+
+## 14. What remains for the two Weierstrass points
+
+Let \(V=V_p(E)\) for the rational elliptic curve in Section 12, with \(\det V=\mathbb Q_p(1)\). The quotient isogeny gives \(V_p(J)=V\otimes M\), with \(M=\mathbb Q_p^2\) a trivial Galois module. The Cauchy decomposition and the surface relation give
+\[
+ \operatorname{gr}_2(U)=\bigwedge^2(V\otimes M)/\mathbb Q_p(1)
+ \simeq \operatorname{Sym}^2 V\oplus\mathbb Q_p(1)^2.
+ \tag{38}
+\]
+Indeed the wedge square decomposes into
+\(\operatorname{Sym}^2V\otimes\bigwedge^2M\) and
+\(\det V\otimes\operatorname{Sym}^2M\).
+The polarization relation lies in the latter summand: \(\operatorname{End}_{\mathbb Q}(E)\otimes\mathbb Q=\mathbb Q\), so the former has no rational Tate line. Removing one line from its three-dimensional Tate multiplicity space proves (38).
+
+Over a coefficient extension containing \(K=\mathbb Q(\sqrt{-2})\), write
+\(V|_{G_K}=\psi\oplus\psi^c\). Then the remaining representation is
+\[
+ \operatorname{Sym}^2V
+ \simeq\operatorname{Ind}_{G_K}^{G_{\mathbb Q}}(\psi^2)
+       \oplus\mathbb Q_p(1)\chi_K.
+ \tag{39}
+\]
+For the sign in the last character, an element outside \(G_K\) exchanges the two eigenvectors; on their symmetric product its action is minus its determinant.
+
+The last one-dimensional direction has no global finite-Selmer translation freedom:
+\[
+ H_f^1(\mathbb Q,\mathbb Q_p(1)\chi_K)=0.
+ \tag{40}
+\]
+By restriction and Kummer theory it is the anti-invariant part of
+\(\mathcal O_K^\times\otimes\mathbb Q_p\), which is zero because \(K\) is imaginary quadratic. Allowing ramification at 2 adds only an invariant valuation direction, since 2 has a unique prime in \(K\). The crystalline condition removes valuation directions at \(p\). Locally the finite Selmer space in this direction has dimension one: its de Rham tangent quotient has dimension one and its invariant subspace is zero.
+
+These calculations identify a genuine remaining local comparison, not a membership test already evaluated. Fibers over a fixed nonzero abelian class are torsors. Vanishing (40) does not canonically make the relevant local coordinate zero; a global lift and its localization must still be constructed and compared. In particular, passing the two scalar heights does not settle the full depth-two membership of \((\pm i,0)\). Their visible primes \(p\equiv1\pmod4\) include both CM-split primes \(p\equiv1\pmod8\) and CM-inert primes \(p\equiv5\pmod8\).
+
+## 15. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. It neither proves that infinitely many parameters have rank one nor classifies all non-Weierstrass candidates.
 
-Sections 8 and 11 transfer exclusions to the full depth-two set; Section 11 in particular excludes all eight points (17). The principal remaining arithmetic question is whether the surviving candidates satisfy the **full** depth-two Selmer conditions, including independent correspondences. In the reciprocal family the Jacobian is isogenous to a square of an elliptic curve, so additional correspondences are available. Establishing their effect is needed before claiming a solution of ICM Problem 6.4 for the full Chabauty–Kim set.
+Sections 8, 11, and 13 transfer exclusions to the full depth-two set in the stated Selmer convention: all eight points (17) are excluded, and so are the four points with x=±1 at their visible primes p≥5. The principal remaining arithmetic question is whether the surviving candidates satisfy the **full** depth-two Selmer conditions, including independent correspondences. In the reciprocal family the Jacobian is isogenous to a square of an elliptic curve, so additional correspondences are available. Establishing their effect is needed before claiming a solution of ICM Problem 6.4 for the full Chabauty–Kim set.
 
 The exact examples themselves were already detected in [5]. The contribution of the arguments above is an exact algebraic membership test, an all-prime exclusion criterion, and a symmetry proof covering a parameter family. No priority claim is made beyond the literature checked here.
 
@@ -690,3 +809,6 @@ The exact examples themselves were already detected in [5]. The contribution of 
 
 7. A. Agboola and B. Howard, *Anticyclotomic Iwasawa theory of CM elliptic curves*, with Appendix A by K. Rubin, especially Theorem A.1 and Lemma A.2 (Bertrand's nonvanishing theorem). https://web.math.ucsb.edu/~agboola/papers/cm1-final.pdf
 8. LMFDB, elliptic curve 256.a1, minimal equation and local root-number data. https://www.lmfdb.org/EllipticCurve/Q/256/a/1
+
+9. J. S. Balakrishnan and N. Dogra, *Quadratic Chabauty and rational points I: p-adic heights*, especially Definition 2.2, Proposition 5.5, Theorem 6.3, and Lemma 7.5. https://arxiv.org/abs/1601.00388
+10. M. Kim and A. Tamagawa, *The l-component of the unipotent Albanese map*, Math. Ann. 340 (2008), 223–235, Theorem 0.1; also restated in L. A. Betts, *Local constancy of pro-unipotent Kummer maps*, introduction. https://arxiv.org/abs/2203.03701
