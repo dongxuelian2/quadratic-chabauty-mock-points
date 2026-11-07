@@ -139,3 +139,7 @@ Theorem 35 excludes all six Weierstrass points and four x=±1 symmetry points, w
 Theorem 36 computes the actual Sym² and joint Tate/Sym² images at every odd prime dividing a-3. Primes 3 modulo4 contribute zero; primes1 modulo4 contribute an explicit finite nonzero segment with coefficients determined by v_q(a-3). The full Tate projection vanishes there. See [proof](proofs/odd_bad_residual_images.md), [independent review](verification/odd_bad_residual_review.md), and [checks](scripts/check_odd_bad_residual.py).
 
 The stable model also classifies all odd good-reduction primes. Thus Theorem35's infinite-family ten-point exclusions hold at every odd good prime. The dyadic image and global residual comparison remain unresolved.
+
+## Compatible Tate lifting is settled for the integral family
+
+Theorem37 proves that, for integral a=3 modulo8 with non-CM rank-one quotient and odd good p=1 modulo4, the common Tate class of (±i,0) has a unique compatible global lift with zero bad-local coordinates. Full depth-two membership of the pair is therefore equivalent to the residual Sym² finite-target criterion. See [proof](proofs/integral_tate_lift.md) and [independent audit](verification/integral_tate_lift_review.md). The dyadic residual image and actual global/local residual comparison remain to be evaluated.
