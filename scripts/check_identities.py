@@ -104,3 +104,25 @@ assert s.rem((10*u+1)+u**2,ht,u) == 0
 assert s.discriminant(ht,u) == 96
 assert ht.subs(u,1) != 0 and ht.subs(u,-1) != 0
 print('PASS: exact six-torsion, second-height cancellation, and non-root-of-unity unit obstruction.')
+
+# Remaining six points: isogeny, twist, rational witness, and local target.
+ge = u**3-8*u**2+8*u
+gep = u**3+16*u**2+32*u
+iso_x = u-8+8/u
+iso_y_factor = 1-8/u**2
+assert s.cancel(iso_y_factor**2*ge-gep.subs(u,iso_x)) == 0
+assert s.diff(iso_x,u) == iso_y_factor
+assert s.expand(gep.subs(u,-2*u)+8*ge) == 0
+assert iso_x.subs(u,1) == 1 and iso_y_factor.subs(u,1) == -7
+assert s.expand(ge.subs(u,u+3)) == u**3+u**2-13*u-21
+for prime, expected in [(3,6),(7,8)]:
+    count = 1+sum(1 for xx in range(prime) for yy in range(prime)
+                  if (yy*yy-int(ge.subs(u,xx))) % prime == 0)
+    assert count == expected
+assert s.Rational(3-16+8,2)**2+8-2 == s.Rational(49,4)
+assert s.expand(G.subs(u,4*u+2)/64) == u**3+4*u**2+2*u
+for odd in range(1,16,2):
+    assert int(fm.subs(x,odd)) % 16 == 8
+    assert (-(odd*odd+1)//2) % 2 == 1
+assert s.rem((u+1)+u*(u-1),u**2+1,u) == 0
+print('PASS: endpoint-height algebra, CM maps, rational nontorsion witness, and exact local-target arithmetic.')
