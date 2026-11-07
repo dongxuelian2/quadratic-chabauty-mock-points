@@ -1087,7 +1087,20 @@ Finally, the [small-disk classification](proofs/small_disk_classification.md) us
 
 Independent audit reports and exact scripts accompany every statement in `verification/` and `scripts/`. General classification across all parameters and primes remains open.
 
-## 19. Boundary of this result
+## 19. Uniform endpoint-only families at 7, 11 and 19
+
+**Theorem 27.** Let a be odd and use the reciprocal family, fixed integral complement, and scalar normalization specified in [the full proof](proofs/uniform_endpoint_families.md). The first scalar height has exactly the four rational endpoint zeros in each locus:
+- p=7, a≡4 mod7 and a not≡46 mod49;
+- p=11, a≡2 mod11 and a not≡24 mod121;
+- p=19, a≡0 mod19.
+
+If additionally a≡3 mod8 and rank E_a(Q)=1, the full Mordell–Weil-restricted, actual-local-image depth-two set equals those four rational points. The omitted residue lifts are unresolved by this leading-digit argument, not counterexamples. At 19 the combined progression is a≡19 mod152, still conditional on rank one.
+
+The proof factors the endpoint identity by alpha, permitting arbitrary negative v_p(alpha), rather than only −1. Exact tripling and quadrupling formulas establish the needed valuations for every parameter, including arbitrarily large v7(a−4), v11(a−2), and v19(a). Entire-series denominator bounds control all omitted terms. The four residue disks exhaust each reduction.
+
+The previously proved rank patterns certify a=−18269 at 11 and a=−17309, −3474245 at 19; a=−605 at 7 is retained. These arithmetic certificates do not establish infinitude. The complete proof, review and standalone exact script are in proofs/uniform_endpoint_families.md, verification/endpoint_families_review.md and scripts/check_endpoint_families.py. The general classification remains open.
+
+## 20. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. It neither proves that infinitely many parameters have rank one nor classifies all non-Weierstrass candidates.
 
