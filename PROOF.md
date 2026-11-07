@@ -1215,7 +1215,25 @@ This discharges the previously unresolved Tate-lift existence and joint-compatib
 
 See [complete proof](proofs/integral_tate_lift.md) and [independent audit](verification/integral_tate_lift_review.md).
 
-## 30. Boundary of this result
+## 30. Dyadic residual vanishing in an infinite congruence subfamily
+
+**Theorem 38 (dyadic residual cohomology).** Let a be integral, a=3 modulo8, and suppose n=v_2(a-3) is odd and at least5. For every odd coefficient prime p, including3,
+
+    H^1(Q_2,Sym² V_p(E_a))=0.
+
+No rank or non-CM hypothesis is required for this local assertion. The two already established independent zero Tate-height coordinates consequently give the exact same-point local image Xi_2={(0,0)}.
+
+The proof scales, and when necessary quadratically twists, E_a to y²=x³+c x²-2B x with B odd and c divisible by8. An exact Newton polygon for its third division polynomial forces wild inertia Q_8. The common good special fiber transports its faithful, absolutely irreducible representation to every odd-p Tate module. The residual representation has no wild-inertia invariants; inflation-restriction gives the claimed cohomology vanishing.
+
+Under the additional global hypotheses of Theorem37, the full membership criterion for W_±=(±i,0) now has only the explicit odd factors from Theorem36: those at primes q=1 modulo4 dividing a-3. If no such prime occurs, it is exactly
+
+    W_± in C_a(Q_p)_2 iff delta_p(W_±)=0.
+
+For a=-605 and a=-1373 all residual local targets are zero; use the full equivalence only when the rank-one global hypotheses hold. For the certified example a=-157469, the global target is {0,±Theta_p(e_37)}, with at most three values; no injectivity of Theta_p is asserted. In particular this theorem does NOT evaluate delta_p(W), show it is nonzero, or by itself exclude W.
+
+The cases n=3 and even n are not covered. See [complete proof](proofs/dyadic_residual_vanishing.md), [exact checks](scripts/check_dyadic_residual.py), and [independent audit](verification/dyadic_residual_review.md).
+
+## 31. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.
 
