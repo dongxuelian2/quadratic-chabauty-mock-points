@@ -572,7 +572,7 @@ is a \(p\)-adic unit with \(\log_pU=0\), and hence a root of unity. Taking numbe
 
 Proposition 13 and containment (20) now exclude the original points from the full depth-two set. Local visibility at \(p=3\) was already ruled out in Section 7; at every other eligible prime the argument applies as stated. ∎
 
-This does not settle the full-depth-two membership of the six earlier points \((\pm i,0)\) and \((\pm1,\pm2\sqrt{-2})\), or classify all other points of the depth-two set. It does resolve the extra second-correspondence condition for the entire eight-point locus (17).
+This theorem alone does not settle the full-depth-two membership of the six earlier points \((\pm i,0)\) and \((\pm1,\pm2\sqrt{-2})\), or classify all other points of the depth-two set. It does resolve the extra second-correspondence condition for the entire eight-point locus (17).
 
 ## 12. Exact second-height values for the remaining six points
 
@@ -757,7 +757,7 @@ The rational basepoint satisfies \(\rho_p(b)=\sum_{q\ne p}w_q(b)\) by the global
 
 The restriction \(p\ge5\) is retained: no new nonvanishing assertion at \(p=3\) is made.
 
-## 14. What remains for the two Weierstrass points
+## 14. The remaining central directions
 
 Let \(V=V_p(E)\) for the rational elliptic curve in Section 12, with \(\det V=\mathbb Q_p(1)\). The quotient isogeny gives \(V_p(J)=V\otimes M\), with \(M=\mathbb Q_p^2\) a trivial Galois module. The Cauchy decomposition and the surface relation give
 \[
@@ -788,13 +788,220 @@ The last one-dimensional direction has no global finite-Selmer translation freed
 By restriction and Kummer theory it is the anti-invariant part of
 \(\mathcal O_K^\times\otimes\mathbb Q_p\), which is zero because \(K\) is imaginary quadratic. Allowing ramification at 2 adds only an invariant valuation direction, since 2 has a unique prime in \(K\). The crystalline condition removes valuation directions at \(p\). Locally the finite Selmer space in this direction has dimension one: its de Rham tangent quotient has dimension one and its invariant subspace is zero.
 
-These calculations identify a genuine remaining local comparison, not a membership test already evaluated. Fibers over a fixed nonzero abelian class are torsors. Vanishing (40) does not canonically make the relevant local coordinate zero; a global lift and its localization must still be constructed and compared. In particular, passing the two scalar heights does not settle the full depth-two membership of \((\pm i,0)\). Their visible primes \(p\equiv1\pmod4\) include both CM-split primes \(p\equiv1\pmod8\) and CM-inert primes \(p\equiv5\pmod8\).
+These calculations identify a genuine remaining local comparison, not a membership test already evaluated. Fibers over a fixed nonzero abelian class are torsors. Vanishing (40) does not canonically make the relevant local coordinate zero; a global lift and its localization must still be constructed and compared. In particular, passing the two scalar heights alone does not settle the full depth-two membership of \((\pm i,0)\). The next section supplies the missing global lift and local comparison in the anti-CM direction. Their visible primes \(p\equiv1\pmod4\) include both CM-split primes \(p\equiv1\pmod8\) and CM-inert primes \(p\equiv5\pmod8\).
 
-## 15. Boundary of this result
+## 15. An explicit norm-one-torus obstruction excludes the pair
+
+**Theorem 20 (exclusion of the final Weierstrass pair).**
+
+Let
+
+\[
+ C:y^2=x^6-5x^4-5x^2+1,
+ \qquad b=(0,1),
+ \qquad E:Y^2=X^3-8X^2+8X.
+\]
+
+For every odd prime \(p\equiv1\pmod4\), neither \((i,0)\) nor \((-i,0)\) belongs to the full depth-two Chabauty–Kim set defined using global classes with abelian projection in \(J(C)(\mathbf Q)\otimes\mathbf Q_p\). An explicit quotient detecting them has center
+\(\mathbf Q_p(1)\otimes\chi_{\mathbf Q(\sqrt{-2})}\).
+
+The local obstruction is the Kummer class of a non-torsion norm-one unit. Under a choice \(s=\sqrt{-2}\) and \(i^2=-1\), its scalar representative, up to inversion and multiplication by \(-1\), is
+\[
+ g(i)=\frac{i+s}{i-s}=-(1+\sqrt2)^2,
+ \qquad \sqrt2=s/i.
+\]
+The proof applies equally when \(p\equiv1\pmod8\) (split CM) and \(p\equiv5\pmod8\) (inert CM). No ordinary splitting or nonvanishing theorem for an elliptic height is needed.
+
+### 1. The exact CM maps and the principal divisor
+
+Put \(K=\mathbf Q(s)\), \(s^2=-2\), and denote its nontrivial automorphism by \(c\). Let \(T=(0,0)\in E[2](\mathbf Q)\) and \(P=(1,1)\in E(\mathbf Q)\). The two quotient maps, in the shifted elliptic coordinates, are
+\[
+ f_1(x,y)=(x^2+1,y),\qquad
+ f_2(x,y)=(1+x^{-2},y/x^3).
+\]
+They extend to the smooth projective curve, and
+\[
+ (f_1(b),f_2(b))=(P,O),\qquad
+ (f_1(W),f_2(W))=(T,T)
+\]
+for either \(W=(\pm i,0)\).
+
+The CM endomorphism
+\[
+ \eta(X,Y)=\left(-\frac{X-8+8/X}{2},
+                 -\frac{Y(1-8/X^2)}{2s}\right)
+\]
+extends across the displayed poles. It satisfies
+\(\eta^2=[-2]\), \(c(\eta)=-\eta\), \(\eta(T)=O\), and \(\eta^\dagger=-\eta\) for the Rosati involution. These facts also follow by composing the degree-two isogeny
+\((X,Y)\mapsto(X-8+8/X,Y(1-8/X^2))\)
+with the inverse of \((X,Y)\mapsto(-2X,-2sY)\). Its invariant-differential multiplier is \(s\).
+
+Define \(f_\pm=f_1\pm\eta f_2:C_K\to E_K\), and put
+\[
+ A=x^3+\frac{3s}{2}x^2-x-\frac{s}{2},\qquad
+ B=x^3-\frac{3s}{2}x^2-x+\frac{s}{2},\qquad g=A/B.
+\]
+Then
+\[
+ \operatorname{div}(g)=f_+^*(O)-f_-^*(O). \tag{41}
+\]
+Here the origin divisors have degree six. To verify (41), the addition-law denominators give
+\[
+ X(f_1)-X(\eta f_2)
+ =\frac{2x^6+5x^4-4x^2+1}{2x^2(x^2+1)}
+ =\frac{AB}{x^2(x^2+1)},
+\]
+while
+\[
+ \frac{Y(\eta f_2)}{Y(f_1)}
+ =\frac{7x^4-2x^2-1}{2s x^3(x^2+1)^2}.
+\]
+This ratio is \(-1\) modulo \(A\), and \(+1\) modulo \(B\). Consequently the six points above roots of \(A\) are precisely the origin fiber of \(f_+\), and those above roots of \(B\) are the origin fiber of \(f_-\), with multiplicity one in characteristic zero. The exact checks
+\[
+ \operatorname{disc}(A)=13,\quad
+ \operatorname{Res}(A,B)=-8s,\quad
+ \operatorname{Res}(A,x^6-5x^4-5x^2+1)=-256,\quad
+ \operatorname{Res}(A,x)=s/2,\quad
+ \operatorname{Res}(A,x^2+1)=-4
+\]
+verify the needed disjointness (the same checks apply to \(B\)). At \(x=0\), \(f_\pm\) limit to \((1,\pm1)\); at infinity they limit to \(\pm\eta(1,\pm1)\), whose \(X\)-coordinate is \(-1/2\); at \(x=\pm i\), both limit to \(T\). Thus no exceptional chart adds an origin point. These computations establish the divisor, not merely a relation between its degrees.
+
+Finally,
+\[
+ g(0)=-1,\qquad c(g)=g^{-1},\qquad
+ g(i)=\frac{i+s}{i-s},\qquad g(-i)=g(i)^{-1}. \tag{42}
+\]
+
+### 2. A norm-one-torus torsor over the abelian surface
+
+Write \(D=E\times E\), and on \(D_K\) let
+\[
+ m_\pm(R,S)=R\pm\eta S,
+ \qquad
+ \mathcal L=m_+^*\mathcal O_E(O)\otimes m_-^*\mathcal O_E(O)^{-1}.
+\]
+There is a canonical rational section \(\sigma\) of \(\mathcal L\), obtained as the ratio of the pullbacks of the canonical section of \(\mathcal O_E(O)\). Its divisor is \(m_+^*(O)-m_-^*(O)\).
+
+Conjugation exchanges \(m_+\) and \(m_-\), hence canonically identifies \(c^*\mathcal L\) with \(\mathcal L^{-1}\). On nonzero vectors, combine this identification with dual inversion \(v\mapsto v^{-1}\). The resulting semilinear involution squares to the identity. Effective descent gives a variety \(\mathcal X/\mathbf Q\) over \(D\), which is a torsor under
+\[
+ \mathcal T=\operatorname{Res}^{1}_{K/\mathbf Q}\mathbf G_m.
+\]
+After base change to \(K\), it is \(\mathcal L^\times\); its torus has Tate module
+\(V_p\mathcal T=\mathbf Q_p(1)\chi_K=:W\).
+
+Let \(j=(f_1,f_2):C\to D\). By (41), \(j^*\sigma/g\) is an everywhere nonzero section of \(j^*\mathcal L\). Since conjugation inverts both \(\sigma\) and \(g\), this section descends to a morphism
+\[
+ \widetilde j:C\longrightarrow\mathcal X
+\]
+over \(j\). This is an actual morphism on the proper curve, including zeros and poles of \(A/B\), because the divisors in (41) cancel exactly.
+
+Whenever \(m_+(a)=m_-(a)\ne O\), the fiber of \(\mathcal L\) at \(a\) has its canonical ratio trivialization, and \(\sigma(a)=1\). In particular, these trivializations apply at \((P,O)\), \((T,O)\), and \((T,T)\). Thus
+\[
+ \widetilde j(b)=(P,O,-1),\qquad
+ \widetilde j(W)=(T,T,g(W)^{-1}). \tag{43}
+\]
+The notation for the third coordinate is confined to these canonically trivialized fibers.
+
+### 3. Why this is a depth-two quotient
+
+Let \(U_{\mathcal X}\) be the \(\mathbf Q_p\)-unipotent geometric étale fundamental group of \(\mathcal X\), based at \(\widetilde j(b)\). Then
+\[
+ 1\longrightarrow W\longrightarrow U_{\mathcal X}
+ \longrightarrow V_pD\longrightarrow1 \tag{44}
+\]
+is a central extension, so \(U_{\mathcal X}\) is two-step unipotent.
+
+One direct explanation is to base change to \(\mathbf C\). An abelian variety is a topological \(K(\mathbf Z^{2\dim D},1)\). The nonzero vectors of a line bundle form a \(\mathbf C^\times\)-bundle. Its homotopy exact sequence gives a central extension of \(\mathbf Z^{2\dim D}\) by \(\mathbf Z\), whose commutator is the Chern class of the line bundle. Rational Malcev completion gives (44) over an algebraic closure; étale comparison and the descent just described identify the Galois module of the center as \(W\).
+
+The Chern class is nonzero: relative to the product principal polarization, its associated symmetric homomorphism is
+\[
+ m_+^\dagger m_+-m_-^\dagger m_-
+ =\begin{pmatrix}0&2\eta\\-2\eta&0\end{pmatrix}\ne0.
+\]
+Also \(j\) induces the known isogeny \(J(C)\to E^2\). Therefore the induced map of unipotent groups factors through the full depth-two quotient \(U_2(C,b)\) and is surjective on its first graded quotient and its central line. In particular, every admissible global depth-two class on \(C\) has an image in (44), with functorial localizations.
+
+This is the non-split-torus version of the geometric quadratic-Chabauty construction. The proof here only uses the explicit torsor, rather than any assertion that a rational-point height equation automatically gives a Selmer condition.
+
+### 4. An explicit admissible global lift
+
+Let
+\[
+ q=(T,T,-1)\in\mathcal X(\mathbf Q).
+\]
+Its existence is literal: in the fiber at \((T,T)\), the two line factors are the same, their ratio is canonically one-dimensional, and \(-1\) has norm one.
+
+The global path torsor from \(\widetilde j(b)\) to \(q\) provides a reference lift \(\gamma\). Its abelian projection is the Kummer class of
+\[
+ (T-P,T)\in D(\mathbf Q),
+\]
+which becomes \((-P,0)\) after tensoring with \(\mathbf Q_p\).
+
+Its required local properties can be proved without a general theorem about nonproper crystalline path torsors. The bundle \(\mathcal L\) is canonically trivial on \(E\times\{O\}\), since there \(m_+=m_-\). It is also canonically trivial on \(\{T\}\times E\): because \(T=-T\),
+\[
+ m_-(T,S)=-m_+(T,S),
+\]
+and the canonical symmetric linearization of \(\mathcal O_E(O)\) identifies the two pullbacks, preserving its canonical section. Both trivializations descend to \(\mathbf Q\); the constant \(-1\) sections give proper copies of \(E\) in \(\mathcal X\). They meet at \((T,O,-1)\), and their trivializations there agree. They connect
+\[
+ (P,O,-1)\longrightarrow(T,O,-1)\longrightarrow(T,T,-1).
+\]
+Concatenate the images of the two elliptic path torsors. Proper smooth good reduction of \(E\) at every odd prime shows that \(\gamma\) is crystalline at \(p\), and unramified at primes outside \(\{2,p\}\). No local-image condition at 2 is asserted or needed for this reference class.
+
+### 5. Uniqueness in the global central fiber
+
+The rank computation already established for this curve gives \(E(\mathbf Q)\otimes\mathbf Q_p=\mathbf Q_p P\), with \(P\) nontorsion. The elliptic logarithm of \(P\) is nonzero at every prime of good reduction: its kernel on \(E(\mathbf Q_p)\) is torsion. Consequently
+\[
+ D(\mathbf Q)\otimes\mathbf Q_p\longrightarrow H_f^1(\mathbf Q_p,V_pD)
+\]
+is injective. The same is true for \(J(C)\) through its isogeny with \(D\).
+
+If \(W_0=(\pm i,0)\) were in the depth-two set, its global class would therefore have exactly the same global abelian projection as \(\gamma\), namely \((-P,0)\). This uses the Mordell–Weil projection clause of the Selmer definition.
+
+For the central representation \(W=\mathbf Q_p(1)\chi_K\),
+\[
+ H^1_{f,\{2\}}(\mathbf Q,W)=0. \tag{45}
+\]
+Here the subscript permits arbitrary ramification at 2, requires the usual unramified conditions elsewhere away from \(p\), and requires the crystalline condition at \(p\). Indeed restriction to \(K\) and the eigenspace decomposition identify this group with the anti-invariant part of
+\(\mathcal O_K[1/2]^\times\otimes\mathbf Q_p\). Class groups contribute only torsion. The unit group of the imaginary quadratic field \(K\) is finite, and there is a single prime over 2. Its valuation direction is invariant under \(c\). Thus the anti-invariant part is zero. Crystallinity excludes valuation directions at the primes above \(p\).
+
+The usual cohomology sequence for a central extension says that two lifts of the same abelian class differ by an element of \(H^1(\mathbf Q,W)\), modulo the action of the abelian invariants. Here \(H^0(\mathbf Q,V_pD)=0\), and also \(H^0(\mathbf Q_p,V_pD)=0\), so the action in the relevant nonempty fibers is free. The imposed unramified/crystalline conditions put the difference of the two admissible lifts in the group (45). Thus their global classes, and hence their localizations, must agree.
+
+For completeness, the crystalline-fiber assertion needs more than the vanishing of ordinary invariants. The group \(U_{\mathcal X}\) is a crystalline quotient of \(U_2(C)\), because \(C\) has good reduction at \(p\). Twisting by the crystalline reference torsor \(\gamma\) preserves crystallinity. Apply exactness of \(D_{\mathrm{cris}}\) to
+\[
+ 0\longrightarrow\operatorname{Lie}W
+ \longrightarrow\operatorname{Lie}(U_{\mathcal X}^{\gamma})
+ \longrightarrow V_pD\longrightarrow0.
+\]
+It gives surjectivity on \(B_{\mathrm{cris}}\)-valued Galois invariants, using exponential coordinates. Thus the connecting boundary from \(V_pD(B_{\mathrm{cris}})^{G_{\mathbb Q_p}}\) vanishes. A central difference between two crystalline lifts is therefore in \(H_f^1(\mathbb Q_p,W)\). Ordinary \(H^0(\mathbb Q_p,V_pD)=0\) separately gives freeness. Compare the finite-Selmer exact sequence in [11, proof of Proposition 2.2]. At a prime \(q\ne2,p\), good reduction and the absence of Frobenius eigenvalue 1 give the analogous unramified conclusion.
+
+### 6. The local difference is nonzero
+
+By (43), the points \(q\) and \(\widetilde j(W_0)\) lie above the same point \((T,T)\). Their ratio in that torus fiber is
+\[
+ t_{W_0}=-g(W_0)^{-1}\in\mathcal T(\mathbf Q_p).
+\]
+The difference of the corresponding local path classes in (44) is exactly the image of its torus Kummer class
+\[
+ \kappa_{\mathcal T}(t_{W_0})\in H_f^1(\mathbf Q_p,W). \tag{46}
+\]
+The inclusion into the central fiber is injective because \(H^0(\mathbf Q_p,V_pD)=0\).
+
+To see that (46) is nonzero, put \(F=K\otimes\mathbf Q_p\). In the split case \(F=\mathbf Q_p\times\mathbf Q_p\), the two coordinates of \(g(W_0)\) are inverse units. In the inert case \(F\) is the unramified quadratic extension, and \(c(g(W_0))=g(W_0)^{-1}\). In either case ordinary Kummer theory after restriction to a splitting field identifies the finite torus Kummer class with the appropriate norm-zero component of the logarithm of this unit.
+
+For \(W_0=(i,0)\), equation (42) gives
+\[
+ g(W_0)=-(1+r)^2,\qquad r=s/i,\qquad r^2=2.
+\]
+This is an algebraic unit and is not a root of unity: under a real embedding its absolute value is \((1+\sqrt2)^2>1\). The kernel of the \(p\)-adic logarithm on the units of a finite extension of \(\mathbf Q_p\) consists of roots of unity. Therefore its logarithm is nonzero. Restriction to a finite splitting field is injective on \(\mathbf Q_p\)-cohomology, by restriction–corestriction; hence (46) itself is nonzero. Replacing \(i\) by \(-i\) inverts \(g\) and gives the same conclusion.
+
+This contradicts the equality of localizations forced by (45), proving the statement.
+
+The structural central extension (44) is also described in [12, Section 3, equation (3.0.1)]. Its norm-one descent, explicit curve lift, and admissible reference path have been constructed above, so no sufficiency claim based merely on the two earlier scalar heights is used. ∎
+
+## 16. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. It neither proves that infinitely many parameters have rank one nor classifies all non-Weierstrass candidates.
 
-Sections 8, 11, and 13 transfer exclusions to the full depth-two set in the stated Selmer convention: all eight points (17) are excluded, and so are the four points with x=±1 at their visible primes p≥5. The principal remaining arithmetic question is whether the surviving candidates satisfy the **full** depth-two Selmer conditions, including independent correspondences. In the reciprocal family the Jacobian is isogenous to a square of an elliptic curve, so additional correspondences are available. Establishing their effect is needed before claiming a solution of ICM Problem 6.4 for the full Chabauty–Kim set.
+Sections 8, 11, and 13 transfer exclusions to the full depth-two set in the stated Selmer convention: all eight points (17) are excluded, and so are the four points with x=±1 at their visible primes p≥5. Section 15 also excludes the pair \(\pm i,0\) at every odd prime where it is visible. Thus, for \(p\ge5\), all fourteen specified nonrational points that survive the first height test (the pair, the four points with x=±1, and the eight three-torsion candidates) are excluded from the full depth-two set whenever locally visible. This does not classify all other points of the full set or solve ICM Problem 6.4 in general. The p=3 nonvanishing boundary for the four x=±1 points remains open here.
 
 The exact examples themselves were already detected in [5]. The contribution of the arguments above is an exact algebraic membership test, an all-prime exclusion criterion, and a symmetry proof covering a parameter family. No priority claim is made beyond the literature checked here.
 
@@ -812,3 +1019,6 @@ The exact examples themselves were already detected in [5]. The contribution of 
 
 9. J. S. Balakrishnan and N. Dogra, *Quadratic Chabauty and rational points I: p-adic heights*, especially Definition 2.2, Proposition 5.5, Theorem 6.3, and Lemma 7.5. https://arxiv.org/abs/1601.00388
 10. M. Kim and A. Tamagawa, *The l-component of the unipotent Albanese map*, Math. Ann. 340 (2008), 223–235, Theorem 0.1; also restated in L. A. Betts, *Local constancy of pro-unipotent Kummer maps*, introduction. https://arxiv.org/abs/2203.03701
+
+11. J. S. Balakrishnan and N. Dogra, *Quadratic Chabauty and Rational Points II: Generalised Height Functions on Selmer Varieties*, especially Section 2 and the proof of Proposition 2.2. https://arxiv.org/abs/1705.00401
+12. L. Alexander Betts, *The motivic anabelian geometry of local heights on abelian varieties*, Section 3, equation (3.0.1). https://arxiv.org/abs/1706.04850
