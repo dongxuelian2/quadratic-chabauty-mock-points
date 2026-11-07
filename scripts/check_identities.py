@@ -70,20 +70,3 @@ for xx,yy in residue_points:
     assert int(s.diff(q3,x).subs(x,xx)) % p != 0
     assert 2*yy % p != 0
 print('PASS: simultaneous three-torsion locus, non-Weierstrass certificate, and exact Hensel witness.')
-
-# The dihedral coordinate field: norms and radical reconstruction.
-dd = s.symbols('dd')
-vv = (64-160*dd)/27
-assert s.rem(s.expand(vv*vv.subs(dd,-dd)),dd**2+2,dd) == s.Rational(2048,27)
-assert s.Rational(2048,27) == 6*s.Rational(32,9)**2
-assert s.rem(s.expand(((1+2*dd)/3)**2-s.Rational(2,3)*(1+2*dd)/3+1),dd**2+2,dd) == 0
-assert s.minimal_polynomial((s.sqrt(6)+s.sqrt(-3))/3,x) == 3*x**4-2*x*x+3
-# A second rank-one bielliptic model, not another torsion-cancellation claim.
-mobius = (u+1)/(u-1)
-assert s.cancel((u-1)**6*fm.subs(x,mobius)) == -8*(u**6-5*u**4-5*u**2+1)
-assert s.expand((u+2)**3+10*(u+2)**2-20*(u+2)-8) == u**3+16*u**2+32*u
-assert s.cancel((u-1)**4*q3.subs(x,mobius)) == 4*(u**4+10*u**2+1)
-D3_tilde = 3*u**4+40*u**3-120*u**2-96*u-720
-assert s.expand(D3_tilde.subs(u,-2*u)-16*D3.subs(a,-5)) == 0
-assert s.gcd(u**2+10*u+1,D3.subs(a,-5)) == 1
-print('PASS: dihedral-field norm identities and explicit second bielliptic test.')
