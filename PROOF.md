@@ -572,7 +572,106 @@ Proposition 13 and containment (20) now exclude the original points from the ful
 
 This does not settle the full-depth-two membership of the six earlier points \((\pm i,0)\) and \((\pm1,\pm2\sqrt{-2})\), or classify all other points of the depth-two set. It does resolve the extra second-correspondence condition for the entire eight-point locus (17).
 
-## 12. Boundary of this result
+## 12. Exact second-height values for the remaining six points
+
+The four points with \(x=\pm1\) require a different argument from the torsion calculation in Section 11. Their second-height values can nevertheless be evaluated exactly in terms of one rational elliptic height.
+
+**Theorem 15.** Let \(p\) be odd and split in \(\mathbb Q(\sqrt{-2})\), put \(s=\sqrt{-2}\in\mathbb Q_p\), and let
+\[
+ E:Y^2=X^3-8X^2+8X,\qquad P=(1,1).
+\]
+Use the unit-root (equivalently complementary CM-eigenspace) splitting for its cyclotomic \(p\)-adic height \(h_p\). For the second-model height of (22),
+\[
+ \rho^\ast_p((-1,\pm2s)^\ast)=2h_p(P),\qquad
+ \rho^\ast_p((1,\pm2s)^\ast)=-2h_p(P).
+ \tag{27}
+\]
+Here the superscript \({}^\ast\) means transport through the isomorphism in Proposition 13. At every odd prime where they are visible, the two Weierstrass points instead satisfy
+\[
+ \rho^\ast_p((\pm i,0)^\ast)=0.
+ \tag{28}
+\]
+
+**Proof.** Write \(E':Y^2=Z^3+16Z^2+32Z\), identified with \(\widetilde E\) by \(X_{\widetilde E}=Z+2\). Consider the degree-two isogeny and the quadratic-twist isomorphism
+\[
+ \phi(X,Y)=\left(X-8+\frac8X,\ Y\left(1-\frac8{X^2}\right)\right),
+ \qquad
+ \psi(X,Y)=(-2X,-2sY).
+ \tag{29}
+\]
+For the invariant differentials \(\omega=dX/(2Y)\) and \(\omega'=dZ/(2Y)\), direct differentiation gives
+\(\phi^\ast\omega'=\omega\) and \(\psi^\ast\omega'=\omega/s\).
+The endomorphism \(\eta=\psi^{-1}\phi\) therefore has differential multiplier \(s\), and \(\eta^2=[-2]\), since in characteristic zero the differential determines an endomorphism. This realizes CM by \(\mathbb Z[\sqrt{-2}]\). At the split good primes under consideration the curve is ordinary; the eigenspace complementary to the Hodge line is its unit-root complement.
+
+Transport this complement via \(\psi\) to \(E'\). Since the complement is \(\eta\)-stable, both \(\phi\) and \(\psi\) preserve the chosen splittings. Functoriality of compatible global heights for the degree-two polarized isogeny, and functoriality of elliptic logarithms, give, for
+\[
+ R=\phi(P)=(1,-7),\qquad Q=\psi(P)=(-2,-2s),
+\]
+the identities
+\[
+ h'_p(R)=2h_p(P),\qquad L'(R)=L(P),\qquad
+ L'(Q)=L(P)/s.
+ \tag{30}
+\]
+The height multiplier is the degree of \(\phi\): pullback of the canonical polarization is twice the canonical polarization. The use of compatible splittings is essential here.
+
+The point \(P\) is nontorsion. For example, direct counting gives
+\(\#E(\mathbb F_3)=6\) and \(\#E(\mathbb F_7)=8\); injectivity of prime-to-residue-characteristic rational torsion under good reduction forces the rational torsion order to divide 2. The point \(P\), with nonzero \(Y\), is not two-torsion.
+
+In the original quotient coordinates, \(P\) is \((0,1)\). It is integral and nonsingular at every finite prime: use the \(Y\)-derivative at odd primes and the \(X\)-derivative at 2. Its non-\(p\) local heights are zero, so \(\lambda_p(P)=h_p(P)\). Under the compatible twist isomorphism the formal parameter changes by \(t'=t/s\), whence the normalized local-height transformation is
+\[
+ \lambda'_p(Q)=\lambda_p(P)+\log_p2.
+ \tag{31}
+\]
+Thus, with \(\alpha'=h'_p(R)/L'(R)^2\), equations (30) give
+\(\alpha'L'(Q)^2=-h_p(P)\).
+
+On (22), the continuous extension at \(u=0\), where \(v^2=-2\), is, writing the finite quotient image in \(E'\)-coordinates,
+\[
+ \rho^\ast_p(0,v)
+   =\lambda'_p((-2,-2v))-\log_p(-2)
+       -\alpha'L'((-2,-2v))^2.
+\]
+Indeed the formal parameter of the second quotient is \(-u/v\), so its logarithmic singularity cancels \(-2\log_pu\), leaving \(-\log_p(v^2)\). Equations (30)–(31) now give \(2h_p(P)\). Reciprocal antisymmetry gives \(-2h_p(P)\) at either infinity. Old \(x=-1\) maps to \(u=0\), and old \(x=1\) to infinity, proving (27). The signs of \(y\) do not affect the heights or squared logarithms.
+
+Finally old \(x=\pm i\) maps to \(u=\mp i\). Theorem 2, with \(a_6=a_0=-2\), gives (28). ∎
+
+**Proposition 16 (the exact second local target).** For model (22), the actual local-image functions (3) satisfy
+\[
+ w^\ast_q\equiv0\quad\text{on }C^\ast(\mathbb Q_q)
+ \quad\text{for every }q\ne p.
+\]
+Consequently the actual local-image target is exactly \(\{0\}\), for every odd good \(p\).
+
+**Proof.** At 2, put \(k=v_2(u)\). If \(k>0\), the valuation of \(-2F(u)\) is 1; if \(k<0\), it is \(1+6k\), where \(F(u)=u^6-5u^4-5u^2+1\). Both are odd and impossible for \(v^2\). Hence \(u\) is a unit. Its square is 1 or 9 modulo 16, giving \(F(u)\equiv8\pmod{16}\), and therefore \(v_2(v)=2\).
+
+Use the integral minimal quotient model
+\[
+ E'':w^2=z^3+4z^2+2z,\qquad
+ X_{\widetilde E}=4z+2,\quad Y_{\widetilde E}=8w.
+\]
+The two images have respectively
+\[
+ (z,w)=\left(-\frac{u^2+1}{2},-\frac v4\right),\qquad
+ \left(-\frac{u^{-2}+1}{2},-\frac{v}{4u^3}\right).
+\]
+All coordinates are 2-adic units. The derivative \(3z^2+8z+2\) is odd, so both reduce nonsingularly and have minimal local height zero. Each displayed-model height has the same change-of-model correction \(-2\log_p2\), and these corrections cancel. Also \(|u|_2=1\), proving \(w^\ast_2=0\). There are no \(u=0\) or infinite points over \(\mathbb Q_2\), since their leading or constant coefficient is \(-2\).
+
+At an odd \(q\ne p\), the quotient model has good reduction. If \(k=v_q(u)>0\), the first quotient image has integral coordinates and height zero, while the second has height \(2k\log_pq\), which cancels \(2\log_p|u|_q=-2k\log_pq\). The case \(k<0\) is symmetric; if \(k=0\), all terms vanish. Continuity gives the same result at any \(u=0,\infty\) points. ∎
+
+**Corollary 17 (exclusion from the refined second-height set).** For every \(p\ge5\) split in \(\mathbb Q(\sqrt{-2})\), the four points \((\pm1,\pm2\sqrt{-2})\) fail the second actual local-image height condition. The two locally visible Weierstrass points \((\pm i,0)\) pass both actual local-image height conditions.
+
+**Proof.** Bertrand's nonvanishing theorem for CM elliptic heights, in the form of [7, Appendix A, Theorem A.1 and Lemma A.2], implies \(h_p(P)\ne0\). More explicitly, the one-prime height there is nonzero for a nontorsion point; the anticyclotomic height of rational \(P\) is zero by complex conjugation, so its cyclotomic height cannot be zero. The cyclotomic height agrees with the unit-root height used here up to a nonzero normalization.
+
+We retain the source's assumption \(p>3\). Its CM and functional-equation hypotheses hold: translating \(X=z+3\) identifies \(E\) with LMFDB 256.a1, \(Y^2=z^3+z^2-13z-21\). The local root number at its sole bad prime 2 is \(+1\) [8]; with the archimedean factor \(-1\), its global root number is \(-1\). The CM field \(\mathbb Q(\sqrt{-2})\) has class number one. No numerical approximation to a regulator or analytic rank is being used to infer nonvanishing.
+
+Equations (27) and Proposition 16 exclude the four points from the refined second-height set. Equation (28), Theorem 4, and Proposition 16 prove the assertion about the two Weierstrass points. ∎
+
+**Important remaining boundary.** Corollary 17 is deliberately not stated as a new full-depth-two exclusion. Bianchi [3, Theorem 6.1] identifies an actual-local-image condition with a correspondence Selmer condition for a monic model. Bianchi–Padurariu [2, Remark 2.5] removes the monic hypothesis in the rational-point height criterion, but that alone does not prove full-depth-two containment for every refinement of the coarse target. A proof or precise source for the analogous actual-target containment for nonmonic model (22) is still required to promote Corollary 17 to a full-depth-two exclusion. The coarse-target full-depth-two exclusions in Sections 8 and 11 do not depend on this unresolved refinement.
+
+At \(p=3\), equation (27) and Proposition 16 remain valid, but the cited nonvanishing result has not been applied here. Passing both tests at the two Weierstrass points still does not prove full-depth-two membership.
+
+## 13. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. It neither proves that infinitely many parameters have rank one nor classifies all non-Weierstrass candidates.
 
@@ -588,3 +687,6 @@ The exact examples themselves were already detected in [5]. The contribution of 
 4. J. S. Balakrishnan and A. Besser, *Coleman–Gross height pairings and the p-adic sigma function*, Proposition 6.1. https://arxiv.org/abs/1201.6016
 5. K. Finnerty, *Quadratic Chabauty Experiments on Genus 2 Bielliptic Modular Curves in the LMFDB*, especially Remark 2.4, Remark 3.4 and Section 3.3. https://arxiv.org/abs/2507.03784
 6. J. H. Silverman and J. Tate, *Rational Points on Elliptic Curves*, Undergraduate Texts in Mathematics, Springer, first edition (1992), Chapter III, Section 6, p. 91. https://doi.org/10.1007/978-1-4757-4252-7
+
+7. A. Agboola and B. Howard, *Anticyclotomic Iwasawa theory of CM elliptic curves*, with Appendix A by K. Rubin, especially Theorem A.1 and Lemma A.2 (Bertrand's nonvanishing theorem). https://web.math.ucsb.edu/~agboola/papers/cm1-final.pdf
+8. LMFDB, elliptic curve 256.a1, minimal equation and local root-number data. https://www.lmfdb.org/EllipticCurve/Q/256/a/1
