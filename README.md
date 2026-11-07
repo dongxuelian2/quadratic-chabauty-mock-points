@@ -16,11 +16,13 @@ Research target: explain extra candidates for genus-two curves over the rational
 - A degree-eight dihedral coordinate field for the eight-point locus. Local visibility occurs exactly at completely split primes, of natural density 1/8. This density concerns the first-height candidates, not full-depth-two membership.
 - Genuine depth-two exclusions: the standard coarse height set contains the full Chabauty–Kim set, so the Weierstrass exclusions transfer to depth two. The four excluded Weierstrass points on the rank-two example are therefore absent from the full depth-two set.
 
+- Exact second heights for the remaining six: the four points with x=±1 have values ±2hₚ(P) for a specified rational CM elliptic point, while (±i,0) give zero. The actual second local target is {0}; CM height nonvanishing excludes the four from this refined height set for visible p≥5. Extending the full-depth-two containment to this nonmonic refined target remains unproved here, so this is not claimed as four further full-depth-two exclusions.
+
 The original example points were already observed by Finnerty. These arguments prove exact membership and exclusion rather than identify points from finite-precision approximations; the underlying logarithm-kernel technique is credited to Bianchi. No unverified priority claim is made.
 
 ## Open question
 
-The positive membership results concern explicitly defined single-height candidate sets, not a characterization of the full depth-two Chabauty–Kim set. The exclusion results do transfer to the full set when the standard coarse target is used, by the known containment detailed in PROOF.md. A second correspondence now excludes the eight-point locus above. Full-depth-two membership of (±i,0) and (±1,±2√−2), and any remaining correspondence conditions, is unresolved. The general classification of non-Weierstrass candidates remains open.
+The positive membership results concern explicitly defined single-height candidate sets, not a characterization of the full depth-two Chabauty–Kim set. The exclusion results do transfer to the full set when the standard coarse target is used, by the known containment detailed in PROOF.md. A second correspondence now excludes the eight-point locus above. The four points (±1,±2√−2) fail the refined second height test for visible p≥5, but their full-depth-two exclusion still needs the nonmonic refined-target containment described in PROOF.md. At p=3 the cited nonvanishing theorem has not been applied. The two points (±i,0) pass both actual height tests, with full membership still unresolved. The general classification of non-Weierstrass candidates remains open.
 
 ## Checking the algebra
 
@@ -30,4 +32,4 @@ The proofs do not require numerical p-adic computation. Optional exact polynomia
 python scripts/check_identities.py
 ```
 
-This verifies the derivative cancellation, reciprocal identities, discriminants, factorization, the descent witness, and the rational-power identities used in the factor classification, the simultaneous-three-torsion resultant, the exact local-visibility certificate, the dihedral-field norm identities, and the six-torsion second-height calculation. It is not a substitute for the mathematical proofs.
+This verifies the derivative cancellation, reciprocal identities, discriminants, factorization, the descent witness, and the rational-power identities used in the factor classification, the simultaneous-three-torsion resultant, the exact local-visibility certificate, the dihedral-field norm identities, and the six-torsion second-height calculation, the CM isogeny/twist maps, and the remaining local-target arithmetic. It is not a substitute for the mathematical proofs.
