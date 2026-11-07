@@ -24,9 +24,13 @@ The original example points were already observed by Finnerty. These arguments p
 
 Depth-two statements here use the Mordell–Weil abelian-image condition of Balakrishnan–Dogra Definition 2.2. They do not identify an unrestricted global Bloch–Kato group with Mordell–Weil points merely from the rank.
 
+## Complete special case at p=3
+
+For y²=x⁶−5x⁴−5x²+1, Theorem 21 proves C(Q₃)₂=C(Q)={(0,±1),∞±}, in the explicitly stated Mordell–Weil-restricted, actual-local-image convention. The proof combines an exact h₃(P)≡2 mod3 certificate, uniform estimates over all eight residue disks, and an endpoint-basepoint mixed-extension bridge. Both analytic and bridge arguments received independent review. Full proofs are in [proofs/](proofs), with reports in [verification/](verification).
+
 ## Scope and open questions
 
-The positive membership results concern explicitly defined single-height candidate sets, not a characterization of the full depth-two Chabauty–Kim set. The exclusion results do transfer to the full set when the standard coarse target is used, by the known containment detailed in PROOF.md. A second correspondence now excludes the eight-point locus above. The four points (±1,±2√−2) are now excluded from depth two for visible p≥5 by the proved nonmonic refined-target containment. At p=3 the cited nonvanishing theorem has not been applied. The two points (±i,0) pass both earlier scalar height tests but are now excluded at every visible odd prime by an explicit norm-one-torus quotient. A global reference path is constructed using two proper elliptic curves; its local discrepancy is the nonzero Kummer class of a unit built from 1+√2. This covers both split and inert CM primes. Together, all fourteen specified nonrational first-height candidates are excluded for p≥5 whenever locally visible. The general classification of non-Weierstrass candidates remains open.
+The positive membership results concern explicitly defined single-height candidate sets, not general characterizations of the full depth-two Chabauty–Kim set. Theorem 21 separately gives a complete characterization for this specific curve at p=3. The exclusion results do transfer to the full set when the standard coarse target is used, by the known containment detailed in PROOF.md. A second correspondence now excludes the eight-point locus above. The four points (±1,±2√−2) are now excluded from depth two for visible p≥5 by the proved nonmonic refined-target containment. The independent exact prime-3 certificate now covers p=3 as well. The two points (±i,0) pass both earlier scalar height tests but are now excluded at every visible odd prime by an explicit norm-one-torus quotient. A global reference path is constructed using two proper elliptic curves; its local discrepancy is the nonzero Kummer class of a unit built from 1+√2. This covers both split and inert CM primes. Together, all fourteen specified nonrational first-height candidates are excluded at every odd prime whenever locally visible. The general classification of non-Weierstrass candidates remains open.
 
 ## Checking the algebra
 
@@ -37,3 +41,13 @@ python scripts/check_identities.py
 ```
 
 This verifies the derivative cancellation, reciprocal identities, discriminants, factorization, the descent witness, and the rational-power identities used in the factor classification, the simultaneous-three-torsion resultant, the exact local-visibility certificate, the dihedral-field norm identities, and the six-torsion second-height calculation, the CM isogeny/twist maps, the remaining local-target arithmetic, and the anti-CM divisor factors and exact nontrivial-unit values. It is not a substitute for the mathematical proofs.
+
+
+Additional exact prime-3 checks (standard library only):
+
+```sh
+python scripts/check_prime3_height.py
+python scripts/check_prime3_six_multiple.py
+```
+
+These scripts include independently derived 3P and 6P certificates. The proofs provide the bounds for every omitted term; zero or nonzero claims are not inferred from unexplained finite precision.
