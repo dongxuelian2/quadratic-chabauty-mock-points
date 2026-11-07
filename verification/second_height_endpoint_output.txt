@@ -1,0 +1,5 @@
+PASS: complete primality and rank-pattern prerequisites; both actual targets zero.
+PASS: ell/7=6,Z=4,h/49=3,alpha=3,b=4,second slope=4 mod7.
+PASS: kappa=294 mod343 by low and independent degree20 formal calculations.
+PASS: first extras x/7=±3 have second height/7=±2, hence are excluded.
+Full-set equality uses the proved series bound and actual-target containment.
