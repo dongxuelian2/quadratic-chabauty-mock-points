@@ -133,3 +133,9 @@ Theorem 34 proves unconditional strict Sym² Selmer vanishing, an isomorphism fr
 ## Actual exclusions for infinitely many non-CM curves
 
 Theorem 35 excludes all six Weierstrass points and four x=±1 symmetry points, whenever locally visible, for an unconditional infinite rank-two genus-two family at every explicitly eligible odd prime. The key is a distinguished denominator prime with a nonzero first actual target, together with an archimedean argument for the other four Weierstrass points. See [proof](proofs/infinite_weierstrass_exclusion.md), [review](verification/weierstrass_exclusion_review.md), and [checks](scripts/check_weierstrass_exclusion.py). This does not compute the residual Sym² class or classify all other local points.
+
+## Exact odd residual local images
+
+Theorem 36 computes the actual Sym² and joint Tate/Sym² images at every odd prime dividing a-3. Primes 3 modulo4 contribute zero; primes1 modulo4 contribute an explicit finite nonzero segment with coefficients determined by v_q(a-3). The full Tate projection vanishes there. See [proof](proofs/odd_bad_residual_images.md), [independent review](verification/odd_bad_residual_review.md), and [checks](scripts/check_odd_bad_residual.py).
+
+The stable model also classifies all odd good-reduction primes. Thus Theorem35's infinite-family ten-point exclusions hold at every odd good prime. The dyadic image and global residual comparison remain unresolved.
