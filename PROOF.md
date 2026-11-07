@@ -1186,7 +1186,22 @@ Taking Zywina's construction with source quadratic extension Q(i) gives infinite
 
 See [complete proof](proofs/infinite_weierstrass_exclusion.md), [independent review](verification/weierstrass_exclusion_review.md), and [exact checks](scripts/check_weierstrass_exclusion.py). This is an actual infinite-family exclusion theorem, not an evaluation of the Sym² discrepancy or a full classification of non-Weierstrass members. No endpoint-only equality for an infinite family is claimed.
 
-## 28. Boundary of this result
+## 28. Exact odd bad-prime residual and joint images
+
+**Theorem 36 (odd residual local images).** Let q be odd, q!=p, and n=v_q(a-3)>0. Use the basepoint (0,1) and the central coordinates T=Q_p(1)^2 and R=Sym²V from Theorem34. If q=3 modulo4, the actual residual image Delta_q and the same-point joint image Xi_q are both zero. If q=1 modulo4, choose i in Q_q and put e_q=r_q(i,0). Then e_q is NONZERO and
+
+    Delta_q={0,±e_q} union {±(4k/n)e_q : integers 1<=k<n/4},
+    Xi_q={(0,delta):delta in Delta_q}.
+
+Every listed value is attained. The proof constructs the two-elliptic-component stable fiber, verifies its edge length n/2 and midpoint basepoint, identifies the separating class as nonzero and entirely in R, and applies the published Betts–Dogra graph Kummer formula. The exact same-point Tate projection vanishes, rather than merely satisfying two separate numerical tests.
+
+For a=-157469, the only possible odd residual contribution is at37, where Delta_37={0,±e_37}; the images at7 and19 vanish. The dyadic image, global transport Theta_p and local discrepancy delta_p remain separate problems.
+
+The same stable model proves that an odd prime q is good for C_a exactly when a is q-integral and a modq is neither -1 nor3. Consequently the explicit eligible primes in Theorem35 are ALL odd good-reduction primes of the abstract curve. Its infinite-family exclusions therefore hold at every odd good prime, whenever the points are visible.
+
+See [complete proof](proofs/odd_bad_residual_images.md), [independent audit](verification/odd_bad_residual_review.md), and [exact checks](scripts/check_odd_bad_residual.py). No dyadic calculation or general full-set equality is asserted.
+
+## 29. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.
 
