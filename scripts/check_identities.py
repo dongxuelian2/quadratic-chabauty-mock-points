@@ -126,3 +126,24 @@ for odd in range(1,16,2):
     assert (-(odd*odd+1)//2) % 2 == 1
 assert s.rem((u+1)+u*(u-1),u**2+1,u) == 0
 print('PASS: endpoint-height algebra, CM maps, rational nontorsion witness, and exact local-target arithmetic.')
+
+
+# Exact anti-CM divisor and unit checks (Theorem 20).
+import sympy as S
+x=S.symbols('x');s=S.sqrt(-2)
+f=x**6-5*x**4-5*x*x+1
+A=x**3+3*s*x*x/2-x-s/2
+B=x**3-3*s*x*x/2-x+s/2
+X=x*x+1;Z=1+x**-2
+assert S.cancel(X+(Z-8+8/Z)/2-A*B/(x*x*(x*x+1)))==0
+N=2*s*x**3*(x*x+1)**2-((x*x+1)**2-8*x**4)
+assert S.simplify(S.rem(N,A,x))==0
+Nminus=-2*s*x**3*(x*x+1)**2-((x*x+1)**2-8*x**4)
+assert S.simplify(S.rem(Nminus,B,x))==0
+assert S.simplify(S.discriminant(A,x))==13
+assert S.simplify(S.resultant(A,B,x))==-8*s
+assert S.simplify(S.resultant(A,f,x))==-256
+assert S.simplify(A.subs(x,0)/B.subs(x,0))==-1
+assert S.simplify(A.subs(x,S.I)/B.subs(x,S.I))==-3-2*S.sqrt(2)
+assert S.simplify(A.subs(x,-S.I)/B.subs(x,-S.I))==-3+2*S.sqrt(2)
+print('PASS: CM fiber factors, separation and multiplicities, basepoint normalization, and nontrivial unit values.')
