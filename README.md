@@ -144,22 +144,34 @@ Theorem 35 excludes all six Weierstrass points and four x=±1 symmetry points, w
 
 Theorem 36 computes the actual Sym² and joint Tate/Sym² images at every odd prime dividing a-3. Primes 3 modulo4 contribute zero; primes1 modulo4 contribute an explicit finite nonzero segment with coefficients determined by v_q(a-3). The full Tate projection vanishes there. See [proof](proofs/odd_bad_residual_images.md), [independent review](verification/odd_bad_residual_review.md), and [checks](scripts/check_odd_bad_residual.py).
 
-The stable model also classifies all odd good-reduction primes. Thus Theorem35's infinite-family ten-point exclusions hold at every odd good prime. The dyadic image and global residual comparison remain unresolved.
+The stable model also classifies all odd good-reduction primes. Thus Theorem35's infinite-family ten-point exclusions hold at every odd good prime. The actual dyadic image is now settled below; the general global residual comparison remains unresolved.
 
 ## Compatible Tate lifting is settled for the integral family
 
-Theorem37 proves that, for integral a=3 modulo8 with non-CM rank-one quotient and odd good p=1 modulo4, the common Tate class of (±i,0) has a unique compatible global lift with zero bad-local coordinates. Full depth-two membership of the pair is therefore equivalent to the residual Sym² finite-target criterion. See [proof](proofs/integral_tate_lift.md) and [independent audit](verification/integral_tate_lift_review.md). The dyadic residual image and actual global/local residual comparison remain to be evaluated.
+Theorem37 proves that, for integral a=3 modulo8 with non-CM rank-one quotient and odd good p=1 modulo4, the common Tate class of (±i,0) has a unique compatible global lift with zero bad-local coordinates. Full depth-two membership of the pair is therefore equivalent to the residual Sym² finite-target criterion. See [proof](proofs/integral_tate_lift.md) and [independent audit](verification/integral_tate_lift_review.md). The actual dyadic image is zero throughout this family, as recorded below; nonzero transported odd residual targets remain to be compared.
 
 ## Dyadic residual cohomology vanishes for odd v₂(a−3)≥5
 
 Theorem38 proves H¹(Q₂,Sym²Vp(E_a))=0 for every odd p in this integral subfamily, with no rank or non-CM hypothesis for the local result. Together with the two zero Tate coordinates, the entire actual dyadic joint image is {(0,0)}. See [proof](proofs/dyadic_residual_vanishing.md), [checks](scripts/check_dyadic_residual.py), and [independent audit](verification/dyadic_residual_review.md).
 
-Combined with Theorems36–37 under their global hypotheses, this leaves only the explicit odd residual targets. For a=-605 the full remaining pair criterion is δp(W)=0; for a=-157469 the target has at most three values, {0,±Θp(e37)}. The discrepancy and global transport have NOT been evaluated. The even valuations are settled by Theorem39 below; v₂(a−3)=3 remains open. No general classification is claimed.
+Combined with Theorems36–37 under their global hypotheses, this leaves only the explicit odd residual targets. For a=-605 the pair criterion is δp(W)=0; for a=-157469 the target has at most three values, {0,±Θp(e37)}. The five-adic period theorem below now excludes the pair for −605. Theorem39 settles even dyadic valuations, and the subsequent actual-image theorem also covers v₂(a−3)=3.
 
 ## All dyadic valuations at least four, and a global discrepancy class
 
 Theorem39 extends dyadic residual vanishing to every v₂(a−3)≥4, equivalently the integral subfamily a≡3 modulo16 (a≠3). The even case uses an exact biquadratic splitting-field and Hensel-deformation proof, independently checked. See [proof](proofs/dyadic_even_valuation.md), [checker](scripts/check_dyadic_even.py), and [audit](verification/dyadic_even_review.md).
 
-Theorem40 constructs a global class ηp in the quadratic twist Sym²Vp(E)⊗χ₋₄ whose p-localization is δp(W). For −605, ηp is provably nonzero because it is ramified at19, but its localization at p is still unevaluated. Full membership remains exactly locp(ηp)=0. A dimension argument rules out blanket localization injectivity for parameters with at least two odd prime factors of a−3. See [proof](proofs/twisted_discrepancy_descent.md) and [audit](verification/twisted_discrepancy_review.md).
+Theorem40 constructs a global class ηp in the quadratic twist Sym²Vp(E)⊗χ₋₄ whose p-localization is δp(W). For −605, ηp is provably nonzero because it is ramified at19. Its localization at5 is now also proved nonzero by the period certificate below. Full membership at other eligible primes retains the criterion locp(ηp)=0. A dimension argument rules out blanket localization injectivity for parameters with at least two odd prime factors of a−3. See [proof](proofs/twisted_discrepancy_descent.md) and [audit](verification/twisted_discrepancy_review.md).
 
-These are new local and global structural results, not a determination of δp(W), Θp, or the general depth-two set.
+## Uniform periods and the actual dyadic image
+
+The [actual dyadic-image theorem](proofs/dyadic_actual_images.md) gives Xi₂={(0,0)} throughout a≡3 modulo8, including v₂(a−3)=3. It does not claim that the whole local cohomology group vanishes in that case.
+
+The [uniform five-adic theorem](proofs/universal_five_adic_residual.md) gives the exact factorization X_a=5(a+5)U((a+5)/5), with U≡3 modulo5. Its only zero is a=−5, already handled by the CM torus argument. The regular Frobenius calculation for −605 has been recomputed: the first normalized coordinate is21625 modulo5⁷, of valuation3. For integral a≡3 modulo8 with 5|a and rank E_a(Q)=1, the [Selmer dichotomy](proofs/five_adic_selmer_dichotomy.md) proves exactly four rational points and either four or six full depth-two points. There are exactly four when every odd prime dividing a−3 is3 modulo4.
+
+The prime-thirteen results also include the [critical lift](proofs/prime13_critical_lift.md) and [nonzero second scalar targets](proofs/prime13_nonzero_second_targets.md). These scalar-target results do not evaluate the general nonzero transported Sym² target.
+
+## A degree-ten reduction for the remaining adjoint computation
+
+For the actual nonzero-target example a=−157469, the [quintic-reduction theorem](proofs/adjoint_quintic_reduction.md) identifies unrestricted S-ramified H¹(Q,ad⁰(E[5])) with the anti-invariant mod-five ray-class characters of an explicit degree-ten field. It uses a five-point module and the published Fernández–Lario modular resolvent, avoiding construction of the degree-120 projective splitting field.
+
+Run `python scripts/check_adjoint_quintic.py` for the exact representation and field identities. The optional PARI script `scripts/compute_adjoint_ray.gp` attempts the ray-class computation and requires unconditional class-group certification before labeling a dimension certified. Propagated finite/crystalline local conditions, δ₅(W) versus {0,±Θ₅(e₃₇)}, and the original general problem remain unresolved.

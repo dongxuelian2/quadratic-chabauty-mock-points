@@ -1274,7 +1274,62 @@ The Q(√−7) cases retain the potentially nonzero global S-unit space. Betts's
 
 The exact checks are in [scripts/check_rational_cm_packet.py](scripts/check_rational_cm_packet.py). This theorem closes the entire rational-CM Weierstrass subclass, not the non-Weierstrass or general non-CM classification. In particular the non-CM comparison with {0,±Theta_5(e_37)} for a=−157469 is still open.
 
-## 34. Boundary of this result
+## 34. Uniform periods and the complete actual dyadic image
+
+The [actual dyadic-image theorem](proofs/dyadic_actual_images.md) proves
+Xi₂={(0,0)} for every a∈Z₂ with a≡3 modulo8 and a≠3, at every odd
+coefficient prime. This includes v₂(a−3)=3, which was left open by
+Theorems38–39. The conclusion concerns point images; it does not assert
+vanishing of the entire local cohomology group in that remaining valuation.
+
+The [uniform five-adic period theorem](proofs/universal_five_adic_residual.md)
+proves X_a=5(a+5)U((a+5)/5), with U∈Z₅⟨b⟩ and U≡3 modulo5. Its
+only zero for a∈5Z₅ is a=−5. In particular the [regular Frobenius
+certificate](proofs/five_adic_residual_certificate.md) evaluates the
+previously unevaluated localization for a=−605: its normalized holomorphic
+coordinate is21625 modulo5⁷, of valuation3. This excludes W± there,
+under the established rank-one global hypotheses and zero actual residual
+targets. The CM case a=−5 is handled by its separate torus obstruction.
+
+Combined with the [six-disk and gluing arguments](proofs/five_adic_selmer_dichotomy.md),
+every integral a≡3 modulo8 with 5|a and rank E_a(Q)=1 has exactly the
+four rational endpoints. Its full restricted depth-two set is either
+those four or those four together with W±. The latter alternative can
+only occur through a nonzero odd residual target; the dyadic target is
+zero throughout. If every odd prime dividing a−3 is3 modulo4, the full
+set is exactly the four endpoints.
+
+The [prime-thirteen period theorem](proofs/universal_thirteen_adic_residual.md),
+[critical-lift continuation](proofs/prime13_critical_lift.md), and
+[nonzero second-scalar-target theorem](proofs/prime13_nonzero_second_targets.md)
+give further full equalities with their stated residue, rank and actual
+target hypotheses. A nonzero second scalar target in these theorems must
+not be confused with an evaluated nonzero transported Sym² target.
+
+## 35. Quintic reduction of the actual mod-five adjoint calculation
+
+For a=−157469 set M=ad⁰(E_a[5]) and S={2,5,7,19,37,39367,∞}.
+The [quintic-reduction theorem](proofs/adjoint_quintic_reduction.md) gives
+
+    H¹(G_{Q,S},M) ≅ Hom(Cl_m(F(√5))/5,F₅)⁻,
+
+where F is the quintic field defined by
+t⁵−1574680t²−123981642460t−15618612205226992 and
+m=(5³·2·7·19·37·39367)O_{F(√5)}. The involution fixes F.
+The proof identifies M with the sign-twisted deleted five-point module,
+proves H¹ and H² vanish for the auxiliary quadratic character over Q
+with this S, and applies the resulting exact sequences, Shapiro and
+class field theory. It uses the published Fernández–Lario modular
+resolvent to identify the quintic field.
+
+This replaces a degree-120 splitting-field calculation by a degree-ten
+unrestricted ray-class calculation. The [exact checker](scripts/check_adjoint_quintic.py)
+verifies the representation on all120 elements and the field identities.
+No class-group dimension or propagated finite/crystalline local condition
+is inferred from that checker. The comparison with {0,±Θ₅(e₃₇)} and the
+general classification remain open.
+
+## 36. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.
 
