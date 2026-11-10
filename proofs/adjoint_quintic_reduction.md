@@ -177,6 +177,11 @@ attempts the class group, ray quotient and involution matrix. Class-group
 output is conditional until `bnfcertify` returns1; no uncertified
 dimension is included in the theorem.
 
+The full local attempt with eight threads and a6GB main PARI stack
+exhausted that stack during class-group construction, after increasing
+the relation factor base. It produced no certified class group or ray
+dimension. The tentative intermediate class number is not a result.
+
 Even a certified value for (1) is not the required finite Selmer group.
 The local long exact sequences from (3) have their own H⁰ and H¹ terms;
 the global character vanishing (4) cannot be imposed locally. In
