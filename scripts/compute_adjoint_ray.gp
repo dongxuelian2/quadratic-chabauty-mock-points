@@ -7,6 +7,7 @@
 \\ The class-group stage may take a long time. Output remains conditional
 \\ until the final certification succeeds; failures abort the script.
 default(parisizemax,if(getenv("PARI_ADJOINT_STACK"),eval(getenv("PARI_ADJOINT_STACK")),2000000000));
+default(threadsizemax,128000000);
 default(nbthreads,8);
 compute_adjoint_ray()={
   my(f=x^5-1574680*x^2+2362020*x+198368738320);
