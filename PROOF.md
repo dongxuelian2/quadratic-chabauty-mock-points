@@ -1264,7 +1264,17 @@ A dimension formula further shows that, when a-3 has at least two distinct odd p
 
 See [complete proof](proofs/twisted_discrepancy_descent.md) and [independent audit](verification/twisted_discrepancy_review.md). No value of delta_p or Theta_p and no new full-set equality are asserted.
 
-## 33. Boundary of this result
+## 33. Complete rational-CM Weierstrass subcase
+
+**Theorem (complete rational-CM subcase).** For the reciprocal family C_a, the rational parameters with geometrically CM elliptic quotient are exactly 0, −3/2, −15/16, −5, 15, −33 and 255. The parameter 0 has elliptic rank zero. Each of the other six has elliptic rank one and Jacobian rank two. At every odd good prime, every locally visible Weierstrass point on each of these six curves is excluded from the full depth-two set in the stated Mordell–Weil abelian-image and actual-local-image convention.
+
+The [complete proof](proofs/rational_cm_weierstrass_classification.md) supplies the finite CM-parameter classification, elementary two-isogeny rank certificates, four new explicit torus quotients, complete origin-fiber divisors and reference-path normalizations. For a=−33 the origin-fiber comparison requires a third-order divided by first-order limit, producing relative torus value 1/9; for a=−3/2 the corresponding value is 1/3. The Q(√−7) values at a=−15/16 and 255 are respectively (431−160√7)/81 and (364961−137920√7)/6561.
+
+The Q(√−7) cases retain the potentially nonzero global S-unit space. Betts's rationality theorem for actual local Néron metrics forces rational coefficients through the injective valuation map on imaginary-quadratic norm-one S-units. Clearing denominators then gives an exact algebraic logarithm comparison; complex absolute values exclude every allowed combination. The argument does not substitute a vanishing assumption for these nonzero targets. The remaining Weierstrass points follow from the existing root-power criterion, except the four additional points at a=−3/2, whose new torus values are (−1±2√−2)/3.
+
+The exact checks are in [scripts/check_rational_cm_packet.py](scripts/check_rational_cm_packet.py). This theorem closes the entire rational-CM Weierstrass subclass, not the non-Weierstrass or general non-CM classification. In particular the non-CM comparison with {0,±Theta_5(e_37)} for a=−157469 is still open.
+
+## 34. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.
 

@@ -2,6 +2,12 @@
 
 Research target: explain extra candidates for genus-two curves over the rationals whose Jacobians have Mordell–Weil rank two, starting from [ICM 2026, Problem 6.4](https://doi.org/10.1137/25M1805011).
 
+## Complete rational-CM Weierstrass subcase
+
+The reciprocal family has exactly seven rational parameters with CM elliptic quotient: 0, −3/2, −15/16, −5, 15, −33 and 255. The parameter 0 has Jacobian rank zero; the other six have rank two. For all six rank-two curves, every locally visible Weierstrass point is excluded from the full restricted depth-two set at every odd good prime. The [complete proof](proofs/rational_cm_weierstrass_classification.md) combines the two earlier CM examples with four explicit new torus quotients and elementary rank certificates.
+
+The new comparison also handles potentially nonzero targets in the CM field Q(√−7): actual local Néron metrics force rational S-unit coefficients, and an algebraic logarithm/complex-absolute-value argument separates the candidate from the entire allowed target. This settles a complete finite arithmetic subclass; the non-CM transported Sym² targets and non-Weierstrass classification remain open. Run `python scripts/check_rational_cm_packet.py` for the exact algebra.
+
 ## Established here
 
 [PROOF.md](PROOF.md) gives complete arguments for:
