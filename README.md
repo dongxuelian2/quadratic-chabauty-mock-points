@@ -195,3 +195,25 @@ index values are never accepted as a class-group certificate.
 Q(sqrt(5)) and completes an unconditional class-group calculation after
 restoration. These changes improve reproducibility of the remaining
 calculation; they do not establish its dimension or the local target test.
+
+## A local lifting obstruction and smaller ray modulus
+
+The [local lifting theorem](proofs/adjoint_local_lifting.md) proves that
+`H¹(Q₁₉,ad⁰(E[5ⁿ]))` has order five at every level, but every coefficient
+reduction map between successive levels is zero. Consequently every
+global mod-five adjoint class lifting to mod 25 must restrict to zero at
+19. The local groups at 7 and 39367 vanish; the group at 37 is the
+unramified `Z/5ⁿZ`.
+
+Exact prime decomposition reduces the unrestricted ray modulus to
+`P5^13 Q19 tau(Q19)`. Imposing the local zero condition at 19 removes
+both Q19 factors. This gives a necessary pure-5-modulus character space
+for integral lifts, without computing its dimension or the crystalline
+condition at 5. Both the Python cocycle checker and the short Hecke
+ideal/residue-field checker pass.
+
+The two long local computations are **stopped** without a final class
+group or ray dimension. The smaller-base checkpoint preserves 1,331
+exact relations at rank 569; it is not a certificate. No long run has
+been restarted with the reduced modulus. The original target comparison
+and general problem remain open.

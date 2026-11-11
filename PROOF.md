@@ -1329,6 +1329,34 @@ No class-group dimension or propagated finite/crystalline local condition
 is inferred from that checker. The comparison with {0,±Θ₅(e₃₇)} and the
 general classification remain open.
 
+### 35.1 Local lifting obstruction and conductor reduction
+
+For the same actual curve let T=ad⁰(T₅E), M_n=T/5ⁿT. The
+[local lifting theorem](proofs/adjoint_local_lifting.md) proves, for all n>=1,
+
+    H¹(Q₇,M_n)=H¹(Q₃₉₃₆₇,M_n)=0,
+    H¹(Q₁₉,M_n)≅Z/5Z,
+    H¹(Q₃₇,M_n)≅Z/5ⁿZ (unramified).
+
+Every map H¹(Q₁₉,M_(n+1))->H¹(Q₁₉,M_n) induced by coefficient
+reduction is zero. Thus a global mod-five class that lifts even to
+M_2 must have zero localization at 19. The proof identifies the local
+group with ker(20:Z/5ⁿZ->Z/5ⁿZ); it does not infer lifting from its order.
+
+Exact prime-ideal decompositions and the local logarithm reduce the
+unrestricted ray modulus to P5^13 Q19 tau(Q19), where P5 is the unique
+prime above 5 and the two Q19 primes have (e,f)=(2,2). Under Section 35's
+global isomorphism, ker(loc_19) is exactly the anti-invariant character
+space for modulus P5^13. This is a necessary condition for integral
+lifts, not a complete finite/crystalline Selmer computation. No dimension
+drop on the global space or value of the transported target is proved.
+
+The exact finite-module checker and the bounded Hecke ideal-decomposition
+checker both pass. The two long class-group computations have been
+stopped without a class-group or ray-dimension result; the saved
+smaller-base relations remain recoverable locally. The new modulus has
+not been used to restart a long computation.
+
 ## 36. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.

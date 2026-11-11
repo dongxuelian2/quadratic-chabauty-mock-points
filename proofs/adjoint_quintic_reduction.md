@@ -23,6 +23,12 @@ This is a cohomological reduction, not a computed dimension. It does not
 identify the propagated finite/crystalline local conditions with all of
 the ray-class space. It does not evaluate δ₅(W) or Θ₅(e₃₇).
 
+The subsequent [local lifting theorem](adjoint_local_lifting.md) reduces
+this sufficient modulus to P5^13 Q19 tau(Q19), and identifies the local
+zero condition at 19 with removal of the two Q19 factors. Every integral
+lift satisfies that necessary condition. The long class-group attempts
+are stopped; no ray dimension has been obtained.
+
 ## 1. The five-point module
 
 The [exact Frobenius calculation](adjoint_transgression_repair.md) proves
