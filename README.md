@@ -175,3 +175,22 @@ The prime-thirteen results also include the [critical lift](proofs/prime13_criti
 For the actual nonzero-target example a=−157469, the [quintic-reduction theorem](proofs/adjoint_quintic_reduction.md) identifies unrestricted S-ramified H¹(Q,ad⁰(E[5])) with the anti-invariant mod-five ray-class characters of an explicit degree-ten field. It uses a five-point module and the published Fernández–Lario modular resolvent, avoiding construction of the degree-120 projective splitting field.
 
 Run `python scripts/check_adjoint_quintic.py` for the exact representation and field identities. The optional PARI script `scripts/compute_adjoint_ray.gp` and Hecke/Nemo alternative `scripts/compute_adjoint_ray.jl` attempt the ray-class computation. Both check the exact field and involution; the Hecke route uses sparse relations and automorphisms, and requires unconditional class and unit certification before labeling the ray dimension certified. No degree-ten dimension has yet been certified. Propagated finite/crystalline local conditions, δ₅(W) versus {0,±Θ₅(e₃₇)}, and the original general problem remain unresolved.
+
+For Hecke 0.41.1, `ADJOINT_LARGE_PRIME_FIX=1` enables a version-checked
+workaround for mismatched large-prime cache keys and a duplicate-base
+quotient error. Installed package files are not changed.
+`scripts/check_hecke_large_prime.jl` reproduces the cache miss, then checks
+the repaired principal-ideal relation and cancellation of repeated bases.
+
+Long runs can set `ADJOINT_FACTOR_BOUND` and
+`ADJOINT_RELATION_CHECKPOINT=build/adjoint.relations`. The latter writes
+exact factored elements atomically before expensive lattice-index work,
+after each 256 additional relations or the first full-rank observation.
+Resume with `ADJOINT_RELATION_RESUME=build/adjoint.relations`; the field
+and discriminant are checked and every saved element is re-factored.
+The saved bound must match any explicitly supplied bound. Saved rank and
+index values are never accepted as a class-group certificate.
+`scripts/check_hecke_relation_checkpoint.jl` checks a round trip on
+Q(sqrt(5)) and completes an unconditional class-group calculation after
+restoration. These changes improve reproducibility of the remaining
+calculation; they do not establish its dimension or the local target test.

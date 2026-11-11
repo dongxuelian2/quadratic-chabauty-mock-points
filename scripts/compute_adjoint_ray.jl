@@ -3,7 +3,14 @@
 # ADJOINT_FIELD_ONLY=1 stops after exact field and involution checks.
 # ADJOINT_CONDITIONAL_ONLY=1 stops before unconditional certification.
 # ADJOINT_FACTOR_BOUND overrides Hecke's default factor-base bound.
+# ADJOINT_LARGE_PRIME_FIX=1 enables the audited Hecke 0.41.1 workaround.
+# ADJOINT_RELATION_CHECKPOINT saves exact relations before index calculations.
+# ADJOINT_RELATION_RESUME re-factors saved relations before continuing.
 using Hecke
+if get(ENV,"ADJOINT_LARGE_PRIME_FIX","0") == "1"
+    include("hecke_large_prime_patch.jl")
+end
+include("hecke_relation_checkpoint.jl")
 
 function adjoint_field()
     Qx, x = polynomial_ring(QQ, :x)
@@ -64,7 +71,24 @@ function main()
     @assert bound == -1 || bound > 0
     println("FACTOR_BOUND=", bound == -1 ? "Hecke default" : string(bound))
     flush(stdout)
-    C, _ = class_group(O; GRH=true, use_aut=true, bound=bound)
+    resumed = haskey(ENV,"ADJOINT_RELATION_RESUME")
+    if resumed
+        L = lll(O)
+        ctx, saved_bound = read_relation_checkpoint(L,ENV["ADJOINT_RELATION_RESUME"])
+        @assert bound == -1 || bound == saved_bound
+        bound = saved_bound
+        Hecke.set_attribute!(L,:ClassGrpCtx,ctx)
+        O = L
+    end
+    if haskey(ENV,"ADJOINT_RELATION_CHECKPOINT")
+        @assert bound > 0
+        install_relation_checkpoints(ENV["ADJOINT_RELATION_CHECKPOINT"],bound)
+    end
+    if resumed
+        # A restored relation lattice is not a completed class/unit group.
+        Base.invokelatest(Hecke.class_group_via_lll,ctx)
+    end
+    C, _ = Base.invokelatest(class_group,O; GRH=true, use_aut=true, bound=bound,do_lll=!resumed)
     println("CLASS_GROUP_CONDITIONAL=", C)
     println("CLASS_NUMBER_CONDITIONAL=", order(C))
     flush(stdout)
