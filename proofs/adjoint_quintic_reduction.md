@@ -177,10 +177,56 @@ attempts the class group, ray quotient and involution matrix. Class-group
 output is conditional until `bnfcertify` returns1; no uncertified
 dimension is included in the theorem.
 
-The full local attempt with eight threads and a6GB main PARI stack
-exhausted that stack during class-group construction, after increasing
-the relation factor base. It produced no certified class group or ray
-dimension. The tentative intermediate class number is not a result.
+The PARI script now reduces the degree-ten defining polynomial and
+transports the involution through an exactly checked field isomorphism.
+It checks that the transported map fixes the quintic generator and
+negates sqrt(5). Thread count, factor-base size and relation-search
+parameters are configurable. Completed class groups have versioned
+binary checkpoints; the loader accepts both a single record and PARI's
+append-only sequence of records, selecting the last record and rejecting
+incompatible field or involution data.
+
+The local PARI attempts exhausted both a 6 GB and a 12 GB main stack
+during class-group construction. Smaller-factor-base random and
+small-norm searches had insufficient relation yield. No attempt
+produced a certified class group or ray dimension. Intermediate
+relation counts and tentative class numbers are not class-group results.
+
+`scripts/compute_adjoint_ray.jl` provides an independent Hecke/Nemo route,
+tested with Hecke 0.41.1 and Julia 1.10.13. It constructs L from
+
+    A(x)=-x⁵−50x³−1574680x²−2362145x+198360864920,
+    B(x)=5x⁴+50x²+3149360x+2362045,
+    A(x)²−5B(x)²=0.
+
+For its root alpha, gamma=-A(alpha)/B(alpha) satisfies gamma²=5,
+and beta=gamma−alpha satisfies g(beta)=0. The map
+alpha↦alpha−2gamma therefore fixes beta and negates gamma. These
+identities and the maximal-order discriminant are checked exactly.
+Hecke collects sparse relations using the order-two automorphism and
+computes the kernel of tau+1 on the exponent-five ray quotient. The
+same ray-action routine was independently exercised on Q(sqrt(5)),
+where unconditional computation returns a zero-dimensional minus part
+for this modulus.
+
+The default full calculation first prints explicitly conditional class
+and ray data, then requests `ray_class_group(...; GRH=false)`, which
+certifies both class and unit groups before recomputing the ray quotient.
+The equality of the two minus dimensions is checked. A conditional
+result is never relabeled certified merely because it is unchanged.
+No degree-ten dimension is asserted here.
+
+From a Julia environment containing Hecke, run
+
+```sh
+ADJOINT_FIELD_ONLY=1 julia --project=<Hecke environment> scripts/compute_adjoint_ray.jl
+julia --project=<Hecke environment> scripts/compute_adjoint_ray.jl
+```
+
+`ADJOINT_FACTOR_BOUND` optionally changes the relation factor base;
+`ADJOINT_CONDITIONAL_ONLY=1` explicitly stops before certification.
+The first command checks the exact field construction without starting
+the expensive class-group stage.
 
 Even a certified value for (1) is not the required finite Selmer group.
 The local long exact sequences from (3) have their own H⁰ and H¹ terms;
