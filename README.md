@@ -179,6 +179,7 @@ Run `python scripts/check_adjoint_quintic.py` for the exact representation and f
 For Hecke 0.41.1, `ADJOINT_LARGE_PRIME_FIX=1` enables a version-checked
 workaround for mismatched large-prime cache keys and a duplicate-base
 quotient error. Installed package files are not changed.
+The corresponding upstream repair is [Hecke.jl PR 2654](https://github.com/thofma/Hecke.jl/pull/2654).
 `scripts/check_hecke_large_prime.jl` reproduces the cache miss, then checks
 the repaired principal-ideal relation and cancellation of repeated bases.
 
