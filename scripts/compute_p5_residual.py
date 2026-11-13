@@ -75,8 +75,12 @@ def eval_mod(coeff,H,g,q):
     return r
 
 def inv_mod(D,g,q,W):
-    # D mod5 = x^25, g mod5=x^30+1; inverse is -x^5.
-    r=[0]*5+[q-1]
+    # Start in the actual residue algebra, including ordinary reductions.
+    x=sp.symbols('x')
+    poly=lambda a: sp.Poly.from_list(list(reversed(a)),x,modulus=5)
+    inverse=sp.invert(poly(D),poly(g))
+    r=[int(inverse.nth(i))%q for i in range(inverse.degree()+1)]
+    assert rem(mmul(D,r,g,5),g,5)==[1]
     n=1
     while n<W:
         r=mmul(r,sub([2],mmul(D,r,g,q),q),g,q);n*=2

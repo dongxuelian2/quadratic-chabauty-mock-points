@@ -1,12 +1,13 @@
-"""Parameterized finite Frobenius certificate.
-The uniform analytic bounds from the fixed certificate apply; comparisons
-between parameter samples alone are not a proof of uniform nonvanishing.
+"""Pointwise finite Frobenius certificates for good reciprocal parameters.
+The analytic bounds from the fixed certificate apply after the hypotheses
+in actual_noncm_five_adic_period.md are checked. Parameter samples alone
+are not a proof of uniform nonvanishing.
 """
 from compute_p5_residual import *
 import argparse
 from pathlib import Path
 def compute(a,cutoff=20,W=30,verbose=False):
-    assert a % 5 == 0, "The certified family requires a divisible by 5."
+    assert a % 5 not in (3,4), "The reciprocal curve must have good reduction at 5."
     assert cutoff == 20 and W >= 30, "The published seven-digit certificate uses T=20 and N>=30."
     t0=time.time();q=5**W;f=[1,0,a,0,a,0,1]
     H,U,PP=regular_lift(f,W,q)
@@ -65,7 +66,7 @@ def compute(a,cutoff=20,W=30,verbose=False):
       'normalized_cross_periods':[rr(z) for z in sol],
       'normalized_target':rr(sol[0]),'odd_model_target_J':2*rr(sol[0])*pow(a-3,-1,mod)%mod,
       'system_determinant_mod5':int(amat.det())%5,
-      'status':'Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.'}
+      'status':'Pointwise arithmetic certificate; analytic bounds: five_adic_residual_certificate.md Section 7; the ordinary example is audited in actual_noncm_five_adic_period.md.'}
 
     if verbose: print('Normalized target modulo5^7:',rr(sol[0]),flush=True)
     if verbose: print('Odd-model target J modulo5^7:',2*rr(sol[0])*pow(a-3,-1,mod)%mod,flush=True)
@@ -77,16 +78,17 @@ def compute(a,cutoff=20,W=30,verbose=False):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description="Compute certified seven-digit parameter samples; no output file is overwritten unless --output is supplied.")
-    parser.add_argument('parameters', nargs='*', type=int, help='Parameters a divisible by 5; default: a=5b-5 for b=0,...,15.')
+    parser.add_argument('parameters', nargs='*', type=int, help='Integral parameters with good reduction at 5; default: a=5b-5 for b=0,...,15.')
     parser.add_argument('--output', type=Path, help='Explicit destination for the JSON certificates.')
     args=parser.parse_args()
     values=args.parameters or [5*b-5 for b in range(16)]
     certificates=[]
     for a in values:
         certificate=compute(a)
-        certificate['b']=(a+5)//5
+        if a%5==0:
+            certificate['b']=(a+5)//5
         certificates.append(certificate)
-        print('a=',a,'b=',certificate['b'],'X mod5^7=',certificate['normalized_target'],flush=True)
+        print('a=',a,'X mod5^7=',certificate['normalized_target'],flush=True)
     if args.output:
         args.output.write_text(json.dumps(certificates,indent=2)+'\n')
         print('Wrote',args.output)

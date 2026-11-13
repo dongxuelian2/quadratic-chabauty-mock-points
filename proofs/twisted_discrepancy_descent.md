@@ -201,4 +201,10 @@ The dimension formula is the same Poitou–Tate/Bloch–Kato formula used in the
 
 Established unconditionally here: the canonical twisted global class; exact split-p localization; nonzero bad-prime ramification; global nonvanishing for −605; and the dimension obstruction to blanket injectivity when there are at least two odd primes dividing a−3.
 
-Unresolved: nonvanishing or vanishing of δ_p(i,0), including a=−605, p=5. No first-height test is substituted for this residual computation, and no local nonvanishing is inferred from global nonvanishing.
+Subsequent [five-adic certification](five_adic_residual_certificate.md)
+proves delta₅(W)!=0 for a=-605. The
+[actual nonzero-target certificate](actual_noncm_five_adic_period.md)
+also proves it for a=-157469, leaving comparison with ±Theta₅(e₃₇).
+General p-local nonvanishing and non-CM target comparison remain open.
+These local conclusions use computed and certified periods, not an
+inference from global nonvanishing.

@@ -1,0 +1,144 @@
+{
+  "parameter_a": -157469,
+  "p": 5,
+  "term_cutoff": 20,
+  "coefficient_precision": 30,
+  "theoretical_degree_bound": 2868,
+  "effective_degree": 698,
+  "horizontal_scale_exponent": 4,
+  "integration_scale_exponent_used": 3,
+  "pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      3
+    ]
+  ],
+  "modulus": 78125,
+  "frobenius_matrix": [
+    [
+      21175,
+      0,
+      22195,
+      0,
+      36815
+    ],
+    [
+      0,
+      21175,
+      0,
+      57470,
+      0
+    ],
+    [
+      16500,
+      0,
+      41315,
+      0,
+      56395
+    ],
+    [
+      0,
+      66641,
+      0,
+      56948,
+      0
+    ],
+    [
+      51008,
+      0,
+      41999,
+      0,
+      15638
+    ]
+  ],
+  "system_matrix": [
+    [
+      56876,
+      25875,
+      20875,
+      225,
+      51750,
+      23200
+    ],
+    [
+      48700,
+      63601,
+      43630,
+      23515,
+      49085,
+      21880
+    ],
+    [
+      65625,
+      26250,
+      76751,
+      1950,
+      54625,
+      73100
+    ],
+    [
+      32875,
+      45500,
+      8335,
+      5881,
+      62055,
+      58165
+    ],
+    [
+      61850,
+      54615,
+      46175,
+      67470,
+      37226,
+      34140
+    ],
+    [
+      72747,
+      40166,
+      50891,
+      37823,
+      55542,
+      72177
+    ]
+  ],
+  "system_rhs": [
+    15725,
+    65180,
+    24125,
+    53778,
+    10216,
+    37248
+  ],
+  "normalized_cross_periods": [
+    22100,
+    73695,
+    38675,
+    51468,
+    35041,
+    50596
+  ],
+  "normalized_target": 22100,
+  "odd_model_target_J": 8275,
+  "system_determinant_mod5": 2,
+  "status": "Pointwise arithmetic certificate; analytic bounds: five_adic_residual_certificate.md Section 7; the ordinary example is audited in actual_noncm_five_adic_period.md."
+}

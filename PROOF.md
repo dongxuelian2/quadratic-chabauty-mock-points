@@ -1378,6 +1378,26 @@ does not decide whether individual cohomology classes lift or evaluate
 the original transported target. The new matrix checker passes, and
 the finite-group argument was independently reviewed.
 
+### 35.3 A nonzero discrepancy for the actual target at five
+
+For a=-157469 the [pointwise ordinary certificate](proofs/actual_noncm_five_adic_period.md)
+proves
+
+    (1/i) integral_(W₋)^(W₊) nu₀ nu₁ = 22100+O(5⁷),
+
+of valuation two. The earlier holomorphic-coordinate lemma therefore
+gives delta₅(W)!=0. This removes zero from the actual target grid;
+comparison with the two values ±Theta₅(e₃₇) remains open.
+
+The two independent implementations agree in every displayed matrix
+entry and all six cross periods. This parameter has ordinary reduction
+and requires a new polynomial inverse in the regular Frobenius lift;
+the supersingular inverse cannot be reused. The existing reduction
+and tail bounds apply because this f is integral, monic and squarefree
+modulo5. The true six-dimensional system has unit determinant, with
+residue69632 modulo5⁷. The proof checks these hypotheses directly,
+without extending the previous uniform parameter-family interpolation.
+
 ## 36. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.

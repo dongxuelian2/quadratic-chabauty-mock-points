@@ -226,3 +226,14 @@ so higher precision must account for its nontrivial congruence kernel.
 An exact matrix identity proves the obstruction for every possible
 lift; the independent checker and proof review pass. This rules out
 that proposed shortcut without settling the global lifting problem.
+
+## The actual non-CM discrepancy is nonzero at five
+
+For a=-157469, the [ordinary period certificate](proofs/actual_noncm_five_adic_period.md)
+proves `X=22100+O(5^7)`, of valuation two, hence `delta₅(W)!=0`.
+Two independently written Frobenius/reduction implementations agree;
+the analytic error bounds are checked for this ordinary parameter.
+The actual comparison is now with **the two nonzero transported targets**
+`±Theta₅(e₃₇)`. Their values remain unevaluated, so full membership is
+still open. Reproduction commands and the compact arithmetic certificate
+are linked in the proof.
