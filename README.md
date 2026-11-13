@@ -227,6 +227,14 @@ An exact matrix identity proves the obstruction for every possible
 lift; the independent checker and proof review pass. This rules out
 that proposed shortcut without settling the global lifting problem.
 
+The same proof shows that the actual projective image is
+`PGL₂(Z/5^n Z)` at every level, and its H¹ with residual adjoint
+coefficients is zero, also in the continuous limit. Thus a nonzero
+global residual class must act nontrivially on the kernel of the
+torsion representation; computing group cohomology only inside that
+tower cannot produce it. This does not make global Selmer cohomology
+vanish.
+
 ## The actual non-CM discrepancy is nonzero at five
 
 For a=-157469, the [ordinary period certificate](proofs/actual_noncm_five_adic_period.md)

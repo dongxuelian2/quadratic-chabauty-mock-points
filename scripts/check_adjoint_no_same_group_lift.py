@@ -58,3 +58,43 @@ assert (U*s.Matrix([0, 1, 0])-s.Matrix([0, 1, 0])) % 5 == s.Matrix([3, 0, 0])
 assert 120*5**3 == 15000
 print('PASS: all125 projective lifts, adjoint kernel witness and irreducibility identities.')
 print('The same S5 cannot act on a free rank-three mod25 lift; no Selmer dimension follows.')
+
+# End_G(M): the distinct diagonal weights force diagonal endomorphisms.
+commuting_diagonals = []
+for a, b, c in product(range(5), repeat=3):
+    Z = s.diag(a, b, c)
+    if Z*U % 5 == U*Z % 5:
+        assert a == b == c
+        commuting_diagonals.append((a, b, c))
+assert len(commuting_diagonals) == 5
+assert sum((U**j for j in range(5)), s.zeros(3)) % 5 == s.zeros(3)
+
+
+def mul_mod(a, b, modulus):
+    return tuple(sum(a[2*i+k]*b[2*k+j] for k in range(2)) % modulus
+                 for i in range(2) for j in range(2))
+
+
+def power_mod(a, exponent, modulus):
+    z = (1, 0, 0, 1)
+    while exponent:
+        if exponent % 2:
+            z = mul_mod(z, a, modulus)
+        a = mul_mod(a, a, modulus)
+        exponent //= 2
+    return z
+
+
+checked = 0
+for n in range(3, 7):
+    modulus, t = 5**n, 5**(n-1)
+    for a, b, c in product(range(5), repeat=3):
+        kernel = (1+t*a, t*b, t*c, 1-t*a)
+        lift = mul_mod(kernel, (1, 1, 0, 1), modulus)
+        witness = power_mod(lift, t, modulus)
+        assert witness == (1, t, 0, 1)
+        assert witness[1] != 0  # A scalar cannot remove this entry.
+        assert power_mod(lift, 5*t, modulus) == (1, 0, 0, 1)
+        checked += 1
+print(f'PASS: scalar endomorphisms and {checked} higher-level projective lift powers.')
+print('H1(G_n,M)=0 follows by nonsplitting and inflation-restriction induction.')

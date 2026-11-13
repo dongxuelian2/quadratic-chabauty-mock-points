@@ -1378,6 +1378,15 @@ does not decide whether individual cohomology classes lift or evaluate
 the original transported target. The new matrix checker passes, and
 the finite-group argument was independently reviewed.
 
+Section 3 of the same proof closes another possible shortcut: the
+actual projective image is `G_n=PGL₂(Z/5^n Z)` for every n, but
+`H¹(G_n,ad⁰(E[5]))=0`, as is the continuous H¹ of the full tower.
+The nonsplit congruence extensions make each transgression injective.
+Every nonzero global residual class therefore restricts nontrivially
+to the kernel of the torsion representation. This distinguishes the
+required new Galois extension data from cohomology of the torsion
+quotients themselves; it does not compute the remaining target.
+
 ### 35.3 A nonzero discrepancy for the actual target at five
 
 For a=-157469 the [pointwise ordinary certificate](proofs/actual_noncm_five_adic_period.md)

@@ -91,7 +91,83 @@ curves over number fields*, Lemma 3.15, for a standard lifting lemma.
 The elementary argument above suffices for the projective level 25
 statement and does not assume a computed degree-15,000 number field.
 
-## 3. Consequence for the remaining computation
+## 3. Even the actual torsion quotients have zero residual H¹
+
+Put G_n=PGL₂(Z/5ⁿZ), and give M its action through G_1=S₅.
+Then
+
+    H¹(G_n,M)=0 for every n>=1.                     (2)
+
+This concerns residual coefficients M, not the varying coefficient
+module ad⁰(E[5ⁿ]). The base case is the finite-group calculation in
+[the transgression note](adjoint_transgression_repair.md).
+
+First, End_(S₅)(M)=F₅: commuting with the diagonal element of Section 2
+forces an endomorphism to be diagonal in e,h,f, and the nonzero (1,2)
+and (2,3) entries of U force its three diagonal entries to be equal.
+For n>=2 the reduction sequence has kernel M with this conjugation
+action:
+
+    1 -> M -> G_n -> G_(n-1) -> 1.                 (3)
+
+The extension (3) is nonsplit. Indeed the standard projective unipotent
+u=I+e in G_(n-1) has exact order t=5^(n-1). Every lift to G_n has a
+representative h=(I+5^(n-1)B)u, up to an invertible scalar. First-order
+multiplication gives
+
+    h^t=u^t (I+5^(n-1) sum_(j=0)^(t-1) Ad(u)^(-j)B) mod5ⁿ.
+
+For n=2 the adjoint norm on M is zero, as already verified. The norm
+also vanishes on the scalar summand of M₂(F₅), since its order is five.
+For n>=3 the conjugation action modulo 5 has period five and the sum
+consists of 5^(n-2) identical five-term blocks, so it is again zero
+modulo 5. Products of two correction terms vanish modulo 5ⁿ because
+2(n-1)>=n. Thus in every case the displayed representative satisfies
+
+    h^t=I+5^(n-1)e mod5ⁿ.                           (4)
+
+The off-diagonal entry is nonzero, so no invertible scalar can make
+this matrix the identity projectively. Every lift has order 5ⁿ,
+whereas a splitting would give a lift of order dividing t. This proves
+nonsplitting.
+
+Assume H¹(G_(n-1),M)=0. Inflation–restriction for (3) gives
+
+    0 -> H¹(G_n,M) -> End_(S₅)(M)
+      -> H²(G_(n-1),M).
+
+The last arrow sends the identity, up to sign, to the extension class
+of (3). Nonsplitting makes it nonzero. Since its source has dimension
+one, it is injective. This proves (2) inductively; no assertion about
+the dimension of the higher-level H² groups is needed.
+
+For this actual elliptic curve the projective image is G_n at every
+level. The mod-five surjectivity is already proved. If the image H_n
+surjects onto G_(n-1), its intersection with the kernel in (3) is an
+S₅-stable subspace of the irreducible M. It contains a nonzero element
+by taking the t-th power of a lift of the standard u, using (4).
+Thus this intersection is all of M, and H_n=G_n. Induction proves the
+assertion. The closed 5-adic projective image is consequently
+G_infinity=PGL₂(Z₅).
+
+Moreover H¹_cont(G_infinity,M)=0. Any continuous cocycle with finite
+values M vanishes on a sufficiently small principal congruence
+subgroup, by continuity at the identity, and therefore factors through
+some G_n. Equation (2) makes it a coboundary.
+
+Let N_infinity be the kernel of the actual projective 5-adic Galois
+representation. Inflation–restriction now gives an injection
+
+    H¹(G_Q,S,M) -> Hom_cont(N_infinity,M)^(G_infinity),
+
+where N_infinity is taken inside G_Q,S; the same assertion holds
+inside the full absolute Galois group. Thus every nonzero global
+residual adjoint class restricts nontrivially to that kernel. Computing
+cohomology only on the actual torsion quotients, even at arbitrarily
+high levels, cannot supply such a class. This does not make global
+cohomology vanish: extensions beyond the torsion tower remain allowed.
+
+## 4. Consequence for the remaining computation
 
 The existing degree-ten ray characters still give the correct residual
 space and the necessary local zero condition at 19. But lifting a
@@ -104,13 +180,19 @@ deformation/extension data.
 The obstruction is to lifting the **coefficient representation on a
 fixed finite quotient**. It does not imply that an individual global
 cohomology class satisfying the local condition at 19 cannot lift,
-and it supplies no criterion for that global lifting problem.
+and it supplies no criterion for that global lifting problem. The new
+vanishing (2) also rules out obtaining the required global residual
+class simply by taking H¹ of the actual finite torsion quotients.
 In particular, it does not evaluate delta₅(W) or Theta₅(e₃₇).
 
 `scripts/check_adjoint_no_same_group_lift.py` checks (1) on all nine
 matrix directions and verifies the first-order formula modulo 25.
 It also verifies the 125 projective lifts, the adjoint kernel witness
-and the irreducibility identities. Linearity in B proves the assertion
+and the irreducibility identities. It also checks the top-kernel power
+identity for all 125 projective lift directions at each level n=3,4,5,6,
+and the scalar endomorphism calculation. The all-level statements follow
+from the preceding proofs, not extrapolation of these checks. Linearity
+in B proves the assertion
 for all 5⁹ possible rank-three lifts without enumerating them.
 
 Reference: D. Lombardo, Algebra & Number Theory 9 (2015), 2347–2395,
