@@ -205,6 +205,13 @@ by tau, and anti-invariance ties their tame characters together.
 It follows that loc_19 is zero exactly when both Q19 factors can be
 removed from the character's conductor. This proves (1).
 
+Explicitly, let (x,y) be the unramified character values at Frobenius
+in the degree-one and degree-four factors. Restriction sends a base
+character t to (t,2t), using the residue degrees. Corestriction sends
+(x,y) to x+2y, using the ramification indices. Thus (1,2) generates
+the trace-kernel line modulo5, since 1+2*2=0. The only remaining
+direction after (4) is the tame character at the degree-four factor.
+
 This argument uses the actual local correction terms. In particular,
 the global vanishing of H¹(chi) from the earlier theorem is not
 incorrectly imposed on the local group at 19.

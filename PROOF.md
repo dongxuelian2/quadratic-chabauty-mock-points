@@ -1357,6 +1357,27 @@ stopped without a class-group or ray-dimension result; the saved
 smaller-base relations remain recoverable locally. The new modulus has
 not been used to restart a long computation.
 
+### 35.2 The residual quintic module has no lift on the same group
+
+The [same-group lifting obstruction](proofs/adjoint_same_group_lifting.md)
+proves that no free rank-three Z/25Z representation of S₅ reduces to
+ad⁰(E[5]). In the displayed Sylow-five basis, every lift U+5B has
+fifth-power entries (1,2)=15 and (2,3)=5 modulo25, so it cannot satisfy
+the order-five relation. This excludes every such coefficient lift,
+including ones unrelated to the deleted-permutation formula.
+
+For the actual curve the projective mod-25 image is PGL₂(Z/25Z), of
+order15,000. The existing nonzero fifth-power witness generates the
+whole three-dimensional congruence kernel under conjugation. This is
+an elementary specialization of the usual congruence lifting phenomenon.
+
+Thus simply replacing F₅ by Z/25Z on the same S₅ quotient cannot extend
+the degree-ten residual construction to integral precision. A further
+algorithm must include the nontrivial congruence-kernel action. This
+does not decide whether individual cohomology classes lift or evaluate
+the original transported target. The new matrix checker passes, and
+the finite-group argument was independently reviewed.
+
 ## 36. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.

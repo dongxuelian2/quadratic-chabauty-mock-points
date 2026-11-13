@@ -217,3 +217,12 @@ group or ray dimension. The smaller-base checkpoint preserves 1,331
 exact relations at rank 569; it is not a certificate. No long run has
 been restarted with the reduced modulus. The original target comparison
 and general problem remain open.
+
+The [coefficient-lifting obstruction](proofs/adjoint_same_group_lifting.md)
+also rules out a direct extension of the quintic method: no free
+rank-three Z/25Z representation of the same S₅ lifts the residual
+adjoint module. The actual projective mod-25 image has order15,000,
+so higher precision must account for its nontrivial congruence kernel.
+An exact matrix identity proves the obstruction for every possible
+lift; the independent checker and proof review pass. This rules out
+that proposed shortcut without settling the global lifting problem.
