@@ -1,0 +1,2322 @@
+[
+  {
+    "parameter_a": -5,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        17585,
+        0,
+        9800,
+        0,
+        42955
+      ],
+      [
+        0,
+        17585,
+        0,
+        60540,
+        0
+      ],
+      [
+        50985,
+        0,
+        53005,
+        0,
+        41300
+      ],
+      [
+        0,
+        18438,
+        0,
+        60540,
+        0
+      ],
+      [
+        19494,
+        0,
+        20225,
+        0,
+        7540
+      ]
+    ],
+    "system_matrix": [
+      [
+        64651,
+        13475,
+        10750,
+        67375,
+        26950,
+        51175
+      ],
+      [
+        64645,
+        13476,
+        10725,
+        67375,
+        26960,
+        51175
+      ],
+      [
+        69400,
+        8725,
+        16451,
+        61675,
+        67625,
+        10500
+      ],
+      [
+        16695,
+        8725,
+        37560,
+        61676,
+        73100,
+        10500
+      ],
+      [
+        10510,
+        67615,
+        46500,
+        31625,
+        65351,
+        12775
+      ],
+      [
+        22753,
+        67615,
+        60200,
+        31625,
+        39980,
+        12776
+      ]
+    ],
+    "system_rhs": [
+      10775,
+      28505,
+      72750,
+      32918,
+      816,
+      33799
+    ],
+    "normalized_cross_periods": [
+      0,
+      74570,
+      42850,
+      50043,
+      7691,
+      69469
+    ],
+    "normalized_target": 0,
+    "odd_model_target_J": 0,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 0
+  },
+  {
+    "parameter_a": 0,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        11480
+      ],
+      [
+        0,
+        0,
+        0,
+        5740,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        1538,
+        0,
+        0,
+        0
+      ],
+      [
+        769,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "system_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        42300
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        49425,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        70435,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        39065,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        67278,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "system_rhs": [
+      60775,
+      55255,
+      59275,
+      12928,
+      66691,
+      5239
+    ],
+    "normalized_cross_periods": [
+      9200,
+      15720,
+      30375,
+      2928,
+      27391,
+      32014
+    ],
+    "normalized_target": 9200,
+    "odd_model_target_J": 45950,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 1
+  },
+  {
+    "parameter_a": 5,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        72740,
+        0,
+        17700,
+        0,
+        38330
+      ],
+      [
+        0,
+        72740,
+        0,
+        19165,
+        0
+      ],
+      [
+        73890,
+        0,
+        25380,
+        0,
+        25775
+      ],
+      [
+        0,
+        45313,
+        0,
+        5385,
+        0
+      ],
+      [
+        33244,
+        0,
+        67200,
+        0,
+        58135
+      ]
+    ],
+    "system_matrix": [
+      [
+        64276,
+        400,
+        2000,
+        76375,
+        800,
+        14925
+      ],
+      [
+        26130,
+        13851,
+        69275,
+        76125,
+        27710,
+        77325
+      ],
+      [
+        7025,
+        70025,
+        30676,
+        76675,
+        48375,
+        6500
+      ],
+      [
+        25555,
+        71100,
+        34185,
+        47451,
+        26175,
+        29750
+      ],
+      [
+        34565,
+        66240,
+        75125,
+        2625,
+        10101,
+        61475
+      ],
+      [
+        20878,
+        43560,
+        44525,
+        3000,
+        25620,
+        68026
+      ]
+    ],
+    "system_rhs": [
+      40900,
+      43805,
+      53475,
+      15588,
+      44466,
+      66579
+    ],
+    "normalized_cross_periods": [
+      27275,
+      74395,
+      51200,
+      75563,
+      45916,
+      48159
+    ],
+    "normalized_target": 27275,
+    "odd_model_target_J": 27275,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 2
+  },
+  {
+    "parameter_a": 10,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        59930,
+        0,
+        70025,
+        0,
+        45255
+      ],
+      [
+        0,
+        59930,
+        0,
+        61690,
+        0
+      ],
+      [
+        39905,
+        0,
+        22505,
+        0,
+        4500
+      ],
+      [
+        0,
+        2888,
+        0,
+        18195,
+        0
+      ],
+      [
+        36294,
+        0,
+        56575,
+        0,
+        73820
+      ]
+    ],
+    "system_matrix": [
+      [
+        35726,
+        27675,
+        42375,
+        1500,
+        55350,
+        15925
+      ],
+      [
+        47160,
+        42401,
+        33425,
+        35750,
+        6685,
+        22775
+      ],
+      [
+        55850,
+        57425,
+        25351,
+        25925,
+        2500,
+        51250
+      ],
+      [
+        66860,
+        22275,
+        5560,
+        52776,
+        50875,
+        75625
+      ],
+      [
+        56830,
+        7515,
+        7125,
+        44500,
+        29901,
+        28575
+      ],
+      [
+        26678,
+        21295,
+        48900,
+        71000,
+        10965,
+        48226
+      ]
+    ],
+    "system_rhs": [
+      44900,
+      47905,
+      76350,
+      25023,
+      71891,
+      27569
+    ],
+    "normalized_cross_periods": [
+      61350,
+      44845,
+      37825,
+      78073,
+      48141,
+      27279
+    ],
+    "normalized_target": 61350,
+    "odd_model_target_J": 39850,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 3
+  },
+  {
+    "parameter_a": 15,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        73820,
+        0,
+        56600,
+        0,
+        75255
+      ],
+      [
+        0,
+        73820,
+        0,
+        76690,
+        0
+      ],
+      [
+        34045,
+        0,
+        56005,
+        0,
+        75175
+      ],
+      [
+        0,
+        6763,
+        0,
+        4305,
+        0
+      ],
+      [
+        60544,
+        0,
+        2875,
+        0,
+        26430
+      ]
+    ],
+    "system_matrix": [
+      [
+        60726,
+        72325,
+        69250,
+        49125,
+        66525,
+        22175
+      ],
+      [
+        52215,
+        17401,
+        26700,
+        8875,
+        34810,
+        11600
+      ],
+      [
+        1225,
+        26450,
+        7776,
+        54675,
+        34625,
+        63625
+      ],
+      [
+        66165,
+        76900,
+        66310,
+        70351,
+        28975,
+        43500
+      ],
+      [
+        16920,
+        5640,
+        33125,
+        63125,
+        31151,
+        36425
+      ],
+      [
+        72178,
+        61205,
+        9500,
+        45000,
+        3910,
+        46976
+      ]
+    ],
+    "system_rhs": [
+      9650,
+      26305,
+      12650,
+      64108,
+      35466,
+      62334
+    ],
+    "normalized_cross_periods": [
+      2300,
+      8820,
+      37125,
+      34958,
+      18941,
+      24374
+    ],
+    "normalized_target": 2300,
+    "odd_model_target_J": 26425,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 4
+  },
+  {
+    "parameter_a": 20,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        14785,
+        0,
+        35175,
+        0,
+        58205
+      ],
+      [
+        0,
+        14785,
+        0,
+        68165,
+        0
+      ],
+      [
+        45435,
+        0,
+        49255,
+        0,
+        36175
+      ],
+      [
+        0,
+        63,
+        0,
+        63340,
+        0
+      ],
+      [
+        53494,
+        0,
+        62725,
+        0,
+        14090
+      ]
+    ],
+    "system_matrix": [
+      [
+        75651,
+        71100,
+        15750,
+        30500,
+        64075,
+        34300
+      ],
+      [
+        6045,
+        2476,
+        49600,
+        62375,
+        4960,
+        14050
+      ],
+      [
+        40400,
+        32600,
+        46076,
+        32925,
+        74500,
+        68625
+      ],
+      [
+        28220,
+        37725,
+        21935,
+        32051,
+        64725,
+        3625
+      ],
+      [
+        28710,
+        65865,
+        32750,
+        53500,
+        38726,
+        23900
+      ],
+      [
+        67378,
+        49415,
+        32700,
+        45375,
+        49830,
+        39401
+      ]
+    ],
+    "system_rhs": [
+      74525,
+      30255,
+      4625,
+      41343,
+      7941,
+      34374
+    ],
+    "normalized_cross_periods": [
+      15375,
+      23070,
+      41600,
+      16343,
+      5691,
+      65069
+    ],
+    "normalized_target": 15375,
+    "odd_model_target_J": 11000,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 5
+  },
+  {
+    "parameter_a": 25,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        8825,
+        0,
+        18500,
+        0,
+        45230
+      ],
+      [
+        0,
+        8825,
+        0,
+        22615,
+        0
+      ],
+      [
+        25700,
+        0,
+        18755,
+        0,
+        1500
+      ],
+      [
+        0,
+        49038,
+        0,
+        69300,
+        0
+      ],
+      [
+        15769,
+        0,
+        45875,
+        0,
+        50550
+      ]
+    ],
+    "system_matrix": [
+      [
+        10001,
+        32000,
+        18750,
+        60000,
+        64000,
+        14175
+      ],
+      [
+        52150,
+        68126,
+        62625,
+        59375,
+        58135,
+        14125
+      ],
+      [
+        72500,
+        44500,
+        34001,
+        74425,
+        43750,
+        61875
+      ],
+      [
+        35900,
+        5625,
+        57935,
+        44126,
+        36750,
+        34375
+      ],
+      [
+        57325,
+        24690,
+        75000,
+        36875,
+        68126,
+        14875
+      ],
+      [
+        1028,
+        20800,
+        69250,
+        3125,
+        35350,
+        10001
+      ]
+    ],
+    "system_rhs": [
+      3275,
+      47255,
+      2025,
+      3978,
+      76441,
+      24689
+    ],
+    "normalized_cross_periods": [
+      71450,
+      9970,
+      70625,
+      62978,
+      40141,
+      1864
+    ],
+    "normalized_target": 71450,
+    "odd_model_target_J": 20700,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 6
+  },
+  {
+    "parameter_a": 30,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        63815,
+        0,
+        5575,
+        0,
+        52455
+      ],
+      [
+        0,
+        63815,
+        0,
+        65290,
+        0
+      ],
+      [
+        76465,
+        0,
+        74130,
+        0,
+        41400
+      ],
+      [
+        0,
+        30563,
+        0,
+        14310,
+        0
+      ],
+      [
+        1119,
+        0,
+        40200,
+        0,
+        18310
+      ]
+    ],
+    "system_matrix": [
+      [
+        67651,
+        3025,
+        12625,
+        70750,
+        6050,
+        56800
+      ],
+      [
+        12780,
+        10476,
+        1900,
+        65500,
+        20960,
+        72075
+      ],
+      [
+        73525,
+        22025,
+        19051,
+        52300,
+        12125,
+        40875
+      ],
+      [
+        31455,
+        4600,
+        67935,
+        59076,
+        4300,
+        66000
+      ],
+      [
+        75390,
+        65490,
+        27625,
+        29500,
+        62976,
+        8850
+      ],
+      [
+        18753,
+        2735,
+        39275,
+        50500,
+        845,
+        15151
+      ]
+    ],
+    "system_rhs": [
+      12150,
+      47930,
+      30850,
+      16138,
+      29966,
+      31779
+    ],
+    "normalized_cross_periods": [
+      25150,
+      7520,
+      32950,
+      48738,
+      75916,
+      26634
+    ],
+    "normalized_target": 25150,
+    "odd_model_target_J": 7650,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 7
+  },
+  {
+    "parameter_a": 35,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        38255,
+        0,
+        12900,
+        0,
+        61005
+      ],
+      [
+        0,
+        38255,
+        0,
+        69565,
+        0
+      ],
+      [
+        11855,
+        0,
+        27505,
+        0,
+        57375
+      ],
+      [
+        0,
+        22763,
+        0,
+        39870,
+        0
+      ],
+      [
+        38294,
+        0,
+        21075,
+        0,
+        12370
+      ]
+    ],
+    "system_matrix": [
+      [
+        70601,
+        40925,
+        26125,
+        33375,
+        3725,
+        15300
+      ],
+      [
+        60810,
+        7526,
+        29175,
+        52000,
+        15060,
+        74400
+      ],
+      [
+        2600,
+        72550,
+        61851,
+        52175,
+        41250,
+        36250
+      ],
+      [
+        66510,
+        75525,
+        75560,
+        16276,
+        66625,
+        36875
+      ],
+      [
+        63030,
+        62265,
+        25875,
+        11375,
+        66901,
+        27825
+      ],
+      [
+        32428,
+        15095,
+        35400,
+        52250,
+        62315,
+        11226
+      ]
+    ],
+    "system_rhs": [
+      35525,
+      1655,
+      8975,
+      52573,
+      16,
+      15394
+    ],
+    "normalized_cross_periods": [
+      5475,
+      75595,
+      73575,
+      27498,
+      19766,
+      42504
+    ],
+    "normalized_target": 5475,
+    "odd_model_target_J": 5225,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 8
+  },
+  {
+    "parameter_a": 40,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        645,
+        0,
+        27600,
+        0,
+        17005
+      ],
+      [
+        0,
+        645,
+        0,
+        47565,
+        0
+      ],
+      [
+        14745,
+        0,
+        18505,
+        0,
+        47800
+      ],
+      [
+        0,
+        70638,
+        0,
+        77480,
+        0
+      ],
+      [
+        52919,
+        0,
+        7625,
+        0,
+        58980
+      ]
+    ],
+    "system_matrix": [
+      [
+        52726,
+        23700,
+        10500,
+        18500,
+        47400,
+        63425
+      ],
+      [
+        63490,
+        25401,
+        575,
+        67625,
+        50810,
+        30725
+      ],
+      [
+        20725,
+        60325,
+        17401,
+        44050,
+        28375,
+        64875
+      ],
+      [
+        5190,
+        57400,
+        31310,
+        60726,
+        66100,
+        49750
+      ],
+      [
+        7870,
+        17140,
+        3750,
+        51250,
+        4776,
+        6925
+      ],
+      [
+        32678,
+        70255,
+        57125,
+        74375,
+        20760,
+        73351
+      ]
+    ],
+    "system_rhs": [
+      7150,
+      17180,
+      46150,
+      64283,
+      23091,
+      49659
+    ],
+    "normalized_cross_periods": [
+      25175,
+      14695,
+      76875,
+      48758,
+      12816,
+      4474
+    ],
+    "normalized_target": 25175,
+    "odd_model_target_J": 49925,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 9
+  },
+  {
+    "parameter_a": 45,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        41985,
+        0,
+        38675,
+        0,
+        65955
+      ],
+      [
+        0,
+        41985,
+        0,
+        72040,
+        0
+      ],
+      [
+        43010,
+        0,
+        45505,
+        0,
+        61050
+      ],
+      [
+        0,
+        29813,
+        0,
+        36140,
+        0
+      ],
+      [
+        23744,
+        0,
+        62725,
+        0,
+        68765
+      ]
+    ],
+    "system_matrix": [
+      [
+        72276,
+        9975,
+        58250,
+        24875,
+        19950,
+        8050
+      ],
+      [
+        19945,
+        5851,
+        29100,
+        19875,
+        11710,
+        58175
+      ],
+      [
+        6400,
+        75225,
+        19451,
+        22925,
+        18875,
+        4875
+      ],
+      [
+        8495,
+        71725,
+        60,
+        58676,
+        72600,
+        59250
+      ],
+      [
+        61285,
+        29115,
+        6500,
+        41000,
+        10851,
+        75650
+      ],
+      [
+        10753,
+        16840,
+        57700,
+        71625,
+        65305,
+        67276
+      ]
+    ],
+    "system_rhs": [
+      63275,
+      61380,
+      56500,
+      59768,
+      9441,
+      38699
+    ],
+    "normalized_cross_periods": [
+      58875,
+      69070,
+      44725,
+      67018,
+      24316,
+      56919
+    ],
+    "normalized_target": 58875,
+    "odd_model_target_J": 25125,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 10
+  },
+  {
+    "parameter_a": 50,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        10150,
+        0,
+        68250,
+        0,
+        5855
+      ],
+      [
+        0,
+        10150,
+        0,
+        41990,
+        0
+      ],
+      [
+        17025,
+        0,
+        43755,
+        0,
+        70500
+      ],
+      [
+        0,
+        35288,
+        0,
+        67975,
+        0
+      ],
+      [
+        60769,
+        0,
+        58625,
+        0,
+        24225
+      ]
+    ],
+    "system_matrix": [
+      [
+        24376,
+        51500,
+        75000,
+        41875,
+        24875,
+        7925
+      ],
+      [
+        29925,
+        53751,
+        31500,
+        3125,
+        29385,
+        53250
+      ],
+      [
+        8750,
+        42125,
+        27376,
+        71300,
+        50000,
+        17500
+      ],
+      [
+        3050,
+        69375,
+        36060,
+        50751,
+        8500,
+        28125
+      ],
+      [
+        69650,
+        28440,
+        34375,
+        55000,
+        53751,
+        57875
+      ],
+      [
+        36653,
+        8475,
+        69125,
+        43750,
+        70075,
+        24376
+      ]
+    ],
+    "system_rhs": [
+      42650,
+      37380,
+      11650,
+      45653,
+      39941,
+      10389
+    ],
+    "normalized_cross_periods": [
+      43075,
+      36095,
+      21500,
+      23028,
+      7891,
+      77339
+    ],
+    "normalized_target": 43075,
+    "odd_model_target_J": 51700,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 11
+  },
+  {
+    "parameter_a": 55,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        25515,
+        0,
+        46575,
+        0,
+        68455
+      ],
+      [
+        0,
+        25515,
+        0,
+        73290,
+        0
+      ],
+      [
+        7165,
+        0,
+        41630,
+        0,
+        5775
+      ],
+      [
+        0,
+        32688,
+        0,
+        52610,
+        0
+      ],
+      [
+        14619,
+        0,
+        67575,
+        0,
+        10985
+      ]
+    ],
+    "system_matrix": [
+      [
+        401,
+        5650,
+        76375,
+        33875,
+        11300,
+        42425
+      ],
+      [
+        28180,
+        77726,
+        56400,
+        1750,
+        77335,
+        66825
+      ],
+      [
+        75650,
+        33400,
+        76176,
+        31050,
+        72750,
+        31500
+      ],
+      [
+        9230,
+        2475,
+        57935,
+        1951,
+        54925,
+        5375
+      ],
+      [
+        43090,
+        57865,
+        42625,
+        6375,
+        30226,
+        65600
+      ],
+      [
+        24753,
+        35035,
+        14650,
+        35500,
+        62945,
+        47901
+      ]
+    ],
+    "system_rhs": [
+      2150,
+      65805,
+      53225,
+      61063,
+      53591,
+      50729
+    ],
+    "normalized_cross_periods": [
+      32400,
+      63145,
+      34700,
+      18788,
+      73416,
+      32609
+    ],
+    "normalized_target": 32400,
+    "odd_model_target_J": 19275,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 12
+  },
+  {
+    "parameter_a": 60,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        59080,
+        0,
+        77650,
+        0,
+        59880
+      ],
+      [
+        0,
+        59080,
+        0,
+        29940,
+        0
+      ],
+      [
+        30680,
+        0,
+        4380,
+        0,
+        18375
+      ],
+      [
+        0,
+        12638,
+        0,
+        19045,
+        0
+      ],
+      [
+        23419,
+        0,
+        49325,
+        0,
+        14670
+      ]
+    ],
+    "system_matrix": [
+      [
+        22351,
+        51050,
+        16125,
+        2750,
+        23975,
+        5300
+      ],
+      [
+        65710,
+        55776,
+        65550,
+        62000,
+        33435,
+        54150
+      ],
+      [
+        3725,
+        34550,
+        57726,
+        34675,
+        30000,
+        8750
+      ],
+      [
+        535,
+        74400,
+        36185,
+        20401,
+        42375,
+        48125
+      ],
+      [
+        77355,
+        7015,
+        19625,
+        6375,
+        15151,
+        77075
+      ],
+      [
+        46303,
+        770,
+        68150,
+        58500,
+        69290,
+        62976
+      ]
+    ],
+    "system_rhs": [
+      29275,
+      31655,
+      74100,
+      71373,
+      19391,
+      35094
+    ],
+    "normalized_cross_periods": [
+      43350,
+      6970,
+      51200,
+      39423,
+      49516,
+      53979
+    ],
+    "normalized_target": 43350,
+    "odd_model_target_J": 54975,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 13
+  },
+  {
+    "parameter_a": 65,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        57470,
+        0,
+        1725,
+        0,
+        63755
+      ],
+      [
+        0,
+        57470,
+        0,
+        70940,
+        0
+      ],
+      [
+        4820,
+        0,
+        68505,
+        0,
+        44175
+      ],
+      [
+        0,
+        10763,
+        0,
+        20655,
+        0
+      ],
+      [
+        44044,
+        0,
+        7375,
+        0,
+        30280
+      ]
+    ],
+    "system_matrix": [
+      [
+        11601,
+        31325,
+        4875,
+        50375,
+        62650,
+        32800
+      ],
+      [
+        44140,
+        66526,
+        27575,
+        73250,
+        54935,
+        15475
+      ],
+      [
+        25850,
+        22325,
+        48901,
+        20925,
+        12750,
+        53625
+      ],
+      [
+        75465,
+        52275,
+        24435,
+        29226,
+        13225,
+        65375
+      ],
+      [
+        41320,
+        49890,
+        65000,
+        20625,
+        42776,
+        61800
+      ],
+      [
+        16928,
+        36805,
+        76000,
+        13125,
+        33860,
+        35351
+      ]
+    ],
+    "system_rhs": [
+      54650,
+      37430,
+      18400,
+      33833,
+      45716,
+      15734
+    ],
+    "normalized_cross_periods": [
+      54300,
+      11820,
+      27250,
+      3183,
+      77316,
+      74574
+    ],
+    "normalized_target": 54300,
+    "odd_model_target_J": 54675,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 14
+  },
+  {
+    "parameter_a": 70,
+    "p": 5,
+    "term_cutoff": 20,
+    "coefficient_precision": 30,
+    "theoretical_degree_bound": 2868,
+    "effective_degree": 698,
+    "horizontal_scale_exponent": 4,
+    "integration_scale_exponent_used": 3,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "modulus": 78125,
+    "frobenius_matrix": [
+      [
+        67935,
+        0,
+        51550,
+        0,
+        50580
+      ],
+      [
+        0,
+        67935,
+        0,
+        25290,
+        0
+      ],
+      [
+        12460,
+        0,
+        73005,
+        0,
+        69050
+      ],
+      [
+        0,
+        29563,
+        0,
+        10190,
+        0
+      ],
+      [
+        8369,
+        0,
+        67100,
+        0,
+        15315
+      ]
+    ],
+    "system_matrix": [
+      [
+        70151,
+        48850,
+        60125,
+        50500,
+        19575,
+        50550
+      ],
+      [
+        75095,
+        7976,
+        11725,
+        18000,
+        15960,
+        58550
+      ],
+      [
+        14275,
+        42850,
+        14701,
+        31675,
+        25750,
+        53625
+      ],
+      [
+        4395,
+        63850,
+        34435,
+        63426,
+        2975,
+        52375
+      ],
+      [
+        45735,
+        66740,
+        77125,
+        72250,
+        44226,
+        27400
+      ],
+      [
+        9128,
+        32390,
+        72700,
+        1000,
+        55155,
+        33901
+      ]
+    ],
+    "system_rhs": [
+      55150,
+      43755,
+      40875,
+      56943,
+      36566,
+      15524
+    ],
+    "normalized_cross_periods": [
+      5500,
+      40695,
+      52225,
+      61443,
+      47941,
+      45019
+    ],
+    "normalized_target": 5500,
+    "odd_model_target_J": 73625,
+    "system_determinant_mod5": 1,
+    "status": "Finite arithmetic certificate; analytic certification is Section 7 of proofs/five_adic_residual_certificate.md.",
+    "b": 15
+  }
+]

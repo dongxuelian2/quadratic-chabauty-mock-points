@@ -1,0 +1,8 @@
+PASS: symbolic endpoint coefficients kappa and b.
+PASS: all omitted-lift residues at 7
+PASS: all omitted-lift residues at 11
+PASS: 12 scalar zeros: 11 12487 kappa mod p^3 = 726 b mod p = 4
+PASS: 12 scalar zeros: 11 656691 kappa mod p^3 = 726 b mod p = 4
+PASS: 12 scalar zeros: 7 17735 kappa mod p^3 = 294 b mod p = 4
+PASS: complete finite-field list [(7, 4), (11, 2), (19, 0)]
+Analytic completeness and infinite tails are proved in the companion text.

@@ -1,0 +1,10 @@
+PASS: generic tripling, quadrupling, derivative, unit-ratio and primitive identities.
+PASS: all 7 and 11 lifts; omitted classes are 46 mod49 and 24 mod121.
+PASS: exhaustive smooth finite-field counts, four endpoint disks in every case.
+PASS: prime-pair rank prerequisites 7 -605 19 151
+PASS: prime-pair rank prerequisites 11 -18269 571 4567
+PASS: prime-pair rank prerequisites 19 -17309 541 4327
+PASS: quadratic rank prerequisites 659 868561 -3474245
+PASS: exact p11 example, ell/121=9,h/11=3,Z=5,1331alpha=9 mod11.
+PASS: exact p19 examples and supplemental valuations 1,2,3,5.
+All exact checks pass. Uniform analytic assertions rely on the companion proof.

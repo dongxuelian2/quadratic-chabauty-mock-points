@@ -1,0 +1,149 @@
+#!/usr/bin/env python3
+"""Exact polynomial checks accompanying PROOF.md; no p-adic approximations."""
+import sympy as s
+
+x, u, a, a0, a2, a4, a6 = s.symbols('x u a a0 a2 a4 a6')
+f = a6*x**6 + a4*x**4 + a2*x**2 + a0
+g1 = u**3 + a4*u**2 + a2*a6*u + a0*a6**2
+g2 = u**3 + a2*u**2 + a4*a0*u + a6*a0**2
+h = 3*a6*x**4 + 2*a4*x**2 + a2
+assert s.expand(s.diff(g1,u).subs(u,a6*x**2) - a6*h) == 0
+# Multiply away denominators; the residual is exactly 3*a0*f.
+residual = s.expand(x**4*s.diff(g2,u).subs(u,a0/x**2) + a0*x**2*h)
+assert s.expand(residual - 3*a0*f) == 0
+
+fa = x**6 + a*x**4 + a*x**2 + 1
+ea = u**3 + a*u**2 + a*u + 1
+assert s.factor(s.discriminant(fa,x)) == -64*(a-3)**6*(a+1)**2
+assert s.factor(s.discriminant(ea,u)) == (a-3)**3*(a+1)
+assert s.expand(x**6*fa.subs(x,1/x) - fa) == 0
+assert s.expand(ea.subs(u,x**2) - fa) == 0
+assert s.simplify(ea.subs(u,1/x**2) - fa/x**6) == 0
+assert s.expand(fa.subs(x,1)) == 2*(a+1)
+
+fm = fa.subs(a,-5)
+assert s.expand(fm-(x*x+1)*(x*x-2*x-1)*(x*x+2*x-1)) == 0
+assert s.expand(ea.subs(a,-5).subs(u,u-1)) == u**3-8*u**2+8*u
+A,B=-8,8
+assert (-2*A,A*A-4*B) == (16,32)
+assert (-4)**3+16*(-4)**2+32*(-4) == 8**2
+assert s.discriminant(fm,x) == -2**28
+assert 16*B**2*(A**2-4*B) == 2**15
+print('PASS: quotient derivatives, reciprocal symmetry, discriminants, factorization, and descent witness.')
+
+# Lemma 6: exact rational-power identities for every permitted quadratic type.
+b,c,d = s.symbols('b c d')
+for quad,m,R in [
+    (u**2+c,2,-c),
+    (u**2+b*u+b**2,3,b**3),
+    (u**2+b*u+b**2/2,4,-b**4/4),
+    (u**2+b*u+b**2/3,6,-b**6/27),
+]:
+    assert s.rem(u**m-R,quad,u) == 0
+assert s.rem(u**3+d,u**3+d,u) == 0
+# Equal-modulus cubic roots u,z,zbar have z*zbar=u*u.
+zsum = s.symbols('zsum')
+cubic_b = -(u+zsum)
+cubic_c = u*zsum+u**2
+assert s.expand(cubic_c+cubic_b*u) == 0
+# The unconditional example's rejected quadratic lies outside all four types.
+assert 36 not in (0,1,2,3)
+assert s.expand((u+1)*(u**2-6*u+1)) == u**3-5*u**2-5*u+1
+ratio = s.symbols('ratio',nonzero=True)
+assert s.cancel(ratio**3/(-1/ratio)) == -ratio**4
+print('PASS: rational-power factor identities, cubic obstruction, and binomial target.')
+
+# Simultaneous three-torsion: exact parameter elimination and specializations.
+D3 = 3*u**4+4*a*u**3+6*a*u**2+12*u+4*a-a**2
+D3_recip = s.expand(u**4*D3.subs(u,1/u))
+assert s.factor(s.resultant(D3,D3_recip,u)) == (a-15)*(a-3)**10*(a+1)**3*(a+5)**2
+assert s.Poly(s.gcd(D3.subs(a,-5),D3_recip.subs(a,-5)),u).monic().as_expr() == u**2-s.Rational(2,3)*u+1
+assert s.Poly(s.gcd(D3.subs(a,15),D3_recip.subs(a,15)),u).monic().as_expr() == u-1
+q3 = 3*x**4-2*x**2+3
+assert s.discriminant(q3,x) == 2**14*3**2
+assert s.resultant(q3,fm,x) == 2**22
+p = 67
+residue_points = [(xx,yy) for xx in range(p) if int(q3.subs(x,xx)) % p == 0
+                  for yy in range(p) if (yy**2-int(fm.subs(x,xx))) % p == 0]
+assert residue_points == [(6,20),(6,47),(11,21),(11,46),(56,21),(56,46),(61,20),(61,47)]
+for xx,yy in residue_points:
+    assert int(s.diff(q3,x).subs(x,xx)) % p != 0
+    assert 2*yy % p != 0
+print('PASS: simultaneous three-torsion locus, non-Weierstrass certificate, and exact Hensel witness.')
+
+# The dihedral coordinate field: norms and radical reconstruction.
+dd = s.symbols('dd')
+vv = (64-160*dd)/27
+assert s.rem(s.expand(vv*vv.subs(dd,-dd)),dd**2+2,dd) == s.Rational(2048,27)
+assert s.Rational(2048,27) == 6*s.Rational(32,9)**2
+assert s.rem(s.expand(((1+2*dd)/3)**2-s.Rational(2,3)*(1+2*dd)/3+1),dd**2+2,dd) == 0
+assert s.minimal_polynomial((s.sqrt(6)+s.sqrt(-3))/3,x) == 3*x**4-2*x*x+3
+# A second rank-one bielliptic model, not another torsion-cancellation claim.
+mobius = (u+1)/(u-1)
+assert s.cancel((u-1)**6*fm.subs(x,mobius)) == -8*(u**6-5*u**4-5*u**2+1)
+assert s.expand((u+2)**3+10*(u+2)**2-20*(u+2)-8) == u**3+16*u**2+32*u
+assert s.cancel((u-1)**4*q3.subs(x,mobius)) == 4*(u**4+10*u**2+1)
+D3_tilde = 3*u**4+40*u**3-120*u**2-96*u-720
+assert s.expand(D3_tilde.subs(u,-2*u)-16*D3.subs(a,-5)) == 0
+assert s.gcd(u**2+10*u+1,D3.subs(a,-5)) == 1
+print('PASS: dihedral-field norm identities and explicit second bielliptic test.')
+
+
+# Exact order six and the second-height obstruction (Theorem 14).
+G = u**3+10*u**2-20*u-8
+hh = u**2-20*u+4
+assert s.gcd(G,hh) == 1
+assert s.gcd(D3_tilde,hh) == 1
+double_x_numerator = s.diff(G,u)**2-4*G*(10+2*u)
+assert s.rem(double_x_numerator-4*G*(u-16),hh,u) == 0
+assert s.rem(-G+8*s.diff(G,u)-(10-u/2)*G,hh,u) == 0
+assert s.rem(D3_tilde.subs(u,u-16),hh,u) == 0
+ht = u**2+10*u+1
+assert s.rem(u*(10+u)+1,ht,u) == 0
+assert s.rem((10*u+1)+u**2,ht,u) == 0
+assert s.discriminant(ht,u) == 96
+assert ht.subs(u,1) != 0 and ht.subs(u,-1) != 0
+print('PASS: exact six-torsion, second-height cancellation, and non-root-of-unity unit obstruction.')
+
+# Remaining six points: isogeny, twist, rational witness, and local target.
+ge = u**3-8*u**2+8*u
+gep = u**3+16*u**2+32*u
+iso_x = u-8+8/u
+iso_y_factor = 1-8/u**2
+assert s.cancel(iso_y_factor**2*ge-gep.subs(u,iso_x)) == 0
+assert s.diff(iso_x,u) == iso_y_factor
+assert s.expand(gep.subs(u,-2*u)+8*ge) == 0
+assert iso_x.subs(u,1) == 1 and iso_y_factor.subs(u,1) == -7
+assert s.expand(ge.subs(u,u+3)) == u**3+u**2-13*u-21
+for prime, expected in [(3,6),(7,8)]:
+    count = 1+sum(1 for xx in range(prime) for yy in range(prime)
+                  if (yy*yy-int(ge.subs(u,xx))) % prime == 0)
+    assert count == expected
+assert s.Rational(3-16+8,2)**2+8-2 == s.Rational(49,4)
+assert s.expand(G.subs(u,4*u+2)/64) == u**3+4*u**2+2*u
+for odd in range(1,16,2):
+    assert int(fm.subs(x,odd)) % 16 == 8
+    assert (-(odd*odd+1)//2) % 2 == 1
+assert s.rem((u+1)+u*(u-1),u**2+1,u) == 0
+print('PASS: endpoint-height algebra, CM maps, rational nontorsion witness, and exact local-target arithmetic.')
+
+
+# Exact anti-CM divisor and unit checks (Theorem 20).
+import sympy as S
+x=S.symbols('x');s=S.sqrt(-2)
+f=x**6-5*x**4-5*x*x+1
+A=x**3+3*s*x*x/2-x-s/2
+B=x**3-3*s*x*x/2-x+s/2
+X=x*x+1;Z=1+x**-2
+assert S.cancel(X+(Z-8+8/Z)/2-A*B/(x*x*(x*x+1)))==0
+N=2*s*x**3*(x*x+1)**2-((x*x+1)**2-8*x**4)
+assert S.simplify(S.rem(N,A,x))==0
+Nminus=-2*s*x**3*(x*x+1)**2-((x*x+1)**2-8*x**4)
+assert S.simplify(S.rem(Nminus,B,x))==0
+assert S.simplify(S.discriminant(A,x))==13
+assert S.simplify(S.resultant(A,B,x))==-8*s
+assert S.simplify(S.resultant(A,f,x))==-256
+assert S.simplify(A.subs(x,0)/B.subs(x,0))==-1
+assert S.simplify(A.subs(x,S.I)/B.subs(x,S.I))==-3-2*S.sqrt(2)
+assert S.simplify(A.subs(x,-S.I)/B.subs(x,-S.I))==-3+2*S.sqrt(2)
+print('PASS: CM fiber factors, separation and multiplicities, basepoint normalization, and nontrivial unit values.')

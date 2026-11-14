@@ -1,0 +1,2 @@
+PASS: isogeny, scaling, inverse, discriminants, quotient maps, differentials and j.
+Infinitude/rank one are supplied by Zywina's cited theorem and proof.

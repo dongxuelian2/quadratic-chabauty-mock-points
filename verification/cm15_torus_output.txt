@@ -1,0 +1,5 @@
+PASS: CM map preserves E, differential multiplier sqrt(-3), eta²=[-3].
+PASS: complete-fiber algebra, residual signs and exceptional finite values.
+PASS: derivative fiber ratio gives local unit -7+4sqrt(3), of norm one.
+PASS: both primitive d=2 descent obstructions, rank witnesses and corrected short model.
+The proof separately establishes fiber multiplicities, proper reference signs and the global obstruction.
