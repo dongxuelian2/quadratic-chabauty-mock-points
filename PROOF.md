@@ -1329,6 +1329,84 @@ No class-group dimension or propagated finite/crystalline local condition
 is inferred from that checker. The comparison with {0,±Θ₅(e₃₇)} and the
 general classification remain open.
 
+### 35.1 Local lifting obstruction and conductor reduction
+
+For the same actual curve let T=ad⁰(T₅E), M_n=T/5ⁿT. The
+[local lifting theorem](proofs/adjoint_local_lifting.md) proves, for all n>=1,
+
+    H¹(Q₇,M_n)=H¹(Q₃₉₃₆₇,M_n)=0,
+    H¹(Q₁₉,M_n)≅Z/5Z,
+    H¹(Q₃₇,M_n)≅Z/5ⁿZ (unramified).
+
+Every map H¹(Q₁₉,M_(n+1))->H¹(Q₁₉,M_n) induced by coefficient
+reduction is zero. Thus a global mod-five class that lifts even to
+M_2 must have zero localization at 19. The proof identifies the local
+group with ker(20:Z/5ⁿZ->Z/5ⁿZ); it does not infer lifting from its order.
+
+Exact prime-ideal decompositions and the local logarithm reduce the
+unrestricted ray modulus to P5^13 Q19 tau(Q19), where P5 is the unique
+prime above 5 and the two Q19 primes have (e,f)=(2,2). Under Section 35's
+global isomorphism, ker(loc_19) is exactly the anti-invariant character
+space for modulus P5^13. This is a necessary condition for integral
+lifts, not a complete finite/crystalline Selmer computation. No dimension
+drop on the global space or value of the transported target is proved.
+
+The exact finite-module checker and the bounded Hecke ideal-decomposition
+checker both pass. The two long class-group computations have been
+stopped without a class-group or ray-dimension result; the saved
+smaller-base relations remain recoverable locally. The new modulus has
+not been used to restart a long computation.
+
+### 35.2 The residual quintic module has no lift on the same group
+
+The [same-group lifting obstruction](proofs/adjoint_same_group_lifting.md)
+proves that no free rank-three Z/25Z representation of S₅ reduces to
+ad⁰(E[5]). In the displayed Sylow-five basis, every lift U+5B has
+fifth-power entries (1,2)=15 and (2,3)=5 modulo25, so it cannot satisfy
+the order-five relation. This excludes every such coefficient lift,
+including ones unrelated to the deleted-permutation formula.
+
+For the actual curve the projective mod-25 image is PGL₂(Z/25Z), of
+order15,000. The existing nonzero fifth-power witness generates the
+whole three-dimensional congruence kernel under conjugation. This is
+an elementary specialization of the usual congruence lifting phenomenon.
+
+Thus simply replacing F₅ by Z/25Z on the same S₅ quotient cannot extend
+the degree-ten residual construction to integral precision. A further
+algorithm must include the nontrivial congruence-kernel action. This
+does not decide whether individual cohomology classes lift or evaluate
+the original transported target. The new matrix checker passes, and
+the finite-group argument was independently reviewed.
+
+Section 3 of the same proof closes another possible shortcut: the
+actual projective image is `G_n=PGL₂(Z/5^n Z)` for every n, but
+`H¹(G_n,ad⁰(E[5]))=0`, as is the continuous H¹ of the full tower.
+The nonsplit congruence extensions make each transgression injective.
+Every nonzero global residual class therefore restricts nontrivially
+to the kernel of the torsion representation. This distinguishes the
+required new Galois extension data from cohomology of the torsion
+quotients themselves; it does not compute the remaining target.
+
+### 35.3 A nonzero discrepancy for the actual target at five
+
+For a=-157469 the [pointwise ordinary certificate](proofs/actual_noncm_five_adic_period.md)
+proves
+
+    (1/i) integral_(W₋)^(W₊) nu₀ nu₁ = 22100+O(5⁷),
+
+of valuation two. The earlier holomorphic-coordinate lemma therefore
+gives delta₅(W)!=0. This removes zero from the actual target grid;
+comparison with the two values ±Theta₅(e₃₇) remains open.
+
+The two independent implementations agree in every displayed matrix
+entry and all six cross periods. This parameter has ordinary reduction
+and requires a new polynomial inverse in the regular Frobenius lift;
+the supersingular inverse cannot be reused. The existing reduction
+and tail bounds apply because this f is integral, monic and squarefree
+modulo5. The true six-dimensional system has unit determinant, with
+residue69632 modulo5⁷. The proof checks these hypotheses directly,
+without extending the previous uniform parameter-family interpolation.
+
 ## 36. Boundary of this result
 
 The exact classification in Theorem 2 concerns Weierstrass points of the specified bielliptic candidate set. Theorem 4 supplies a uniform non-Weierstrass mechanism in a rank-restricted one-parameter family, with a proved rank-two specialization. Theorem 4 itself neither proves rank infinitude nor classifies all non-Weierstrass candidates. Theorem 28 separately proves rational-parameter rank infinitude by transfer from Zywina's theorem.

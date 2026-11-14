@@ -195,3 +195,53 @@ index values are never accepted as a class-group certificate.
 Q(sqrt(5)) and completes an unconditional class-group calculation after
 restoration. These changes improve reproducibility of the remaining
 calculation; they do not establish its dimension or the local target test.
+
+## A local lifting obstruction and smaller ray modulus
+
+The [local lifting theorem](proofs/adjoint_local_lifting.md) proves that
+`H¹(Q₁₉,ad⁰(E[5ⁿ]))` has order five at every level, but every coefficient
+reduction map between successive levels is zero. Consequently every
+global mod-five adjoint class lifting to mod 25 must restrict to zero at
+19. The local groups at 7 and 39367 vanish; the group at 37 is the
+unramified `Z/5ⁿZ`.
+
+Exact prime decomposition reduces the unrestricted ray modulus to
+`P5^13 Q19 tau(Q19)`. Imposing the local zero condition at 19 removes
+both Q19 factors. This gives a necessary pure-5-modulus character space
+for integral lifts, without computing its dimension or the crystalline
+condition at 5. Both the Python cocycle checker and the short Hecke
+ideal/residue-field checker pass.
+
+The two long local computations are **stopped** without a final class
+group or ray dimension. The smaller-base checkpoint preserves 1,331
+exact relations at rank 569; it is not a certificate. No long run has
+been restarted with the reduced modulus. The original target comparison
+and general problem remain open.
+
+The [coefficient-lifting obstruction](proofs/adjoint_same_group_lifting.md)
+also rules out a direct extension of the quintic method: no free
+rank-three Z/25Z representation of the same S₅ lifts the residual
+adjoint module. The actual projective mod-25 image has order15,000,
+so higher precision must account for its nontrivial congruence kernel.
+An exact matrix identity proves the obstruction for every possible
+lift; the independent checker and proof review pass. This rules out
+that proposed shortcut without settling the global lifting problem.
+
+The same proof shows that the actual projective image is
+`PGL₂(Z/5^n Z)` at every level, and its H¹ with residual adjoint
+coefficients is zero, also in the continuous limit. Thus a nonzero
+global residual class must act nontrivially on the kernel of the
+torsion representation; computing group cohomology only inside that
+tower cannot produce it. This does not make global Selmer cohomology
+vanish.
+
+## The actual non-CM discrepancy is nonzero at five
+
+For a=-157469, the [ordinary period certificate](proofs/actual_noncm_five_adic_period.md)
+proves `X=22100+O(5^7)`, of valuation two, hence `delta₅(W)!=0`.
+Two independently written Frobenius/reduction implementations agree;
+the analytic error bounds are checked for this ordinary parameter.
+The actual comparison is now with **the two nonzero transported targets**
+`±Theta₅(e₃₇)`. Their values remain unevaluated, so full membership is
+still open. Reproduction commands and the compact arithmetic certificate
+are linked in the proof.

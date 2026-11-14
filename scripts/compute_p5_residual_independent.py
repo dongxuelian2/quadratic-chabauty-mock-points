@@ -1,4 +1,7 @@
 from math import comb
+import sys
+parameter_a=int(sys.argv[1]) if len(sys.argv)>1 else -605
+assert parameter_a%5 not in (3,4), 'Good reduction at 5 is required.'
 p=5;N=30;q=p**N
 def trim(a):
  while a and a[-1]==0:a.pop()
@@ -22,7 +25,7 @@ def power(a,n):
   if n&1:z=mul(z,a)
   a=mul(a,a);n//=2
  return z
-f=[1,0,-605,0,-605,0,1];f=[x%q for x in f]
+f=[1,0,parameter_a,0,parameter_a,0,1];f=[x%q for x in f]
 F=power(f,5)
 def divmodpoly(a,b):
  a=a[:];out=[0]*max(1,len(a)-len(b)+1)
@@ -39,7 +42,11 @@ def comp(a,h):
  for c in a[::-1]:out=add(rmul(out,h),[c])
  return out
 def inverse(a):
- z=[0]*6;z[5]=-1%q
+ import sympy as sp
+ x=sp.symbols('x')
+ poly=lambda v: sp.Poly.from_list(list(reversed(v)),x,modulus=5)
+ ri=sp.invert(poly(a),poly(F))
+ z=[int(ri.nth(i))%q for i in range(ri.degree()+1)]
  for k in range(5):z=rmul(z,add([2],neg(rmul(a,z))))
  assert rmul(a,z)==[1]
  return z
@@ -93,7 +100,7 @@ while 5**(L+1)<=Dmax-2:L+=1
 S=5**L
 w=[1];vs=[1]; inv4=pow(4,-1,q);invpow=1
 for n in range(1,Dmax//2+1):
- val=-sum([-605,-605,1][k-1]*(2*n-k)*4**k*w[n-k] for k in range(1,min(3,n)+1))
+ val=-sum([parameter_a,parameter_a,1][k-1]*(2*n-k)*4**k*w[n-k] for k in range(1,min(3,n)+1))
  assert val%(2*n)==0;w.append(val//(2*n));invpow=invpow*inv4%q
  vs.append(w[-1]%q*invpow%q)
 vv=[0]*(Dmax+1)
@@ -153,6 +160,6 @@ def val5(x):
 print('WORK N,T,L,L2',N,T,L,L2,flush=True)
 print('scaled solution valuations',[val5(z) for z in sol],'scale exponent',exponent,flush=True)
 if all(z%den==0 for z in sol):
- print('I_eo/i mod5^6',[z//den%(5**6) for z in sol],flush=True)
- print('original holomorphic I/i mod5^6',4*(sol[0]//den)%(5**6),flush=True)
+ print('I_eo/i mod5^7',[z//den%(5**7) for z in sol],flush=True)
+ print('original holomorphic I/i mod5^7',4*(sol[0]//den)%(5**7),flush=True)
 print('seconds',round(time()-start,2),flush=True)
