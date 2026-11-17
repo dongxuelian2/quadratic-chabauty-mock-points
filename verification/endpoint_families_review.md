@@ -33,6 +33,6 @@ A separate check of the complete proof verified:
 
 ## Reproducible checking
 
-Run python scripts/check_endpoint_families.py with SymPy installed. The exact run is saved in endpoint_families_output.txt. It checks generic rational identities, all lifts at 7 and 11, exhaustive finite-field counts, all listed prime-pattern prerequisites, the exact p11 certificate, and p19 tests including valuations 1,2,3,5. These samples are supplemental; the all-parameter statements come from identities and the full-series proof.
+Run python scripts/check_endpoint_families.py with SymPy installed. It checks generic rational identities, all lifts at 7 and 11, exhaustive finite-field counts, all listed prime-pattern prerequisites, the exact p11 certificate, and p19 tests including valuations 1,2,3,5. These samples are supplemental; the all-parameter statements come from identities and the full-series proof.
 
 No finite truncation is used to prove an exact zero. No infinitude theorem, unrestricted Bloch–Kato identification, or failure at the omitted lifts is asserted. The prior special cases remain valid.
