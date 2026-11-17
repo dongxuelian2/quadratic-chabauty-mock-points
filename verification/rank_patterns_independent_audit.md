@@ -10,7 +10,7 @@ Audited deliverables:
 
 - `../proofs/checkable_rank_patterns.md`
 - `../scripts/check_rank_patterns.py`
-- `../verification/rank_patterns_output.txt`
+- `../scripts/check_rank_patterns_independent.py`
 
 A separate implementation, `../scripts/check_rank_patterns_independent.py`, tests the uniform 2-adic obstructions on every primitive residue pair, rather than using the source script's two projective charts. It also independently checks the ten examples by exhaustive trial division and exact integer arithmetic. All checks pass.
 
