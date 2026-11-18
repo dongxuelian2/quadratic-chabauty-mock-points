@@ -1,10 +1,17 @@
 # Quadratic Chabauty: Mock Rational Points
 
+**Research allocation (15 November 2026):** Further work on the original
+general classification and the non-CM transported targets is stopped.
+Manuscript preparation now prioritizes the complete rational-CM
+Weierstrass theorem; the original general problem remains open.
+
 Research target: explain extra candidates for genus-two curves over the rationals whose Jacobians have Mordell–Weil rank two, starting from [ICM 2026, Problem 6.4](https://doi.org/10.1137/25M1805011).
 
 ## Complete rational-CM Weierstrass subcase
 
-The reciprocal family has exactly seven rational parameters with CM elliptic quotient: 0, −3/2, −15/16, −5, 15, −33 and 255. The parameter 0 has Jacobian rank zero; the other six have rank two. For all six rank-two curves, every locally visible Weierstrass point is excluded from the full restricted depth-two set at every odd good prime. The [complete proof](proofs/rational_cm_weierstrass_classification.md) combines the two earlier CM examples with four explicit new torus quotients and elementary rank certificates.
+The reciprocal family has exactly seven rational parameters with CM elliptic quotient: 0, −3/2, −15/16, −5, 15, −33 and 255. The parameter 0 has Jacobian rank zero and the other six have rank two. For all six rank-two curves, every locally visible Weierstrass point is excluded from the full restricted depth-two set at every good prime. The [complete proof](proofs/rational_cm_weierstrass_classification.md) combines the two earlier CM examples with four explicit torus quotients and elementary rank certificates. The [visibility formula](proofs/rational_cm_all_good_primes.md) gives an empty locus over Q₂ for all seven parameters.
+
+The [norm-one torus criterion](proofs/cm_torus_totally_real_base_change.md) works over any totally real base with a CM quadratic splitting extension and rational actual valuation data. As an application, C_(−3/2) has Jacobian rank two over Q(√3), and its visible Weierstrass points are excluded at every good finite place. Above 7 all six are visible, including the pair x=±i which is absent over Q₇.
 
 The new comparison also handles potentially nonzero targets in the CM field Q(√−7): actual local Néron metrics force rational S-unit coefficients, and an algebraic logarithm/complex-absolute-value argument separates the candidate from the entire allowed target. This settles a complete finite arithmetic subclass; the non-CM transported Sym² targets and non-Weierstrass classification remain open. Run `python scripts/check_rational_cm_packet.py` for the exact algebra.
 
