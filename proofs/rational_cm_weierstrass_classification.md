@@ -18,9 +18,10 @@ multiplication are exactly
     0, −3/2, −15/16, −5, 15, −33, 255.
 
 The parameter 0 has elliptic rank zero. Each of the other six has elliptic
-rank one and Jacobian rank two. For each of these six curves, at every odd
+rank one and Jacobian rank two. For each of these six curves, at every
 prime of good reduction, **every locally visible Weierstrass point is
-excluded from the full restricted depth-two set**.
+excluded from the full restricted depth-two set**. At two this is a
+visibility statement, as [no Weierstrass points are visible](rational_cm_all_good_primes.md).
 
 This closes the Weierstrass-point question on the entire rational-CM
 subclass of this reciprocal family. It does not classify non-Weierstrass
@@ -223,9 +224,10 @@ norm-one number u has absolute value one. Every complex embedding of a
 root of unity does too. This contradicts `|t| != 1`. ∎
 
 The lemma simultaneously separates t from the entire actual finite
-target. It needs neither vanishing of (3) nor localization injectivity
-on an enlarged Q_p-vector space. It is special to an Artin–Tate central
-quotient; it does not solve the non-CM Sym² transport problem.
+target. The [totally real base change](cm_torus_totally_real_base_change.md)
+gives an exact divisor criterion in both directions for this Artin–Tate
+comparison and applies it over Q(√3), where C_(−3/2) has rank two and two
+additional visible Weierstrass points above 7.
 
 If the norm-one S-unit space in (3) is zero, a simpler version applies:
 any t which is a local unit and is not a root of unity gives exclusion,
